@@ -20,7 +20,10 @@
     --bs-body: var(--deep-charcoal);
 }
 
-/* 2. Global Typography */
+/* =========================
+   2. Global Typography
+   ========================= */
+
 body {
     background-color: var(--bone-white);
     color: var(--deep-charcoal);
@@ -34,7 +37,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.02em;
 }
 
-/* 3. Links */
+/* =========================
+   3. Links
+   ========================= */
+
 a {
     color: var(--burnt-umber);
 }
@@ -43,7 +49,10 @@ a:hover {
     color: var(--soft-blue);
 }
 
-/* 4. Buttons */
+/* =========================
+   4. Buttons
+   ========================= */
+
 .btn-primary {
     background-color: var(--burnt-umber);
     border: none;
@@ -63,28 +72,40 @@ a:hover {
     background-color: var(--sandstone);
 }
 
-/* 5. Soft Surfaces */
+/* =========================
+   5. Soft Surfaces
+   ========================= */
+
 .card,
 .service-item,
 .blog-item {
     background-color: var(--sandstone);
 }
+
+/* =========================
+   6. BOOTSTRAP TEXT OVERRIDES
+   ========================= */
+
+.text-primary {
+    color: var(--burnt-umber) !important;
+}
+
 /* =========================
    HEADER (NAVBAR)
    ========================= */
 
 header,
 .navbar {
-  background-color: var(--burnt-umber) !important;
+    background-color: var(--burnt-umber) !important;
 }
 
 .navbar a,
 .navbar-brand {
-  color: var(--bone-white) !important;
+    color: var(--bone-white) !important;
 }
 
 .navbar a:hover {
-  color: var(--sandstone) !important;
+    color: var(--sandstone) !important;
 }
 
 /* =========================
@@ -92,15 +113,14 @@ header,
    ========================= */
 
 footer {
-  background-color: var(--burnt-umber) !important;
-  color: var(--bone-white);
+    background-color: var(--burnt-umber) !important;
+    color: var(--bone-white);
 }
 
 footer a {
-  color: var(--sandstone);
+    color: var(--sandstone);
 }
 
 footer a:hover {
-  color: var(--bone-white);
+    color: var(--bone-white);
 }
-
