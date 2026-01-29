@@ -69,3 +69,38 @@ a:hover {
 .blog-item {
     background-color: var(--sandstone);
 }
+/* =========================
+   HEADER (NAVBAR)
+   ========================= */
+
+header,
+.navbar {
+  background-color: var(--burnt-umber) !important;
+}
+
+.navbar a,
+.navbar-brand {
+  color: var(--bone-white) !important;
+}
+
+.navbar a:hover {
+  color: var(--sandstone) !important;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  background-color: var(--burnt-umber) !important;
+  color: var(--bone-white);
+}
+
+footer a {
+  color: var(--sandstone);
+}
+
+footer a:hover {
+  color: var(--bone-white);
+}
+
