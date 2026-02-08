@@ -4,6 +4,10 @@
 
 /* 1. Brand Variables */
 :root {
+   :root {
+    --bs-primary: #cbb89d; /* Desert & River sandstone */
+}
+
     --bone-white: #F4F1EC;
     --sandstone: #CBB89D;
     --burnt-umber: #6E4B3A;
@@ -103,3 +107,4 @@ footer a {
 footer a:hover {
   color: var(--bone-white);
 }
+
