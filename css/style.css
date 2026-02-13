@@ -743,3 +743,38 @@ a:hover{ color: #55382B; }
 /*** copyright end ***/
 
 
+/* Desert & River — Footer readability fix */
+.footer {
+  background: #CBB89D !important;   /* Sandstone */
+}
+
+.footer,
+.footer p,
+.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6,
+.footer .text-white,
+.footer .text-white-50 {
+  color: #2B2B2B !important;        /* Deep Charcoal */
+}
+
+.footer a,
+.footer .btn.btn-link {
+  color: #2B2B2B !important;
+  opacity: 0.9;
+}
+
+.footer a:hover,
+.footer .btn.btn-link:hover {
+  color: #6E4B3A !important;        /* Burnt Umber */
+  opacity: 1;
+}
+
+/* Social icon buttons in footer */
+.footer .btn.btn-light {
+  background: #F4F1EC !important;   /* Bone White */
+  color: #2B2B2B !important;
+  border: 1px solid rgba(43,43,43,.15);
+}
+.footer .btn.btn-light:hover {
+  background: #6E4B3A !important;
+  color: #F4F1EC !important;
+}
