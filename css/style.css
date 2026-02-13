@@ -1,3 +1,69 @@
+/* =========================================================
+   Desert & River — Brand Theme Tokens
+   Palette:
+   Burnt Umber   #6E4B3A (primary)
+   Sandstone     #CBB89D (accent / borders)
+   Deep Charcoal #2B2B2B (text)
+   Faded Olive   #7A7D5C (secondary)
+   Bone White    #F4F1EC (background)
+
+   Fonts:
+   Headings: Merriweather
+   Body: Inter
+========================================================= */
+:root{
+  --bs-primary: #6E4B3A;
+  --bs-secondary: #7A7D5C;
+  --bs-dark: #2B2B2B;
+  --bs-light: #F4F1EC;
+
+  --dr-accent: #CBB89D;
+  --dr-soft: rgba(110,75,58,.08);
+  --dr-shadow: 0 10px 30px rgba(43,43,43,.12);
+}
+
+body{
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bs-light);
+  color: var(--bs-dark);
+}
+
+h1,h2,h3,h4,h5,h6,.display-1,.display-2,.display-3,.display-4{
+  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+  letter-spacing: .2px;
+}
+
+.text-muted{ color: rgba(43,43,43,.65) !important; }
+
+.bg-light{ background-color: rgba(244,241,236,.88) !important; }
+
+.dr-card{
+  box-shadow: var(--dr-shadow);
+  border: 1px solid rgba(203,184,157,.55);
+}
+
+.dr-soft{ background: var(--dr-soft); }
+
+.btn-primary{
+  border-color: var(--bs-primary);
+}
+.btn-primary:hover{
+  filter: brightness(.95);
+}
+.btn-secondary{
+  border-color: var(--bs-secondary);
+}
+
+.navbar .navbar-brand img{
+  height: 46px;
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(203,184,157,.55);
+}
+
+.footer .btn.btn-link:hover{
+  color: var(--dr-accent) !important;
+}
 
 /*** Spinner Start ***/
 /*** Spinner ***/
@@ -660,5 +726,6 @@
     background: var(--bs-dark);
 }
 /*** copyright end ***/
+
 
 
