@@ -802,3 +802,20 @@ a:hover{ color: #55382B; }
 .footer .footer-item a i {
   width: 18px;
 }
+/* Footer links — clean list style (no divider lines) */
+.footer .footer-links .footer-link {
+  color: rgba(244, 241, 236, 0.88);
+  text-decoration: none;
+  display: block;
+  padding: 7px 0;
+  transition: 0.2s ease;
+}
+
+.footer .footer-links .footer-link:hover {
+  color: #CBB89D; /* Sandstone */
+  transform: translateX(2px);
+}
+
+.footer p {
+  color: rgba(244, 241, 236, 0.78);
+}
