@@ -778,3 +778,27 @@ a:hover{ color: #55382B; }
   background: #6E4B3A !important;
   color: #F4F1EC !important;
 }
+/* Footer link styling (consistent lists) */
+.footer .footer-item a {
+  color: rgba(244, 241, 236, 0.85);
+  text-decoration: none;
+  display: block;
+  padding: 6px 0;
+  transition: 0.2s ease;
+}
+
+.footer .footer-item a:hover {
+  color: #CBB89D; /* Sandstone */
+  transform: translateX(2px);
+}
+
+/* Optional: smaller legal list so it sits neatly */
+.footer .footer-links .footer-link {
+  font-size: 0.95rem;
+  padding: 5px 0;
+}
+
+/* Keep the icons aligned */
+.footer .footer-item a i {
+  width: 18px;
+}
