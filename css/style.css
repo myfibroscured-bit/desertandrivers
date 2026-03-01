@@ -58,8 +58,9 @@ a:hover{ color: #55382B; }
     gap:.75rem;
 }
 .navbar-light .navbar-brand .brand-mark img{
-    height:48px;
-    width:auto;
+    height: 60px;
+    width: auto;
+    border-radius: 12px;
 }
 .navbar-light .navbar-brand .brand-name{
     font-weight:800;
