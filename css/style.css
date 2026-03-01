@@ -858,20 +858,4 @@ a:hover{ color: #55382B; }
 .nav-bar {
   border-bottom: 1px solid rgba(43,43,43,.12);
 }
-/* Force bigger logo on desktop (Desert & River) */
-.navbar-light .navbar-brand .brand-mark img{
-  height: 72px !important;
-  width: auto !important;
-  border-radius: 12px;
-}
 
-/* Mobile */
-@media (max-width: 991.98px){
-  .navbar-light .navbar-brand .brand-mark img{
-    height: 52px !important;
-  }
-  /* prevent template max-height from shrinking it */
-  .navbar-light .navbar-brand img{
-    max-height: 52px !important;
-  }
-}
