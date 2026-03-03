@@ -858,4 +858,40 @@ a:hover{ color: #55382B; }
 .nav-bar {
   border-bottom: 1px solid rgba(43,43,43,.12);
 }
+/* WhatsApp buttons: bright green */
+:root{
+  --wa-green: #25D366;
+  --wa-green-dark: #1DA851;
+}
 
+/* Header WhatsApp button (your .btn-outline-dr WhatsApp link) */
+a[href*="wa.me"].btn,
+a[href^="https://wa.me"].btn,
+a[href^="http://wa.me"].btn{
+  background: var(--wa-green) !important;
+  border-color: var(--wa-green) !important;
+  color: #ffffff !important;
+}
+
+a[href*="wa.me"].btn:hover{
+  background: var(--wa-green-dark) !important;
+  border-color: var(--wa-green-dark) !important;
+  color: #ffffff !important;
+}
+
+/* Footer round WhatsApp icon button */
+a[href*="wa.me"].btn-sm-square,
+a[href*="wa.me"].btn-md-square,
+a[href*="wa.me"].btn-lg-square{
+  background: var(--wa-green) !important;
+  border-color: var(--wa-green) !important;
+  color: #ffffff !important;
+}
+
+a[href*="wa.me"].btn-sm-square:hover,
+a[href*="wa.me"].btn-md-square:hover,
+a[href*="wa.me"].btn-lg-square:hover{
+  background: var(--wa-green-dark) !important;
+  border-color: var(--wa-green-dark) !important;
+  color: #ffffff !important;
+}
