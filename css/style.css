@@ -743,155 +743,126 @@ a:hover{ color: #55382B; }
 }
 /*** copyright end ***/
 
+/* =========================================================
+   Desert & River — Final Overrides (Clean)
+   ========================================================= */
 
-/* Desert & River — Footer readability fix */
-.footer {
-  background: #CBB89D !important;   /* Sandstone */
+/* HEADER / NAVBAR: Sandstone background + Charcoal text */
+.container-fluid.position-relative.p-0 .navbar,
+.navbar.navbar-light {
+  background: var(--dr-sandstone) !important;  /* Sandstone */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--dr-charcoal) !important;        /* Charcoal */
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--bs-primary) !important;         /* Burnt Umber */
+}
+
+/* Dropdown menu */
+.navbar .dropdown-menu {
+  background: var(--dr-bone) !important;
+  border: 1px solid rgba(43,43,43,.12);
+}
+.navbar .dropdown-item {
+  color: var(--dr-charcoal) !important;
+}
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background: rgba(203,184,157,.35) !important;
+}
+
+/* LOGO sizing (bigger on desktop, controlled on mobile) */
+.navbar-light .navbar-brand .brand-mark img{
+  height: 72px !important;   /* desktop */
+  width: auto !important;
+  border-radius: 12px;
+}
+
+@media (max-width: 991.98px){
+  .navbar-light .navbar-brand .brand-mark img{
+    height: 52px !important; /* mobile */
+  }
+  .navbar-light .navbar-brand img{
+    max-height: 52px !important; /* prevents template cap */
+  }
+}
+
+/* Optional: keep navbar height tidy */
+.navbar.navbar-expand-lg{
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/* WHATSAPP BUTTONS (use btn-whatsapp class) */
+.btn-whatsapp{
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #ffffff !important;
+}
+.btn-whatsapp:hover{
+  background: #1DA851 !important;
+  border-color: #1DA851 !important;
+  color: #ffffff !important;
+}
+.btn-whatsapp i{
+  color: #ffffff !important;
+}
+
+/* FOOTER: Sandstone background + Charcoal text */
+.footer,
+.copyright{
+  background: var(--dr-sandstone) !important;
 }
 
 .footer,
 .footer p,
 .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6,
 .footer .text-white,
-.footer .text-white-50 {
-  color: #2B2B2B !important;        /* Deep Charcoal */
+.footer .text-white-50,
+.copyright,
+.copyright .text-body,
+.copyright a{
+  color: var(--dr-charcoal) !important;
 }
 
-.footer a,
-.footer .btn.btn-link {
-  color: #2B2B2B !important;
-  opacity: 0.9;
-}
+.footer p{ opacity: 0.92; }
 
-.footer a:hover,
-.footer .btn.btn-link:hover {
-  color: #6E4B3A !important;        /* Burnt Umber */
-  opacity: 1;
-}
-
-/* Social icon buttons in footer */
-.footer .btn.btn-light {
-  background: #F4F1EC !important;   /* Bone White */
-  color: #2B2B2B !important;
-  border: 1px solid rgba(43,43,43,.15);
-}
-.footer .btn.btn-light:hover {
-  background: #6E4B3A !important;
-  color: #F4F1EC !important;
-}
-/* Footer link styling (consistent lists) */
-.footer .footer-item a {
-  color: rgba(244, 241, 236, 0.85);
-  text-decoration: none;
-  display: block;
-  padding: 6px 0;
-  transition: 0.2s ease;
-}
-
-.footer .footer-item a:hover {
-  color: #CBB89D; /* Sandstone */
-  transform: translateX(2px);
-}
-
-/* Optional: smaller legal list so it sits neatly */
-.footer .footer-links .footer-link {
-  font-size: 0.95rem;
-  padding: 5px 0;
-}
-
-/* Keep the icons aligned */
-.footer .footer-item a i {
-  width: 18px;
-}
-/* Footer links — clean list style (no divider lines) */
-.footer .footer-links .footer-link {
-  color: rgba(244, 241, 236, 0.88);
+/* Footer links: clean list style (no dividers) */
+.footer .footer-links .footer-link{
+  color: rgba(43,43,43,.92) !important;
   text-decoration: none;
   display: block;
   padding: 7px 0;
   transition: 0.2s ease;
 }
-
-.footer .footer-links .footer-link:hover {
-  color: #CBB89D; /* Sandstone */
+.footer .footer-links .footer-link:hover{
+  color: var(--bs-primary) !important;
   transform: translateX(2px);
 }
 
-.footer p {
-  color: rgba(244, 241, 236, 0.78);
+/* Footer social icon buttons */
+.footer .btn.btn-secondary.btn-sm-square{
+  background: rgba(43,43,43,.12) !important;
+  border-color: rgba(43,43,43,.12) !important;
+  color: var(--dr-charcoal) !important;
 }
-/* Header / Navbar: Sandstone background + Charcoal text */
-.nav-bar,
-.navbar,
-.navbar-light,
-.sticky-top.nav-bar {
-  background: #CBB89D !important;  /* Sandstone */
-}
-
-.navbar .navbar-nav .nav-link,
-.navbar .navbar-brand,
-.navbar .navbar-toggler,
-.navbar .fa-bars {
-  color: #2B2B2B !important;       /* Deep Charcoal */
+.footer .btn.btn-secondary.btn-sm-square:hover{
+  background: rgba(110,75,58,.18) !important;
+  border-color: rgba(110,75,58,.18) !important;
 }
 
-/* Dropdown menu */
-.navbar .dropdown-menu {
-  background: #F4F1EC !important;  /* Bone White */
-  border: 1px solid rgba(43,43,43,.12);
-}
-.navbar .dropdown-item {
-  color: #2B2B2B !important;
-}
-.navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus {
-  background: rgba(203,184,157,.35) !important; /* light sandstone wash */
-}
-
-/* Active/hover link styling */
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-  color: #6E4B3A !important;       /* Burnt Umber */
-}
-
-/* Optional: tidy border under header */
-.nav-bar {
-  border-bottom: 1px solid rgba(43,43,43,.12);
-}
-/* WhatsApp buttons: bright green */
-:root{
-  --wa-green: #25D366;
-  --wa-green-dark: #1DA851;
-}
-
-/* Header WhatsApp button (your .btn-outline-dr WhatsApp link) */
-a[href*="wa.me"].btn,
-a[href^="https://wa.me"].btn,
-a[href^="http://wa.me"].btn{
-  background: var(--wa-green) !important;
-  border-color: var(--wa-green) !important;
+/* If a footer WhatsApp icon also has btn-whatsapp, force green */
+.footer .btn-whatsapp{
+  background: #25D366 !important;
+  border-color: #25D366 !important;
   color: #ffffff !important;
 }
-
-a[href*="wa.me"].btn:hover{
-  background: var(--wa-green-dark) !important;
-  border-color: var(--wa-green-dark) !important;
-  color: #ffffff !important;
-}
-
-/* Footer round WhatsApp icon button */
-a[href*="wa.me"].btn-sm-square,
-a[href*="wa.me"].btn-md-square,
-a[href*="wa.me"].btn-lg-square{
-  background: var(--wa-green) !important;
-  border-color: var(--wa-green) !important;
-  color: #ffffff !important;
-}
-
-a[href*="wa.me"].btn-sm-square:hover,
-a[href*="wa.me"].btn-md-square:hover,
-a[href*="wa.me"].btn-lg-square:hover{
-  background: var(--wa-green-dark) !important;
-  border-color: var(--wa-green-dark) !important;
+.footer .btn-whatsapp:hover{
+  background: #1DA851 !important;
+  border-color: #1DA851 !important;
   color: #ffffff !important;
 }
