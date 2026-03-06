@@ -6,7 +6,6 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="description" content="Meet Joseph & Annet, the guides behind Desert & River. Bespoke desert journeys in the Sinai region with a focus on ethics, permits, and long-term Bedouin relationships.">
   <meta name="robots" content="index,follow">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -14,240 +13,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
+  
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-
-  <style>
-    .about-editorial-wrap{
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .eyebrow{
-      display: inline-block;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: var(--bs-primary);
-      margin-bottom: 0.85rem;
-    }
-
-    .about-intro-card{
-      padding: 2rem;
-      background: #fff;
-      border-radius: 1.35rem;
-      box-shadow: 0 12px 32px rgba(0,0,0,.08);
-    }
-
-    .about-intro-card p:last-child{
-      margin-bottom: 0;
-    }
-
-    .editorial-section{
-      padding: 2.5rem 0;
-    }
-
-    .editorial-copy{
-      font-size: 1.08rem;
-      line-height: 1.9;
-      color: var(--dr-charcoal);
-    }
-
-    .editorial-copy p{
-      margin-bottom: 1.25rem;
-    }
-
-    .editorial-copy h3{
-      font-family: 'Merriweather', serif;
-      font-size: 1.18rem;
-      margin-top: 2rem;
-      margin-bottom: 0.85rem;
-      color: var(--dr-charcoal);
-    }
-
-    .editorial-title{
-      font-family: 'Merriweather', serif;
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-
-    .editorial-subtitle{
-      font-size: 1.05rem;
-      color: #6c757d;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .editorial-block{
-      background: #fff;
-      border-radius: 1.5rem;
-      box-shadow: 0 14px 36px rgba(0,0,0,.06);
-      padding: 2.25rem;
-    }
-
-    .portrait-figure{
-      width: min(340px, 42%);
-      margin-bottom: 1rem;
-    }
-
-    .portrait-left{
-      float: left;
-      margin-right: 2rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .portrait-right{
-      float: right;
-      margin-left: 2rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .portrait-figure img{
-      width: 100%;
-      display: block;
-      border-radius: 1.25rem;
-      box-shadow: 0 12px 28px rgba(0,0,0,.14);
-    }
-
-    .portrait-caption{
-      font-size: 0.9rem;
-      color: #6c757d;
-      margin-top: 0.65rem;
-      line-height: 1.5;
-    }
-
-    .story-name{
-      font-family: 'Merriweather', serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      margin-bottom: 0.35rem;
-    }
-
-    .story-kicker{
-      font-size: 1rem;
-      color: #6c757d;
-      margin-bottom: 1.5rem;
-    }
-
-    .editorial-copy::after{
-      content: "";
-      display: block;
-      clear: both;
-    }
-
-    .mini-gallery{
-      margin-top: 1rem;
-    }
-
-    .mini-gallery-grid{
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1rem;
-    }
-
-    .mini-gallery-item{
-      display: block;
-      overflow: hidden;
-      border-radius: 1.1rem;
-      box-shadow: 0 10px 24px rgba(0,0,0,.08);
-      background: #f4f1ec;
-      min-height: 180px;
-    }
-
-    .mini-gallery-item img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform .35s ease;
-    }
-
-    .mini-gallery-item:hover img{
-      transform: scale(1.03);
-    }
-
-    .gallery-large{
-      grid-column: span 6;
-    }
-
-    .gallery-small{
-      grid-column: span 3;
-    }
-
-    .trust-panel{
-      padding: 2rem;
-      border-radius: 1.4rem;
-      background: #fff;
-      box-shadow: 0 12px 30px rgba(0,0,0,.07);
-      height: 100%;
-    }
-
-    .trust-panel h4{
-      margin-bottom: 1rem;
-    }
-
-    .trust-list .trust-item{
-      margin-bottom: 1rem;
-    }
-
-    .trust-list .trust-item:last-child{
-      margin-bottom: 0;
-    }
-
-    .trust-list .trust-item strong{
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-
-    .cta-panel{
-      padding: 2rem;
-      border-radius: 1.4rem;
-      background: #fff;
-      box-shadow: 0 12px 30px rgba(0,0,0,.07);
-      height: 100%;
-    }
-
-    @media (max-width: 991.98px){
-      .portrait-figure{
-        float: none !important;
-        width: 100%;
-        max-width: 420px;
-        margin: 0 auto 1.5rem auto !important;
-      }
-
-      .editorial-block{
-        padding: 1.5rem;
-      }
-
-      .mini-gallery-grid{
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-large,
-      .gallery-small{
-        grid-column: span 1;
-      }
-    }
-
-    @media (max-width: 575.98px){
-      .about-intro-card{
-        padding: 1.4rem;
-      }
-
-      .editorial-copy{
-        font-size: 1rem;
-        line-height: 1.8;
-      }
-
-      .mini-gallery-grid{
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
-
 <body>
   <!-- Spinner Start -->
   <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -257,493 +26,526 @@
   </div>
   <!-- Spinner End -->
 
-  <!-- Navbar Start -->
-  <div class="container-fluid position-relative p-0">
-    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 bg-white shadow-sm">
-      <a href="index.html" class="navbar-brand p-0">
-        <div class="brand-mark">
-          <img src="img/logo.png" alt="Desert & River logo">
-          <div class="d-flex flex-column">
-            <p class="brand-name">Desert & River</p>
-            <p class="brand-tagline d-none d-md-block">Where deserts teach and rivers remember</p>
-          </div>
-        </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="fa fa-bars"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto py-0">
-          <a href="index.html" class="nav-item nav-link">Home</a>
-          <a href="about.html" class="nav-item nav-link active">About Us</a>
-          <a href="plan-your-own-trip.html" class="nav-item nav-link">Plan Your Own Trip</a>
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">See More</a>
-            <div class="dropdown-menu m-0">
-              <a href="places.html" class="dropdown-item">Places to Visit</a>
-              <a href="blog.html" class="dropdown-item">Blog Posts</a>
-              <a href="gallery.html" class="dropdown-item">Gallery</a>
-              <a href="archaeologist.html" class="dropdown-item">Are you an archaeologist?</a>
-            </div>
-          </div>
-          <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-        </div>
-        <div class="d-flex align-items-center gap-2 ms-lg-3">
-          <a class="btn btn-outline-dr rounded-pill py-2 px-4 d-none d-lg-inline-flex" href="https://wa.me/201063864837" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp me-2"></i> WhatsApp
-          </a>
-          <a class="btn btn-primary rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" target="_blank" rel="noopener">
-            Book a Call
-          </a>
+<!-- Navbar Start -->
+<div class="container-fluid position-relative p-0">
+  <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 bg-white shadow-sm">
+    <a href="index.html" class="navbar-brand p-0">
+      <div class="brand-mark">
+        <img src="img/logo.png" alt="Desert & River logo">
+        <div class="d-flex flex-column">
+          <p class="brand-name">Desert & River</p>
+          <p class="brand-tagline d-none d-md-block">Where deserts teach and rivers remember</p>
         </div>
       </div>
-    </nav>
-  </div>
-  <!-- Navbar End -->
-
-  <!-- Header Start -->
-  <div class="container-fluid bg-breadcrumb" style="background-image: linear-gradient(rgba(43,43,43,.55), rgba(43,43,43,.55)), url('img/about-team.jpg'); background-size: cover; background-position: center;">
-    <div class="container text-center py-5" style="max-width: 900px;">
-      <h1 class="display-4 text-white mb-3 wow fadeInDown" data-wow-delay="0.1s">About Us</h1>
-      <p class="text-white-50 mb-0">Quiet confidence. Real relationship with land and people.</p>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto py-0">
+        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="about.html" class="nav-item nav-link active">About Us</a>
+        <a href="plan-your-own-trip.html" class="nav-item nav-link">Plan Your Own Trip</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">See More</a>
+          <div class="dropdown-menu m-0">
+            <a href="places.html" class="dropdown-item">Places to Visit</a>
+            <a href="blog.html" class="dropdown-item">Blog Posts</a>
+            <a href="gallery.html" class="dropdown-item">Gallery</a>
+            <a href="archaeologist.html" class="dropdown-item">Are you an archaeologist?</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+      </div>
+      <div class="d-flex align-items-center gap-2 ms-lg-3">
+        <a class="btn btn-outline-dr rounded-pill py-2 px-4 d-none d-lg-inline-flex" href="https://wa.me/201063864837" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp me-2"></i> WhatsApp
+        </a>
+        <a class="btn btn-primary rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" target="_blank" rel="noopener">
+          Book a Call
+        </a>
+      </div>
     </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb" style="background-image: linear-gradient(rgba(43,43,43,.55), rgba(43,43,43,.55)), url('img/about-team.jpg'); background-size: cover; background-position: center;">
+  <div class="container text-center py-5" style="max-width: 900px;">
+    <h1 class="display-4 text-white mb-3 wow fadeInDown" data-wow-delay="0.1s">About Us</h1>
+    <p class="text-white-50 mb-0">Quiet confidence. Real relationship with land and people.</p>
   </div>
-  <!-- Header End -->
-
-  <div class="container py-5">
-    <div class="about-editorial-wrap">
-
-      <!-- Intro -->
-      <section class="mb-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="text-center mb-4">
-          <span class="eyebrow">Our story</span>
-          <h2 class="editorial-title">Journeys Beyond the Ordinary</h2>
-          <p class="editorial-subtitle">
-            A shared life shaped by history, care, and the desert itself.
-          </p>
-        </div>
-
-        <div class="about-intro-card">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-7">
-              <!-- IMPORTANT:
-                   If your joint image is already linked to a carousel/lightbox, keep your existing <a> wrapper and attributes.
-                   Only replace the inner image styling if needed. -->
-              <img src="img/about-team.jpg" class="img-fluid rounded-2xl shadow-soft" alt="Joseph and Annet in the desert together">
-            </div>
-
-            <div class="col-lg-5">
-              <p>
-                We first met in the desert, at the Temple of Hathor in Sinai, where Joseph was guiding a trip I had taken with my brother and sister-in-law. None of us knew then that this meeting would shape the rest of our lives. That journey did more than introduce us—it sparked a deep love for the desert and its hidden history.
-              </p>
-
-              <p>
-                Joseph had already begun building his path. In 2005, he founded King Safari with his brother Bob. In 2008, his wife Irina joined and helped build the company further. That same year, Annette came as well, and the four of us shaped King Safari together. Through passion, hard work, and countless days in the mountains and valleys of Sinai, the company grew.
-              </p>
-
-              <p>
-                Then in 2011, the revolution came, bringing uncertainty and challenge. But we stayed. We believed in the desert, and we believed in what we were building. In 2015, the four of us also created Sababa Hotel, and in 2020, we opened Lydia Hotel—continuing to grow, always together.
-              </p>
-
-              <p class="mb-0">
-                By 2025, something shifted inside us. Joseph and Annette found themselves longing for something more personal again. We both deeply love the desert—being under the stars, walking through silence, watching the animals. We love all animals: cats, dogs, camels. And we began thinking carefully about how desert trips should truly be done.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider my-5"></div>
-
-      <!-- Joseph -->
-      <section class="editorial-section wow fadeInUp" data-wow-delay="0.1s">
-        <div class="editorial-block">
-          <div class="editorial-copy">
-            <figure class="portrait-figure portrait-left">
-              <img src="img/joseph-editorial.jpg" alt="Joseph portrait">
-              <figcaption class="portrait-caption">
-                Joseph — guide, storyteller, and a lifelong student of the desert.
-              </figcaption>
-            </figure>
-
-            <span class="eyebrow">Guide story</span>
-            <h2 class="story-name">Joseph</h2>
-            <p class="story-kicker">A life built through work, reading, silence, and the pull of Sinai.</p>
-
-            <p>I was born in March 1977, in a small village near Sohag.</p>
-
-            <p>When I was just a little boy—maybe three or four years old—my world was full of secrets.</p>
-
-            <p>Right beneath our local church, there was a hidden world of ancient Egyptian and old Christian history.</p>
-
-            <p>My friends and I used to sneak in there to play, even though the elders always warned us to stay away.</p>
-
-            <p>I think that’s where my love for history really began, in the dark shadows of those ruins.</p>
-
-            <p>But by the time I was six or seven, the play ended.</p>
-
-            <p>I started working in a metal factory.</p>
-
-            <p>It was heavy, mechanical work—too heavy for a child—but that factory is actually what taught me to love reading.</p>
-
-            <p>I hated the grease and the hard labor so much that I knew school was my only way out.</p>
-
-            <h3>The 65-Piastre Dream</h3>
-
-            <p>I became obsessed with books.</p>
-
-            <p>Once I finished my schoolbooks, I needed more.</p>
-
-            <p>Back then, I earned a salary of 25 piastres a week at the factory.</p>
-
-            <p>My dad would give me an extra 5 piastres on our day off, so I had 30 piastres for the whole week.</p>
-
-            <p>Most kids would have bought sweets, but I saved every single coin.</p>
-
-            <p>If I saved for two weeks, I could finally afford a "big book" for 60 or 65 piastres.</p>
-
-            <p>It would take me a whole week to read it, and those pages were my real home.</p>
-
-            <h3>From Housekeeping to Dahab</h3>
-
-            <p>Eventually, I headed to Cairo.</p>
-
-            <p>I worked so many different jobs, just trying to find my way.</p>
-
-            <p>One day, I met someone who told me, "Come work in Dahab."</p>
-
-            <p>I didn't even know what Dahab was!</p>
-
-            <p>But I liked to try new things.</p>
-
-            <p>I started at the very bottom, doing housekeeping in a campsite.</p>
-
-            <p>From there, I worked my way up to being a receptionist, and eventually, I became a manager.</p>
-
-            <p>I traveled everywhere for work—Cairo, Luxor, Aswan—learning every part of the tourism world.</p>
-
-            <h3>Finding the Desert (and Annet)</h3>
-
-            <p>In 2005, my brother Bob joined me, and we decided to take a leap and start our own company.</p>
-
-            <p>We started leading tours into the desert.</p>
-
-            <p>I fell in love with the silence there.</p>
-
-            <p>Most people don't realize how rich the Sinai is—it has history from the Stone Age and the very first alphabets.</p>
-
-            <p>It’s a quiet, ancient place that speaks to you.</p>
-
-            <p>It was on one of those desert trips that I met Annet.</p>
-
-            <p>We fell in love, and that’s when our real journey together began.</p>
-
-            <p class="mb-0">Looking back at the boy in the metal factory, I realize that every piastre I saved and every book I read was leading me right here: to the quiet of the desert and a life I built with my own hands.</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider my-5"></div>
-
-      <!-- Annet -->
-      <section class="editorial-section wow fadeInUp" data-wow-delay="0.2s">
-        <div class="editorial-block">
-          <div class="editorial-copy">
-            <figure class="portrait-figure portrait-right">
-              <img src="img/annet-editorial.jpg" alt="Annet portrait">
-              <figcaption class="portrait-caption">
-                Annet — historian, researcher, and co-creator of Desert &amp; River.
-              </figcaption>
-            </figure>
-
-            <span class="eyebrow">Guide story</span>
-            <h2 class="story-name">Annet</h2>
-            <p class="story-kicker">History first, then language, then the desert that changed everything.</p>
-
-            <p>I was born in the Netherlands in 1974, into a home filled with books, stories, and a deep love for history. While other children played, I was fascinated by something invisible to most people — the idea that beneath our feet lay entire worlds. Romans. Medieval villages. Prehistoric tribes. Layers of time resting quietly in the soil.</p>
-
-            <p>If you dug into the ground, you might find a coin, a piece of pottery, a fragment of someone’s life from centuries ago.</p>
-
-            <p>When my teachers asked what I wanted to be, I answered without hesitation: an archaeologist. I didn’t fully understand the profession — but I understood wonder. I understood treasure. I understood the magic of uncovering stories buried by time.</p>
-
-            <p>My mother encouraged that dream. She gave me a book about archaeology in the Netherlands, filled with photographs of discoveries pulled from the earth. I was especially fascinated by the ancient stone tombs in the north — the Hunebedden — massive stones arranged thousands of years ago. People once believed giants had built them. In fact, they are 5,000-year-old burial chambers. They still stand in the open landscape, silent witnesses to a distant past.</p>
-
-            <p>History wasn’t just something in books. It was alive.</p>
-
-            <p>At the same time, I discovered another passion: languages. Words came easily to me, and with them came a longing for distant places. Travel called to me. So after completing a degree in history, I made a practical but adventurous decision — I would become a translator. This was before anyone spoke about “digital nomads,” but I already dreamed of a life without borders. If I could translate, I could work from anywhere in the world.</p>
-
-            <h3>And then Egypt happened</h3>
-
-            <p>On a trip with my brother and sister-in-law, I visited Dahab. One evening, we drove into the desert. We had dinner under an endless sky. The silence was vast. The stars felt close enough to touch. Something shifted inside me that night. Two nights in the desert were not enough.</p>
-
-            <p>So we booked a longer trip with a local desert guide — Joseph.</p>
-
-            <p>We traveled deep into Sinai, to the ancient temple of Hathor at Serabit el-Khadim — a place few visitors ever see. There, in the middle of the desert, surrounded by ruins older than imagination, something extraordinary happened.</p>
-
-            <p>We fell in love.</p>
-
-            <p>At the temple of Hathor, the ancient Egyptian goddess of love.</p>
-
-            <p>It felt almost written in the stones.</p>
-
-            <p>When I returned to the Netherlands, my heart did not stay there. I came back to Egypt — to Joseph, to the desert, to the history hidden in the mountains of Sinai.</p>
-
-            <p>We discovered that we shared the same passion: a deep love for history and for the quiet power of the desert. And as we explored more, we realized something surprising — so few people truly knew the history of Sinai. Its ancient trade routes. Its temples. Its inscriptions. Its forgotten stories.</p>
-
-            <p>So we decided to change that.</p>
-
-            <p>We began researching, studying, walking the paths ourselves. We didn’t want to offer just desert trips. We wanted to offer journeys through time. To stand in ancient places and tell the real stories. To let people feel what we felt — that history is not dead. It is waiting.</p>
-
-            <p class="mb-0">And that is how our life together began — with love, with history, and with the desert as our witness.</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider my-5"></div>
-
-      <!-- Shared ethos -->
-      <section class="editorial-section pt-0 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="about-intro-card">
-          <div class="row g-4">
-            <div class="col-lg-8">
-              <span class="eyebrow">How we travel</span>
-              <h3 class="story-name mb-3" style="font-size: clamp(1.6rem, 3vw, 2.2rem);">What we believe a desert journey should be</h3>
-
-              <p>Too often, camels are overloaded with water, camping gear, and heavy supplies simply to save the cost of a support vehicle. It may look romantic, but it is hard on the animals. For us, well-being comes first. On our Desert and River journeys, we always bring a backup car to carry the equipment, food, water, and camping gear. The camels carry only light blankets so guests can sit comfortably. When we travel with camels, we even bring good food for them.</p>
-
-              <p>And of course, we bring wonderful food for ourselves. Every night we cook something special over the open fire. We make pizza, different kinds of bread, desserts like banana split and apple crumble. We constantly invent new recipes that can be prepared in the desert. Sharing meals under the stars is part of the magic.</p>
-
-              <p>We visit famous places if guests wish—such as Colored Canyon and Arada Canyon—but we refuse to rush. We don’t pack Colored Canyon, White Canyon in Hodra, Arada Canyon, Mushroom Stone and everything else into one hurried day with ten minutes here and five minutes there. We take our time. We look at inscriptions. We feel the silence. We sleep under the stars. We allow the desert to be experienced, not consumed.</p>
-
-              <p>We also talk—about Bedouin life, Egyptian daily life, traditions, history, and modern realities. Guests who spend three days with us during a two-week holiday often tell us that those three days were the most meaningful part of their entire trip. They learned more, saw more, and experienced more deeply than in all the other days combined.</p>
-
-              <p>In 2026, we finally created Desert and River together—a reflection of everything we believe in. Our journeys are about truth, about the birthplace of the alphabet, 5,000-year-old tombs, 12,000-year-old cave art—but also about care, time, connection, and love for this extraordinary land.</p>
-
-              <p class="mb-0">We simply give people what we have: our love for the desert, our respect for its animals, our passion for history, and the quiet magic of sleeping beneath a sky full of stars.</p>
-            </div>
-
-            <div class="col-lg-4">
-              <div class="trust-panel">
-                <h4>A note on pace</h4>
-                <p class="mb-4">
-                  Silence, heat, bumpy travel, and simplicity are part of the reality. We don’t romanticise it — we respect it. The land, conditions, and guide wisdom determine decisions.
-                </p>
-
-                <h5 class="mb-3">Responsible desert work</h5>
-                <p class="mb-0">
-                  We operate with permits, compliance, insurance, and duty of care in place — and we plan with abundant preparation: vehicles, fuel, food, water, and contingency are always part of responsible desert work.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider my-5"></div>
-
-      <!-- Small gallery -->
-      <section class="editorial-section pt-0 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="text-center mb-4">
-          <span class="eyebrow">A few moments</span>
-          <h3 class="story-name mb-2" style="font-size: clamp(1.8rem, 3vw, 2.4rem);">A small gallery</h3>
-          <p class="editorial-subtitle">
-            Add quiet portraits, guiding moments, camp life, walking shots, and one or two natural candid images.
-          </p>
-        </div>
-
-        <div class="mini-gallery">
-          <div class="mini-gallery-grid">
-            <a href="img/about-gallery-01.jpg" class="mini-gallery-item gallery-large">
-              <img src="img/about-gallery-01.jpg" alt="Joseph and Annet in the desert together">
-            </a>
-
-            <a href="img/about-gallery-02.jpg" class="mini-gallery-item gallery-small">
-              <img src="img/about-gallery-02.jpg" alt="Joseph during a guided desert journey">
-            </a>
-
-            <a href="img/about-gallery-03.jpg" class="mini-gallery-item gallery-small">
-              <img src="img/about-gallery-03.jpg" alt="Annet in the Sinai desert landscape">
-            </a>
-
-            <a href="img/about-gallery-04.jpg" class="mini-gallery-item gallery-small">
-              <img src="img/about-gallery-04.jpg" alt="Camp life and meals under the stars">
-            </a>
-
-            <a href="img/about-gallery-05.jpg" class="mini-gallery-item gallery-small">
-              <img src="img/about-gallery-05.jpg" alt="Walking through desert terrain in Sinai">
-            </a>
-
-            <a href="img/about-gallery-06.jpg" class="mini-gallery-item gallery-large">
-              <img src="img/about-gallery-06.jpg" alt="A quiet shared desert moment at sunset">
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-divider my-5"></div>
-
-      <!-- Trust + CTA -->
-      <section class="pb-2 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="row g-4 align-items-stretch">
-          <div class="col-lg-8">
-            <div class="trust-panel">
-              <h4 class="mb-4">What our work protects</h4>
-
-              <div class="trust-list">
-                <div class="trust-item">
-                  <strong><i class="fas fa-leaf text-primary me-2"></i>Fragile environments</strong>
-                  <span>We actively limit access, keep groups small, and organise clean-up trips when needed.</span>
-                </div>
-
-                <div class="trust-item">
-                  <strong><i class="fas fa-handshake text-primary me-2"></i>Bedouin relationships</strong>
-                  <span>We travel by permission, not entitlement — and we give back materially and respectfully.</span>
-                </div>
-
-                <div class="trust-item">
-                  <strong><i class="fas fa-compass text-primary me-2"></i>Integrity of the experience</strong>
-                  <span>No daily departures, no spectacle. Presence and listening come first.</span>
-                </div>
-
-                <div class="trust-item">
-                  <strong><i class="fas fa-shield-alt text-primary me-2"></i>Safety and duty of care</strong>
-                  <span>Permits, planning, and abundant preparation are non-negotiable.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="cta-panel">
-              <h4 class="mb-3">Start with a call</h4>
-              <p class="mb-3 text-body">
-                Tell us your timeframe, interests, and travel style. We’ll advise what’s realistic, respectful, and worth doing.
-              </p>
-              <a href="https://calendly.com/desertandriver2026/30min" target="_blank" rel="noopener" class="btn btn-primary rounded-pill py-3 px-4 w-100 mb-2">
-                Book a 30-minute call
-              </a>
-              <a href="https://wa.me/201060200950" target="_blank" rel="noopener" class="btn btn-secondary rounded-pill py-3 px-4 w-100">
-                Message on WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
+</div>
+<!-- Header End -->
+
+<div class="container py-5">
+  <div class="row g-5 align-items-center">
+    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+      <img src="img/about-team.jpg" class="img-fluid rounded-2xl shadow-soft" alt="Joseph and Annet in the desert">
+    </div>
+    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
+      <h2 class="display-5 mb-3">Journeys Beyond the Ordinary</h2>
+      <p class="mb-3">
+        We first met in the desert, at the Temple of Hathor in Sinai, where Joseph was guiding a trip I had taken with my brother and sister-in-law. None of us knew then that this meeting would shape the rest of our lives. That journey did more than introduce us—it sparked a deep love for the desert and its hidden history.
+</p>
+
+<p>
+Joseph had already begun building his path. In 2005, he founded King Safari with his brother Bob. In 2008, his wife Irina joined and helped build the company further. That same year, Annette came as well, and the four of us shaped King Safari together. Through passion, hard work, and countless days in the mountains and valleys of Sinai, the company grew.
+</p>
+
+<p>
+Then in 2011, the revolution came, bringing uncertainty and challenge. But we stayed. We believed in the desert, and we believed in what we were building. In 2015, the four of us also created Sababa Hotel, and in 2020, we opened Lydia Hotel—continuing to grow, always together.
+</p>
+
+<p>
+By 2025, something shifted inside us. Joseph and Annette found themselves longing for something more personal again. We both deeply love the desert—being under the stars, walking through silence, watching the animals. We love all animals: cats, dogs, camels. And we began thinking carefully about how desert trips should truly be done.
+</p>
+
+<p>
+Too often, camels are overloaded with water, camping gear, and heavy supplies simply to save the cost of a support vehicle. It may look romantic, but it is hard on the animals. For us, well-being comes first. On our Desert and River journeys, we always bring a backup car to carry the equipment, food, water, and camping gear. The camels carry only light blankets so guests can sit comfortably. When we travel with camels, we even bring good food for them.
+</p>
+
+<p>
+And of course, we bring wonderful food for ourselves. Every night we cook something special over the open fire. We make pizza, different kinds of bread, desserts like banana split and apple crumble. We constantly invent new recipes that can be prepared in the desert. Sharing meals under the stars is part of the magic.
+</p>
+
+<p>
+We visit famous places if guests wish—such as Colored Canyon and Arada Canyon—but we refuse to rush. We don’t pack Colored Canyon, White Canyon in Hodra, Arada Canyon, Mushroom Stone and everything else into one hurried day with ten minutes here and five minutes there. We take our time. We look at inscriptions. We feel the silence. We sleep under the stars. We allow the desert to be experienced, not consumed.
+</p>
+
+<p>
+We also talk—about Bedouin life, Egyptian daily life, traditions, history, and modern realities. Guests who spend three days with us during a two-week holiday often tell us that those three days were the most meaningful part of their entire trip. They learned more, saw more, and experienced more deeply than in all the other days combined.
+</p>
+
+<p>
+In 2026, we finally created Desert and River together—a reflection of everything we believe in. Our journeys are about truth, about the birthplace of the alphabet, 5,000-year-old tombs, 12,000-year-old cave art—but also about care, time, connection, and love for this extraordinary land.
+</p>
+
+<p>
+We simply give people what we have: our love for the desert, our respect for its animals, our passion for history, and the quiet magic of sleeping beneath a sky full of stars.
+</p>
+      <p class="mb-4">
+        We operate with permits, compliance, insurance, and duty of care in place — and we plan with abundant preparation:
+        vehicles, fuel, food, water, and contingency are always part of responsible desert work.
+      </p>
+
+      <div class="p-4 rounded-2xl card-dr shadow-soft">
+        <h5 class="mb-2">A note on pace</h5>
+        <p class="mb-0">
+          Silence, heat, bumpy travel, and simplicity are part of the reality. We don’t romanticise it — we respect it.
+          The land, conditions, and guide wisdom determine decisions.
+        </p>
+      </div>
     </div>
   </div>
 
-  <!-- Footer Start -->
-  <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-    <div class="container py-5">
-      <div class="row g-5">
+  <div class="section-divider my-5"></div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="footer-item d-flex flex-column">
-            <h4 class="text-white mb-4">Desert &amp; River</h4>
+  <div class="text-center mx-auto mb-4" style="max-width: 850px;">
+    <h3 class="display-6 mb-2">Meet your guides</h3>
+    <p class="text-body mb-0">Learn where their passion came from</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="p-4 rounded-2xl card-dr h-100 shadow-soft">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-4">
+            <img src="img/joseph.jpg" class="img-fluid rounded-2xl" alt="Joseph portrait placeholder">
+          </div>
+          <div class="col-md-8">
+            <h4 class="mb-2">Joseph</h4>
             <p class="mb-3">
-              Small, ethically guided desert journeys in the Sinai region — designed around pace, care, and real relationship with land and people.
+            <p class="mb-3">
+ <p class="mb-3">
+  I was born in March 1977, in a small village near Sohag.
+</p>
+
+<p class="mb-3">
+  When I was just a little boy—maybe three or four years old—my world was full of secrets.
+</p>
+
+<p class="mb-3">
+  Right beneath our local church, there was a hidden world of ancient Egyptian and old Christian history.
+</p>
+
+<p class="mb-3">
+  My friends and I used to sneak in there to play, even though the elders always warned us to stay away.
+</p>
+
+<p class="mb-4">
+  I think that’s where my love for history really began, in the dark shadows of those ruins.
+</p>
+
+<p class="mb-3">
+  But by the time I was six or seven, the play ended.
+</p>
+
+<p class="mb-3">
+  I started working in a metal factory.
+</p>
+
+<p class="mb-3">
+  It was heavy, mechanical work—too heavy for a child—but that factory is actually what taught me to love reading.
+</p>
+
+<p class="mb-4">
+  I hated the grease and the hard labor so much that I knew school was my only way out.
+</p>
+
+<h3 class="h5 mt-4 mb-2">The 65-Piastre Dream</h3>
+
+<p class="mb-3">
+  I became obsessed with books.
+</p>
+
+<p class="mb-3">
+  Once I finished my schoolbooks, I needed more.
+</p>
+
+<p class="mb-3">
+  Back then, I earned a salary of 25 piastres a week at the factory.
+</p>
+
+<p class="mb-3">
+  My dad would give me an extra 5 piastres on our day off, so I had 30 piastres for the whole week.
+</p>
+
+<p class="mb-3">
+  Most kids would have bought sweets, but I saved every single coin.
+</p>
+
+<p class="mb-3">
+  If I saved for two weeks, I could finally afford a "big book" for 60 or 65 piastres.
+</p>
+
+<p class="mb-4">
+  It would take me a whole week to read it, and those pages were my real home.
+</p>
+
+<h3 class="h5 mt-4 mb-2">From Housekeeping to Dahab</h3>
+
+<p class="mb-3">
+  Eventually, I headed to Cairo.
+</p>
+
+<p class="mb-3">
+  I worked so many different jobs, just trying to find my way.
+</p>
+
+<p class="mb-3">
+  One day, I met someone who told me, "Come work in Dahab."
+</p>
+
+<p class="mb-3">
+  I didn't even know what Dahab was!
+</p>
+
+<p class="mb-3">
+  But I liked to try new things.
+</p>
+
+<p class="mb-3">
+  I started at the very bottom, doing housekeeping in a campsite.
+</p>
+
+<p class="mb-3">
+  From there, I worked my way up to being a receptionist, and eventually, I became a manager.
+</p>
+
+<p class="mb-4">
+  I traveled everywhere for work—Cairo, Luxor, Aswan—learning every part of the tourism world.
+</p>
+
+<h3 class="h5 mt-4 mb-2">Finding the Desert (and Annet)</h3>
+
+<p class="mb-3">
+  In 2005, my brother Bob joined me, and we decided to take a leap and start our own company.
+</p>
+
+<p class="mb-3">
+  We started leading tours into the desert.
+</p>
+
+<p class="mb-3">
+  I fell in love with the silence there.
+</p>
+
+<p class="mb-3">
+  Most people don't realize how rich the Sinai is—it has history from the Stone Age and the very first alphabets.
+</p>
+
+<p class="mb-4">
+  It’s a quiet, ancient place that speaks to you.
+</p>
+
+<p class="mb-3">
+  It was on one of those desert trips that I met Annet.
+</p>
+
+<p class="mb-3">
+  We fell in love, and that’s when our real journey together began.
+</p>
+
+<p class="mb-3">
+  Looking back at the boy in the metal factory, I realize that every piastre I saved and every book I read was leading me right here: to the quiet of the desert and a life I built with my own hands.
+</p>
             </p>
-            <div class="d-flex align-items-center">
-              <a class="btn btn-secondary btn-sm-square rounded-circle me-2"
-                 href="https://www.tiktok.com/@desert_and_river" target="_blank" rel="noopener" aria-label="TikTok">
-                <i class="fab fa-tiktok"></i>
-              </a>
-              <a class="btn btn-secondary btn-sm-square rounded-circle me-2"
-                 href="https://wa.me/201060200950" target="_blank" rel="noopener" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-              <a class="btn btn-secondary btn-sm-square rounded-circle me-0"
-                 href="mailto:info@desertandriver.com" aria-label="Email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
+            <ul class="mb-0">
+             
+            </ul>
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="footer-item d-flex flex-column">
-            <h4 class="text-white mb-4">Explore</h4>
-            <div class="footer-links">
-              <a class="footer-link" href="about.html">About Us</a>
-              <a class="footer-link" href="plan-your-own-trip.html">Plan Your Own Trip</a>
-              <a class="footer-link" href="places.html">Places to Visit</a>
-              <a class="footer-link" href="blog.html">Blog Posts</a>
-              <a class="footer-link" href="gallery.html">Gallery</a>
-              <a class="footer-link" href="contact.html">Contact</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="footer-item d-flex flex-column">
-            <h4 class="text-white mb-4">Contact</h4>
-            <div class="footer-links">
-              <a class="footer-link" href="https://wa.me/201060200950" target="_blank" rel="noopener">WhatsApp: +201063864837</a>
-              <a class="footer-link" href="mailto:info@desertandriver.com">Email: info@desertandriver.com</a>
-              <a class="footer-link" href="https://calendly.com/desertandriver2026/30min" target="_blank" rel="noopener">Book a call</a>
-              <a class="footer-link" href="https://www.tiktok.com/@desert_and_river" target="_blank" rel="noopener">TikTok: @desert_and_river</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="footer-item d-flex flex-column">
-            <h4 class="text-white mb-4">Legal</h4>
-            <div class="footer-links">
-              <a class="footer-link" href="terms-and-conditions.html">Terms &amp; Conditions</a>
-              <a class="footer-link" href="privacy-policy.html">Privacy Policy</a>
-              <a class="footer-link" href="cookie-policy.html">Cookie Policy</a>
-              <a class="footer-link" href="disclaimer.html">Disclaimer</a>
-            </div>
-
-            <div class="mt-3 small text-white-50">
-              <span>© <span id="yearNow"></span> Desert &amp; River</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- Footer End -->
-
-  <!-- Copyright Start -->
-  <div class="container-fluid copyright py-4">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-6 text-center text-md-start mb-md-0">
-          <span class="text-body">
-            <a href="index.html" class="border-bottom text-white">
-              <i class="fas fa-copyright text-light me-2"></i>Desert & River
-            </a> — All rights reserved.
-          </span>
-        </div>
-        <div class="col-md-6 text-center text-md-end text-body">
-          Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
         </div>
       </div>
     </div>
+
+    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+      <div class="p-4 rounded-2xl card-dr h-100 shadow-soft">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-4">
+            <img src="img/annet.jpg" class="img-fluid rounded-2xl" alt="Annet portrait placeholder">
+          </div>
+          <div class="col-md-8">
+            <h4 class="mb-2">Annet</h4>
+            <p class="mb-3">
+           <p class="mb-3">
+  I was born in the Netherlands in 1974, into a home filled with books, stories, and a deep love for history. While other children played, I was fascinated by something invisible to most people — the idea that beneath our feet lay entire worlds. Romans. Medieval villages. Prehistoric tribes. Layers of time resting quietly in the soil.
+</p>
+
+<p class="mb-3">
+  If you dug into the ground, you might find a coin, a piece of pottery, a fragment of someone’s life from centuries ago.
+</p>
+
+<p class="mb-3">
+  When my teachers asked what I wanted to be, I answered without hesitation: an archaeologist. I didn’t fully understand the profession — but I understood wonder. I understood treasure. I understood the magic of uncovering stories buried by time.
+</p>
+
+<p class="mb-3">
+  My mother encouraged that dream. She gave me a book about archaeology in the Netherlands, filled with photographs of discoveries pulled from the earth. I was especially fascinated by the ancient stone tombs in the north — the Hunebedden — massive stones arranged thousands of years ago. People once believed giants had built them. In fact, they are 5,000-year-old burial chambers. They still stand in the open landscape, silent witnesses to a distant past.
+</p>
+
+<p class="mb-3">
+  History wasn’t just something in books. It was alive.
+</p>
+
+<p class="mb-3">
+  At the same time, I discovered another passion: languages. Words came easily to me, and with them came a longing for distant places. Travel called to me. So after completing a degree in history, I made a practical but adventurous decision — I would become a translator. This was before anyone spoke about “digital nomads,” but I already dreamed of a life without borders. If I could translate, I could work from anywhere in the world.
+</p>
+
+<h3 class="h5 mt-4 mb-2">And then Egypt happened</h3>
+
+<p class="mb-3">
+  On a trip with my brother and sister-in-law, I visited Dahab. One evening, we drove into the desert. We had dinner under an endless sky. The silence was vast. The stars felt close enough to touch. Something shifted inside me that night. Two nights in the desert were not enough.
+</p>
+
+<p class="mb-3">
+  So we booked a longer trip with a local desert guide — Joseph.
+</p>
+
+<p class="mb-3">
+  We traveled deep into Sinai, to the ancient temple of Hathor at Serabit el-Khadim — a place few visitors ever see. There, in the middle of the desert, surrounded by ruins older than imagination, something extraordinary happened.
+</p>
+
+<p class="mb-3">
+  We fell in love.
+</p>
+
+<p class="mb-3">
+  At the temple of Hathor, the ancient Egyptian goddess of love.
+</p>
+
+<p class="mb-3">
+  It felt almost written in the stones.
+</p>
+
+<p class="mb-3">
+  When I returned to the Netherlands, my heart did not stay there. I came back to Egypt — to Joseph, to the desert, to the history hidden in the mountains of Sinai.
+</p>
+
+<p class="mb-3">
+  We discovered that we shared the same passion: a deep love for history and for the quiet power of the desert. And as we explored more, we realized something surprising — so few people truly knew the history of Sinai. Its ancient trade routes. Its temples. Its inscriptions. Its forgotten stories.
+</p>
+
+<p class="mb-3">
+  So we decided to change that.
+</p>
+
+<p class="mb-3">
+  We began researching, studying, walking the paths ourselves. We didn’t want to offer just desert trips. We wanted to offer journeys through time. To stand in ancient places and tell the real stories. To let people feel what we felt — that history is not dead. It is waiting.
+</p>
+
+<p class="mb-3">
+  And that is how our life together began — with love, with history, and with the desert as our witness.
+</p>
+
+
+            </p>
+            <ul class="mb-0">
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- Copyright End -->
 
-  <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top">
-    <i class="fa fa-arrow-up"></i>
-  </a>
+  <div class="section-divider my-5"></div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var el = document.getElementById("yearNow");
-      if (el) el.textContent = new Date().getFullYear();
-    });
-  </script>
+  <div class="row g-4 align-items-stretch">
+    <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="p-4 rounded-2xl card-dr h-100 shadow-soft">
+        <h4 class="mb-3">What our work protects</h4>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <p class="mb-2"><i class="fas fa-leaf text-primary me-2"></i>Fragile environments</p>
+            <p class="text-body mb-0">We actively limit access, keep groups small, and organise clean-up trips when needed.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="mb-2"><i class="fas fa-handshake text-primary me-2"></i>Bedouin relationships</p>
+            <p class="text-body mb-0">We travel by permission, not entitlement — and we give back materially and respectfully.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="mb-2"><i class="fas fa-compass text-primary me-2"></i>Integrity of the experience</p>
+            <p class="text-body mb-0">No daily departures, no spectacle. Presence and listening come first.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="mb-2"><i class="fas fa-shield-alt text-primary me-2"></i>Safety and duty of care</p>
+            <p class="text-body mb-0">Permits, planning, and abundant preparation are non-negotiable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="js/main.js"></script>
+    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+      <div class="p-4 rounded-2xl card-dr h-100 shadow-soft">
+        <h4 class="mb-3">Start with a call</h4>
+        <p class="mb-3 text-body">Tell us your timeframe, interests, and travel style. We’ll advise what’s realistic, respectful, and worth doing.</p>
+        <a href="https://calendly.com/desertandriver2026/30min" target="_blank" rel="noopener" class="btn btn-primary rounded-pill py-3 px-4 w-100 mb-2">Book a 30-minute call</a>
+        <a href="https://wa.me/201060200950" target="_blank" rel="noopener" class="btn btn-secondary rounded-pill py-3 px-4 w-100">Message on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+  <div class="container py-5">
+    <div class="row g-5">
+
+      <!-- Column 1: Brand -->
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-white mb-4">Desert &amp; River</h4>
+          <p class="mb-3">
+            Small, ethically guided desert journeys in the Sinai region — designed around pace, care, and real relationship with land and people.
+          </p>
+          <div class="d-flex align-items-center">
+            <a class="btn btn-secondary btn-sm-square rounded-circle me-2"
+               href="https://www.tiktok.com/@desert_and_river" target="_blank" rel="noopener" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a class="btn btn-secondary btn-sm-square rounded-circle me-2"
+               href="https://wa.me/201060200950" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="btn btn-secondary btn-sm-square rounded-circle me-0"
+               href="mailto:info@desertandriver.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Explore -->
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-white mb-4">Explore</h4>
+          <div class="footer-links">
+            <a class="footer-link" href="about.html">About Us</a>
+            <a class="footer-link" href="plan-your-own-trip.html">Plan Your Own Trip</a>
+            <a class="footer-link" href="places.html">Places to Visit</a>
+            <a class="footer-link" href="blog.html">Blog Posts</a>
+            <a class="footer-link" href="gallery.html">Gallery</a>
+            <a class="footer-link" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 3: Contact -->
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-white mb-4">Contact</h4>
+          <div class="footer-links">
+            <a class="footer-link" href="https://wa.me/201060200950" target="_blank" rel="noopener">WhatsApp: +201063864837</a>
+            <a class="footer-link" href="mailto:info@desertandriver.com">Email: info@desertandriver.com</a>
+            <a class="footer-link" href="https://calendly.com/desertandriver2026/30min" target="_blank" rel="noopener">Book a call</a>
+            <a class="footer-link" href="https://www.tiktok.com/@desert_and_river" target="_blank" rel="noopener">TikTok: @desert_and_river</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 4: Legal -->
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-white mb-4">Legal</h4>
+          <div class="footer-links">
+            <a class="footer-link" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a class="footer-link" href="privacy-policy.html">Privacy Policy</a>
+            <a class="footer-link" href="cookie-policy.html">Cookie Policy</a>
+            <a class="footer-link" href="disclaimer.html">Disclaimer</a>
+          </div>
+
+          <div class="mt-3 small text-white-50">
+            <span>© <span id="yearNow"></span> Desert &amp; River</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var el = document.getElementById("yearNow");
+    if (el) el.textContent = new Date().getFullYear();
+  });
+</script>
+
+<script>
+  // Optional: auto-update year
+  document.addEventListener("DOMContentLoaded", function(){
+    var el = document.getElementById("yearNow");
+    if (el) el.textContent = new Date().getFullYear();
+  });
+</script>
+
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-4">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-6 text-center text-md-start mb-md-0">
+        <span class="text-body"><a href="index.html" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Desert & River</a> — All rights reserved.</span>
+      </div>
+      <div class="col-md-6 text-center text-md-end text-body">
+        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Copyright End -->
+
+<a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
