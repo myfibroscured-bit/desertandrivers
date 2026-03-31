@@ -917,3 +917,12 @@ a:hover{ color: #55382B; }
     flex-direction: column;
   }
 }
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-features {
+    flex-direction: column;
+  }
+}
