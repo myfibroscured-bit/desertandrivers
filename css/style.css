@@ -866,3 +866,38 @@ a:hover{ color: #55382B; }
   border-color: #1DA851 !important;
   color: #ffffff !important;
 }
+/* === ABOUT SECTION UPGRADE (SAFE) === */
+
+.about-row {
+  align-items: stretch;
+}
+
+.about-img {
+  height: 100%;
+}
+
+.about-img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Make feature boxes feel premium */
+.about-item .card-dr {
+  transition: all 0.3s ease;
+}
+
+.about-item .card-dr:hover {
+  transform: translateY(-5px);
+}
+
+/* Improve spacing */
+.about-item p {
+  max-width: 520px;
+}
+
+/* Mobile tidy */
+@media (max-width: 768px) {
+  .about-img {
+    height: 300px;
+  }
+}
