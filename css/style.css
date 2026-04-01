@@ -1058,14 +1058,14 @@ a:hover{ color: #55382B; }
   height: 72px !important;
   border-radius: 50% !important;
   background: #f6f1e8 !important;
-  border: 1px solid rgba(90, 74, 58, 0.12) !important;
+  border: 1px solid rgba(16, 44, 87, 0.10) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
   position: relative;
   z-index: 3;
-  color: #6f7f6a !important;
+  color: #5f8fc4 !important;
   font-size: 1.3rem !important;
   flex-shrink: 0 !important;
 }
