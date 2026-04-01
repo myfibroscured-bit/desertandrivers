@@ -1133,3 +1133,50 @@ a:hover{ color: #55382B; }
     padding: 22px 18px !important;
   }
 }
+/* ===== Comparison Section Mobile Fix ===== */
+@media (max-width: 767.98px) {
+
+  .comparison-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .comparison-pill {
+    width: 42%;
+    max-width: 42%;
+    min-height: 92px;
+    padding: 12px 10px;
+    border-radius: 18px;
+    font-size: 0.82rem;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .comparison-icon-wrap {
+    width: 16%;
+    min-width: 16%;
+    height: 44px;
+    margin: 0;
+  }
+
+  .comparison-line {
+    display: block;
+  }
+
+  .comparison-icon-circle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .comparison-icon-circle i {
+    font-size: 0.95rem;
+  }
+
+}
