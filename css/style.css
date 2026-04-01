@@ -901,183 +901,186 @@ a:hover{ color: #55382B; }
     height: 300px;
   }
 }
+/* ===== Plan Your Trip Section ===== */
+
 .plan-trip-shell {
   position: relative;
 }
 
-.trip-steps-wrap {
+.plan-trip-shell .trip-steps-wrap {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.trip-step-card {
-  display: flex;
-  align-items: stretch;
+.plan-trip-shell .trip-step-card {
+  display: flex !important;
+  align-items: stretch !important;
   gap: 16px;
-  background: #f6f1e8;
-  border: 1px solid rgba(90, 74, 58, 0.10);
-  border-radius: 24px;
-  padding: 22px 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  background: #f6f1e8 !important;
+  border: 1px solid rgba(90, 74, 58, 0.10) !important;
+  border-radius: 24px !important;
+  padding: 22px 24px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  margin-bottom: 0 !important;
 }
 
-.trip-step-number {
-  min-width: 68px;
-  height: 68px;
-  border-radius: 20px;
-  background: #6f7f6a;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.06em;
-  flex-shrink: 0;
+.plan-trip-shell .trip-step-number {
+  min-width: 68px !important;
+  width: 68px !important;
+  height: 68px !important;
+  border-radius: 20px !important;
+  background: #6f7f6a !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.06em !important;
+  flex-shrink: 0 !important;
 }
 
-.trip-step-content h4 {
-  margin-bottom: 8px;
-  font-size: 1.25rem;
+.plan-trip-shell .trip-step-content h4 {
+  margin-bottom: 8px !important;
+  font-size: 1.25rem !important;
+  color: #102c57 !important;
 }
 
-.trip-step-content p {
-  margin-bottom: 0;
-  color: #5f5a53;
+.plan-trip-shell .trip-step-content p {
+  margin-bottom: 0 !important;
+  color: #5f5a53 !important;
 }
 
-.trip-step-cta {
+.plan-trip-shell .trip-step-cta {
   margin-top: 10px;
-  padding: 28px;
-  border-radius: 24px;
-  background: #fff;
+  padding: 28px !important;
+  border-radius: 24px !important;
+  background: #fff !important;
+  border: 1px solid rgba(90, 74, 58, 0.10) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
 }
 
-.river-panel {
+.plan-trip-shell .river-panel {
   position: relative;
-  padding: 30px 26px;
-  border-radius: 28px;
-  background: #fff;
+  padding: 30px 26px !important;
+  border-radius: 28px !important;
+  background: #fff !important;
   overflow: hidden;
+  border: 1px solid rgba(90, 74, 58, 0.10) !important;
 }
 
-.river-panel-copy {
+.plan-trip-shell .river-panel-copy {
   margin-bottom: 28px;
 }
 
-.river-flow {
+.plan-trip-shell .river-flow {
   position: relative;
   min-height: 640px;
   padding: 10px 0;
 }
 
-.river-line {
+.plan-trip-shell .river-line {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 90px;
+  width: 88px;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, rgba(111,127,106,0.12) 0%, rgba(111,127,106,0.22) 50%, rgba(111,127,106,0.12) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(111, 127, 106, 0.10) 0%,
+    rgba(111, 127, 106, 0.20) 50%,
+    rgba(111, 127, 106, 0.10) 100%
+  );
   border-radius: 999px;
+  z-index: 0;
 }
 
-.river-line::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  background:
-    radial-gradient(circle at 30% 15%, rgba(255,255,255,0.55) 0 16%, transparent 17%),
-    radial-gradient(circle at 70% 38%, rgba(255,255,255,0.35) 0 12%, transparent 13%),
-    radial-gradient(circle at 40% 70%, rgba(255,255,255,0.35) 0 14%, transparent 15%);
-  opacity: 0.8;
-}
-
-.river-item {
+.plan-trip-shell .river-item {
   position: relative;
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
   margin-bottom: 26px;
   min-height: 82px;
+  z-index: 2;
 }
 
-.river-item-left {
-  justify-content: flex-start;
+.plan-trip-shell .river-item-left {
+  justify-content: flex-start !important;
   padding-right: 42%;
 }
 
-.river-item-right {
-  justify-content: flex-end;
+.plan-trip-shell .river-item-right {
+  justify-content: flex-end !important;
   padding-left: 42%;
 }
 
-.river-item span {
-  display: inline-block;
-  max-width: 140px;
-  font-weight: 600;
-  color: #4c473f;
+.plan-trip-shell .river-item span {
+  display: inline-block !important;
+  max-width: 150px;
+  font-weight: 600 !important;
+  color: #4c473f !important;
   line-height: 1.35;
 }
 
-.river-item-left span {
+.plan-trip-shell .river-item-left span {
   text-align: right;
   margin-right: 18px;
 }
 
-.river-item-right span {
+.plan-trip-shell .river-item-right span {
   order: 2;
   margin-left: 18px;
 }
 
-.river-bubble {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: #f6f1e8;
-  border: 1px solid rgba(90, 74, 58, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+.plan-trip-shell .river-bubble {
+  width: 72px !important;
+  height: 72px !important;
+  border-radius: 50% !important;
+  background: #f6f1e8 !important;
+  border: 1px solid rgba(90, 74, 58, 0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
   position: relative;
-  z-index: 2;
-  color: #6f7f6a;
-  font-size: 1.3rem;
-  flex-shrink: 0;
+  z-index: 3;
+  color: #6f7f6a !important;
+  font-size: 1.3rem !important;
+  flex-shrink: 0 !important;
 }
 
-.river-note {
+.plan-trip-shell .river-note {
   margin-top: 20px;
-  padding: 20px 22px;
-  border-radius: 20px;
-  background: #f6f1e8;
-  border: 1px solid rgba(90, 74, 58, 0.08);
+  padding: 20px 22px !important;
+  border-radius: 20px !important;
+  background: #f6f1e8 !important;
+  border: 1px solid rgba(90, 74, 58, 0.08) !important;
 }
 
 @media (max-width: 991.98px) {
-  .river-flow {
+  .plan-trip-shell .river-flow {
     min-height: auto;
   }
 
-  .river-line {
+  .plan-trip-shell .river-line {
     left: 36px;
     width: 48px;
     transform: none;
   }
 
-  .river-item,
-  .river-item-left,
-  .river-item-right {
-    justify-content: flex-start;
-    padding-left: 0;
-    padding-right: 0;
+  .plan-trip-shell .river-item,
+  .plan-trip-shell .river-item-left,
+  .plan-trip-shell .river-item-right {
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
-  .river-item span,
-  .river-item-left span,
-  .river-item-right span {
+  .plan-trip-shell .river-item span,
+  .plan-trip-shell .river-item-left span,
+  .plan-trip-shell .river-item-right span {
     max-width: none;
     text-align: left;
     margin-left: 16px;
@@ -1085,29 +1088,29 @@ a:hover{ color: #55382B; }
     order: 2;
   }
 
-  .trip-step-card {
-    padding: 20px;
+  .plan-trip-shell .trip-step-card {
+    padding: 20px !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  .trip-step-card {
-    flex-direction: column;
+  .plan-trip-shell .trip-step-card {
+    flex-direction: column !important;
   }
 
-  .trip-step-number {
-    min-width: 58px;
-    width: 58px;
-    height: 58px;
-    border-radius: 16px;
-    font-size: 1rem;
+  .plan-trip-shell .trip-step-number {
+    min-width: 58px !important;
+    width: 58px !important;
+    height: 58px !important;
+    border-radius: 16px !important;
+    font-size: 1rem !important;
   }
 
-  .river-panel {
-    padding: 24px 18px;
+  .plan-trip-shell .river-panel {
+    padding: 24px 18px !important;
   }
 
-  .trip-step-cta {
-    padding: 22px 18px;
+  .plan-trip-shell .trip-step-cta {
+    padding: 22px 18px !important;
   }
 }
