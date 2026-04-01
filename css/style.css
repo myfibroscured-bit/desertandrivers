@@ -985,18 +985,36 @@ a:hover{ color: #55382B; }
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 88px;
+  width: 110px;
   transform: translateX(-50%);
   background: linear-gradient(
     180deg,
-    rgba(111, 127, 106, 0.10) 0%,
-    rgba(111, 127, 106, 0.20) 50%,
-    rgba(111, 127, 106, 0.10) 100%
+    #9fc3e6 0%,
+    #7da8d6 35%,
+    #5f8fc4 65%,
+    #4d7fb7 100%
+  );
+  border-radius: 45% 55% 50% 50% / 8% 10% 8% 10%;
+  z-index: 0;
+  opacity: 0.95;
+  box-shadow: inset 10px 0 18px rgba(255,255,255,0.22),
+              inset -8px 0 14px rgba(0,0,0,0.06);
+}
+.plan-trip-shell .river-line::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 24px;
+  width: 26px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.30) 0%,
+    rgba(255,255,255,0.10) 100%
   );
   border-radius: 999px;
-  z-index: 0;
+  transform: rotate(2deg);
 }
-
 .plan-trip-shell .river-item {
   position: relative;
   display: flex !important;
