@@ -61,13 +61,16 @@
   }
 
   .trip-step-card {
-    background: #f4efe6;
-    border: 1px solid rgba(31, 53, 87, 0.08);
-    border-radius: 24px;
-    padding: 1.2rem 1.5rem 1.25rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    text-align: center;
-  }
+  background: #f4efe6;
+  border: 1px solid rgba(31, 53, 87, 0.08);
+  border-radius: 24px;
+  padding: 1.2rem 1.5rem 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
   .trip-step-word {
     display: block;
@@ -82,19 +85,34 @@
     line-height: 1;
     margin: 0 0 0.85rem 0;
   }
+.trip-step-card > h4,
+.trip-step-card > p,
+.trip-step-card > .mt-4 {
+  width: 100%;
+}
 
-  .trip-step-card h4 {
-    font-size: 1.35rem;
-    margin-bottom: 0.45rem;
-    color: #1f3557;
-  }
+.trip-step-card > .mt-4 {
+  display: flex;
+  justify-content: center;
+}
+ .trip-step-card h4 {
+  font-size: 1.35rem;
+  margin-bottom: 0.45rem;
+  color: #1f3557;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .trip-step-card p {
-    margin-bottom: 0;
-    color: #6b6b6b;
-    line-height: 1.6;
-    font-size: 0.98rem;
-  }
+ .trip-step-card p {
+  margin-bottom: 0;
+  color: #6b6b6b;
+  line-height: 1.6;
+  font-size: 0.98rem;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
   .trip-reassurance {
     text-align: center;
@@ -411,8 +429,6 @@
 </aside>
 
 </div>
-       
-      </div>
     </div>
   </div>
 
