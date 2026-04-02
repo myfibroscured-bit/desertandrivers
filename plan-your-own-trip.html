@@ -228,7 +228,30 @@
     gap: 0.75rem;
     align-items: start;
   }
-   .trip-bubble {
+
+  .trip-side-bubbles {
+    order: 2;
+  }
+
+  .bubble-wave {
+    max-width: 760px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .bubble-row,
+  .bubble-center,
+  .bubble-left-shift,
+  .bubble-right-shift,
+  .bubble-mid-left,
+  .bubble-mid-right {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    transform: none;
+  }
+
+  .trip-bubble {
     width: 52px;
     height: 52px;
     font-size: 0.52rem;
@@ -254,34 +277,10 @@
     height: 74px;
     font-size: 0.56rem;
     padding: 8px;
-  } 
-}
-
-    .trip-side-bubbles {
-      order: 2;
-    }
-
-    .bubble-wave {
-      max-width: 760px;
-      margin: 0 auto;
-      align-items: center;
-    }
-
-    .bubble-row,
-    .bubble-center,
-    .bubble-left-shift,
-    .bubble-right-shift,
-    .bubble-mid-left,
-    .bubble-mid-right {
-      justify-content: center;
-      padding-left: 0;
-      padding-right: 0;
-      transform: none;
-    }
   }
-
+}
   @media (max-width: 767.98px) {
-   trip-step-card {
+   .trip-step-card {
   padding: 1rem 0.75rem;
 }
 
