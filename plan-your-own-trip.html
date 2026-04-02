@@ -206,7 +206,22 @@
     font-size: 0.8rem;
     padding: 14px;
   }
+/* 🌊 Bubble wave movement */
+.bubble-wave .bubble-row:nth-child(odd) {
+  transform: translateX(-12px);
+}
 
+.bubble-wave .bubble-row:nth-child(even) {
+  transform: translateX(18px);
+}
+
+.trip-side-bubbles-left .bubble-row:nth-child(3) {
+  transform: translateX(-28px);
+}
+
+.trip-side-bubbles-right .bubble-row:nth-child(2) {
+  transform: translateX(28px);
+}
   @media (max-width: 991.98px) {
   .trip-main-layout {
     grid-template-columns: 70px 1fr 70px;
