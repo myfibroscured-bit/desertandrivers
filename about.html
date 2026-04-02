@@ -138,6 +138,98 @@
       padding: 1.25rem;
     }
   }
+ .pace-band {
+  margin-bottom: 1.5rem;
+}
+
+.pace-band-inner {
+  background: linear-gradient(135deg, rgba(123, 82, 59, 0.08), rgba(123, 82, 59, 0.03));
+  border: 1px solid rgba(123, 82, 59, 0.14);
+  border-left: 5px solid #7b523b;
+  border-radius: 1.5rem;
+  padding: 1.5rem 1.5rem;
+}
+
+.pace-band-inner h4 {
+  margin-bottom: 0.6rem;
+}
+
+.pace-band-inner p {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: #4b4b4b;
+  line-height: 1.8;
+}
+
+.protect-card,
+.conversation-card {
+  background: #fff;
+  border: 1px solid rgba(43, 43, 43, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.protect-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.protect-item {
+  background: #f8f6f3;
+  border-radius: 1.25rem;
+  padding: 1.2rem;
+  height: 100%;
+}
+
+.protect-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--bs-primary-rgb), 0.12);
+  color: var(--bs-primary);
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.protect-item h5 {
+  font-size: 1rem;
+  margin-bottom: 0.55rem;
+}
+
+.protect-item p {
+  margin-bottom: 0;
+  color: #4b4b4b;
+  line-height: 1.75;
+}
+
+.conversation-card p {
+  color: #4b4b4b;
+  line-height: 1.8;
+}
+
+.conversation-actions {
+  margin-top: auto;
+}
+
+@media (max-width: 991.98px) {
+  .protect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .protect-card,
+  .conversation-card {
+    padding: 1.35rem;
+  }
+
+  .pace-band-inner {
+    padding: 1.25rem;
+  }
+} 
 </style>
 </head>
 <body>
@@ -302,12 +394,7 @@
             Desert &amp; River grew out of that feeling: a wish to offer journeys with more time, more truth, more care for animals, and more respect for the land itself.
           </p>
 
-          <div class="story-note">
-            <h5>A note on pace</h5>
-            <p class="mb-0">
-              Silence, heat, bumpy travel, and simplicity are part of the reality. We do not romanticise it — we respect it.
-            </p>
-          </div>
+         
 
           <div class="collapse" id="storyJoint">
             <p>
@@ -419,47 +506,71 @@
     </div>
   </div>
 
-  <div class="row g-4 mt-1 align-items-stretch">
-    <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="p-4 rounded-2xl card-dr h-100 shadow-soft about-bottom-card">
-        <span class="about-label">What our work protects</span>
-        <h4 class="mb-3">What we protect when we guide</h4>
+<div class="about-philosophy mt-5">
+  <div class="pace-band wow fadeInUp" data-wow-delay="0.1s">
+    <div class="pace-band-inner">
+      <span class="about-label">A note on pace</span>
+      <h4>We do not rush the desert.</h4>
+      <p class="mb-0">
+        Silence, heat, bumpy travel, and simplicity are part of the reality. We do not romanticise it — we respect it.
+      </p>
+    </div>
+  </div>
 
-        <div class="row g-4">
-          <div class="col-md-6">
-            <p class="icon-line"><i class="fas fa-leaf text-primary me-2"></i>Fragile environments</p>
-            <p class="text-body mb-0">We actively limit access, keep groups small, and organise clean-up trips when needed.</p>
+  <div class="row g-4 mt-1 align-items-stretch">
+    <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.15s">
+      <div class="protect-card h-100">
+        <span class="about-label">What our work protects</span>
+        <h4 class="mb-4">What we protect when we guide</h4>
+
+        <div class="protect-grid">
+          <div class="protect-item">
+            <div class="protect-icon"><i class="fas fa-leaf"></i></div>
+            <h5>Fragile environments</h5>
+            <p>We actively limit access, keep groups small, and organise clean-up trips when needed.</p>
           </div>
-          <div class="col-md-6">
-            <p class="icon-line"><i class="fas fa-handshake text-primary me-2"></i>Bedouin relationships</p>
-            <p class="text-body mb-0">We travel by permission, not entitlement — and we give back materially and respectfully.</p>
+
+          <div class="protect-item">
+            <div class="protect-icon"><i class="fas fa-handshake"></i></div>
+            <h5>Bedouin relationships</h5>
+            <p>We travel by permission, not entitlement — and we give back materially and respectfully.</p>
           </div>
-          <div class="col-md-6">
-            <p class="icon-line"><i class="fas fa-compass text-primary me-2"></i>Integrity of the experience</p>
-            <p class="text-body mb-0">No daily departures, no spectacle. Presence and listening come first.</p>
+
+          <div class="protect-item">
+            <div class="protect-icon"><i class="fas fa-compass"></i></div>
+            <h5>Integrity of the experience</h5>
+            <p>No daily departures, no spectacle. Presence and listening come first.</p>
           </div>
-          <div class="col-md-6">
-            <p class="icon-line"><i class="fas fa-shield-alt text-primary me-2"></i>Safety and duty of care</p>
-            <p class="text-body mb-0">Permits, planning, and abundant preparation are non-negotiable.</p>
+
+          <div class="protect-item">
+            <div class="protect-icon"><i class="fas fa-shield-alt"></i></div>
+            <h5>Safety and duty of care</h5>
+            <p>Permits, planning, and abundant preparation are non-negotiable.</p>
           </div>
         </div>
       </div>
     </div>
 
     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-      <div class="p-4 rounded-2xl card-dr h-100 shadow-soft">
+      <div class="conversation-card h-100">
         <span class="about-label">Start with a call</span>
         <h4 class="mb-3">Start with a conversation</h4>
-        <p class="mb-3 text-body">
+        <p class="mb-4">
           Tell us your timeframe, interests, and travel style. We’ll advise what’s realistic, respectful, and worth doing.
         </p>
-        <a href="https://calendly.com/desertandriver2026/30min" target="_blank" rel="noopener" class="btn btn-primary rounded-pill py-3 px-4 w-100 mb-2">Book a 30-minute call</a>
-        <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-whatsapp rounded-pill py-3 px-4 w-100">Message on WhatsApp</a>
+
+        <div class="conversation-actions">
+          <a href="https://calendly.com/desertandriver2026/30min" target="_blank" rel="noopener" class="btn btn-primary rounded-pill py-3 px-4 w-100 mb-3">
+            Book a 30-minute call
+          </a>
+          <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-whatsapp rounded-pill py-3 px-4 w-100">
+            Message on WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
+</div> 
 <!-- Footer Start -->
 <!-- Footer Start -->
   <!-- Footer Start -->
