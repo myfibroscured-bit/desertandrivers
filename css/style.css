@@ -1227,3 +1227,41 @@ a:hover{ color: #55382B; }
   font-weight: 700;
   margin-bottom: 10px;
 }
+.footer-social-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 48px);
+  gap: 14px 10px;
+  align-items: center;
+  justify-content: start;
+}
+
+.footer-social-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.25); /* subtle lift */
+  border-radius: 50%;
+  backdrop-filter: blur(2px);
+  transition: all 0.25s ease;
+}
+
+.footer-social-grid img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+/* Hover = THIS is what makes them pop */
+.footer-social-grid a:hover {
+  background: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.footer-social-grid a:hover img {
+  transform: scale(1.1);
+}
