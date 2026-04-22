@@ -1180,3 +1180,50 @@ a:hover{ color: #55382B; }
   }
 
 }
+.footer-social-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 44px);
+  gap: 10px 8px;
+  align-items: center;
+  justify-content: start;
+  max-width: 260px;
+}
+
+.footer-social-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  text-decoration: none;
+}
+
+.footer-social-grid img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.footer-social-grid a:hover img {
+  transform: translateY(-2px);
+}
+
+.footer-contact-column {
+  max-width: 300px;
+}
+
+.footer-contact-links .footer-link {
+  margin-bottom: 14px;
+}
+
+.footer-field-box {
+  padding-top: 4px;
+}
+
+.footer-field-title {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
