@@ -1180,7 +1180,7 @@ a:hover{ color: #55382B; }
   }
 
 }
-/* ===== Footer social + contact tidy ===== */
+/* ===== FINAL Footer social + contact (clean + aligned) ===== */
 
 .footer-social-grid {
   display: grid;
@@ -1189,7 +1189,7 @@ a:hover{ color: #55382B; }
   align-items: start;
   justify-content: start;
   max-width: 300px;
-  margin: 0 0 0 -14px;
+  margin: -10px 0 0 0; /* lifts icons up into alignment */
   padding: 0;
 }
 
@@ -1222,36 +1222,31 @@ a:hover{ color: #55382B; }
   transform: scale(1.05);
 }
 
+/* Contact column spacing fix */
 .footer-contact-column {
   max-width: 290px;
 }
 
 .footer-contact-links .footer-link {
-  padding: 4px 0 !important;
-  margin-bottom: 4px;
+  padding: 5px 0 !important;
+  margin-bottom: 5px;
   line-height: 1.45 !important;
 }
 
 .footer-contact-column p {
-  margin-top: 4px;
+  margin-top: 6px;
   margin-bottom: 0;
   line-height: 1.5;
 }
 
+/* Space between contact + field section */
 .footer-field-box {
+  margin-top: 22px !important;
   padding-top: 0;
-  margin-top: 18px !important;
 }
 
 .footer-field-title {
   display: inline-block;
   font-weight: 700;
   margin-bottom: 8px;
-}
-.footer-social-grid {
-  margin-left: -6px;
-}
-.footer-social-grid img {
-  position: relative;
-  left: -5px;
 }
