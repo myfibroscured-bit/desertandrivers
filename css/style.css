@@ -1248,3 +1248,6 @@ a:hover{ color: #55382B; }
   font-weight: 700;
   margin-bottom: 8px;
 }
+.footer-social-grid {
+  margin-left: -6px;
+}
