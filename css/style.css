@@ -1184,11 +1184,11 @@ a:hover{ color: #55382B; }
 
 .footer-social-grid {
   display: grid;
-  grid-template-columns: repeat(5, 36px);
-  gap: 8px 8px;
+  grid-template-columns: repeat(5, 52px);
+  gap: 10px 10px;
   align-items: start;
   justify-content: start;
-  max-width: 212px;
+  max-width: 300px;
   margin: 0;
   padding: 0;
 }
@@ -1197,54 +1197,54 @@ a:hover{ color: #55382B; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 52px;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.18);
   border-radius: 50%;
   transition: all 0.2s ease;
 }
 
 .footer-social-grid img {
-  width: 22px;
-  height: 22px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
   display: block;
   transition: transform 0.2s ease;
 }
 
 .footer-social-grid a:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.32);
   transform: translateY(-1px);
 }
 
 .footer-social-grid a:hover img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .footer-contact-column {
-  max-width: 280px;
+  max-width: 290px;
 }
 
 .footer-contact-links .footer-link {
-  padding: 2px 0 !important;
-  margin-bottom: 2px;
-  line-height: 1.35 !important;
+  padding: 4px 0 !important;
+  margin-bottom: 4px;
+  line-height: 1.45 !important;
 }
 
 .footer-contact-column p {
-  margin-top: 2px;
+  margin-top: 4px;
   margin-bottom: 0;
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 .footer-field-box {
   padding-top: 0;
-  margin-top: 8px !important;
+  margin-top: 18px !important;
 }
 
 .footer-field-title {
   display: inline-block;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
