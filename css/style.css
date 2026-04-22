@@ -1189,8 +1189,10 @@ a:hover{ color: #55382B; }
   align-items: start;
   justify-content: start;
   max-width: 300px;
-  margin: -10px 0 0 0; /* lifts icons up into alignment */
+  margin: -10px 0 0 0;
   padding: 0;
+  position: relative;
+  left: -12px; /* keeps icons visually aligned with text above */
 }
 
 .footer-social-grid a {
@@ -1210,6 +1212,8 @@ a:hover{ color: #55382B; }
   height: 34px;
   object-fit: contain;
   display: block;
+  position: relative;
+  left: -2px; /* shifts icon itself, not just the circle */
   transition: transform 0.2s ease;
 }
 
@@ -1222,7 +1226,6 @@ a:hover{ color: #55382B; }
   transform: scale(1.05);
 }
 
-/* Contact column spacing fix */
 .footer-contact-column {
   max-width: 290px;
 }
@@ -1239,7 +1242,6 @@ a:hover{ color: #55382B; }
   line-height: 1.5;
 }
 
-/* Space between contact + field section */
 .footer-field-box {
   margin-top: 22px !important;
   padding-top: 0;
