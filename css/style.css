@@ -1251,3 +1251,7 @@ a:hover{ color: #55382B; }
 .footer-social-grid {
   margin-left: -6px;
 }
+.footer-social-grid img {
+  position: relative;
+  left: -3px;
+}
