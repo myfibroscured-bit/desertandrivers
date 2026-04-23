@@ -1180,7 +1180,7 @@ a:hover{ color: #55382B; }
   }
 
 }
-/* ===== FINAL Footer social + contact (clean + aligned) ===== */
+/* ===== FINAL Footer social + contact ===== */
 
 .footer-social-grid {
   display: grid;
@@ -1191,8 +1191,6 @@ a:hover{ color: #55382B; }
   max-width: 300px;
   margin: -10px 0 0 0;
   padding: 0;
-  position: relative;
-  left: -12px; /* keeps icons visually aligned with text above */
 }
 
 .footer-social-grid a {
@@ -1212,8 +1210,6 @@ a:hover{ color: #55382B; }
   height: 34px;
   object-fit: contain;
   display: block;
-  position: relative;
-  left: -2px; /* shifts icon itself, not just the circle */
   transition: transform 0.2s ease;
 }
 
