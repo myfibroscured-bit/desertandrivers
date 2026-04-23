@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Journey Examples | Desert & River</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Bespoke Egypt journeys, travel examples, desert experiences" name="keywords">
+  <meta content="Explore example journeys across Egypt — from one-day introductions to extended desert odysseys." name="description">
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your Styles -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Page Header -->
+<div class="container-fluid py-5 bg-light text-center">
+  <div class="container py-4">
+    <h6 class="text-uppercase text-primary mb-2">Journey Examples</h6>
+    <h1 class="display-5 mb-3">A starting point — always bespoke</h1>
+    <p class="mb-0 text-muted">
+      These journeys are here to help you imagine scale and rhythm.  
+      Every experience is shaped around you — your time, your pace, and the conditions on the ground.
+    </p>
+  </div>
+</div>
+
+<!-- Journey Cards -->
+<div class="container py-5">
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+
+        <img src="img/journey-1.jpg" class="card-img-top" alt="One Day Experience">
+
+        <div class="card-body d-flex flex-column">
+          <small class="text-muted">An immersive introduction</small>
+          <h5 class="mt-2">One-Day Experience</h5>
+          <p class="text-primary mb-2">€300pp</p>
+
+          <p class="text-muted">
+            Perfect for curious first-time explorers — desert time, stories, and a slower rhythm beyond Dahab.
+          </p>
+
+          <!-- Hidden Expand -->
+          <div class="collapse" id="more1">
+            <p class="text-muted">
+              You might spend the day with a local Bedouin guide, exploring lesser-known valleys,
+              sharing tea, and experiencing the quiet depth of the desert — far from the usual routes.
+            </p>
+          </div>
+
+          <div class="mt-auto">
+            <a href="contact.html" class="btn btn-dark rounded-pill px-4 me-2">Plan this style</a>
+            <button class="btn btn-outline-primary rounded-pill px-4" data-bs-toggle="collapse" data-bs-target="#more1">
+              Read more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+
+        <img src="img/journey-2.jpg" class="card-img-top" alt="Six Day Journey">
+
+        <div class="card-body d-flex flex-column">
+          <small class="text-muted">Delve deeper</small>
+          <h5 class="mt-2">Six-Day Journey</h5>
+          <p class="text-primary mb-2">€1800pp</p>
+
+          <p class="text-muted">
+            Shifting landscapes, remote camps, and nights under starlit skies — with room for adaptation and rest.
+          </p>
+
+          <div class="collapse" id="more2">
+            <p class="text-muted">
+              Travel deeper into Sinai’s varied terrain, moving between mountains, wadis,
+              and open desert. Evenings are spent around the fire, with time to slow down,
+              reflect, and connect.
+            </p>
+          </div>
+
+          <div class="mt-auto">
+            <a href="contact.html" class="btn btn-dark rounded-pill px-4 me-2">Plan this style</a>
+            <button class="btn btn-outline-primary rounded-pill px-4" data-bs-toggle="collapse" data-bs-target="#more2">
+              Read more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+
+        <img src="img/journey-3.jpg" class="card-img-top" alt="Thirty Day Odyssey">
+
+        <div class="card-body d-flex flex-column">
+          <small class="text-muted">For those who want distance</small>
+          <h5 class="mt-2">Thirty-Day Odyssey</h5>
+          <p class="text-primary mb-2">€9000pp</p>
+
+          <p class="text-muted">
+            A slow-travel journey through valleys, oases, and nomadic traditions — shaped by conditions and permission.
+          </p>
+
+          <div class="collapse" id="more3">
+            <p class="text-muted">
+              This is a fully immersive experience. Travel at a natural pace, staying in remote locations,
+              guided by local knowledge and the rhythm of the land itself.
+            </p>
+          </div>
+
+          <div class="mt-auto">
+            <a href="contact.html" class="btn btn-dark rounded-pill px-4 me-2">Plan this style</a>
+            <button class="btn btn-outline-primary rounded-pill px-4" data-bs-toggle="collapse" data-bs-target="#more3">
+              Read more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Closing Section -->
+<div class="container text-center pb-5">
+  <p class="text-muted">
+    No journey is fixed. These are simply starting points — your experience will be shaped around you.
+  </p>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
