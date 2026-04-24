@@ -1197,8 +1197,8 @@ a:hover{ color: #55382B; }
   display: flex;
   align-items: center;        /* vertically center */
   justify-content: center;    /* horizontally center */
-  width: 60px;
-  height: 80px;
+  width: 54px;
+  height: 72px;
   background: rgba(255,255,255,0.22);
   border-radius: 14px;
   text-decoration: none;
