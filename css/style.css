@@ -263,19 +263,7 @@ a:hover{ color: #55382B; }
         opacity: 0;
     }
 
-   @media (min-width: 992px) {
-    .navbar-light {
-        position: relative;
-        width: 100%;
-        top: auto;
-        left: auto;
-        border-top: 0;
-        border-right: 0;
-        border-bottom: 1px solid;
-        border-left: 0;
-        border-style: dotted;
-        z-index: 999;
-    }
+   
 
     .sticky-top.navbar-light {
         position: sticky;
