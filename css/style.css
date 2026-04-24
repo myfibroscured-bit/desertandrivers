@@ -1194,15 +1194,10 @@ a:hover{ color: #55382B; }
 }
 
 .footer-social-grid a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 50%;
-  transition: all 0.2s ease;
+  width: 60px;
+  height: 80px; /* taller for icon + label */
+  background: rgba(255,255,255,0.22);
+  border-radius: 14px; /* rectangle instead of circle */
 }
 
 .footer-social-grid img {
