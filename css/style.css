@@ -286,55 +286,7 @@ a:hover{ color: #55382B; }
     }
 }
     
-    .sticky-top.navbar-light {
-        position: fixed;
-        background: var(--bs-light);
-        border: none;
-    }
-
-    .navbar-light .navbar-nav .nav-item::before {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 2px;
-        bottom: -1px;
-        left: 50%;
-        background: var(--bs-primary);
-        transition: .5s;
-    }
-
-    .sticky-top.navbar-light .navbar-nav .nav-item::before {
-        bottom: 0;
-    }
-
-    .navbar-light .navbar-nav .nav-item::after {
-        content: "";
-        position: absolute;
-        bottom: 1px;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 10px solid;
-        border-color: transparent transparent var(--bs-primary) transparent;
-        opacity: 0;
-        transition: 0.5s;
-    }
-
-    .navbar-light .navbar-nav .nav-item:hover::after,
-    .navbar-light .navbar-nav .nav-item.active::after {
-        bottom: 1px;
-        opacity: 1;
-    }
-
-    .navbar-light .navbar-nav .nav-item:hover::before,
-    .navbar-light .navbar-nav .nav-item.active::before {
-        width: calc(100% - 2px);
-        left: 1px;
-    }
-
-    .navbar-light .navbar-nav .nav-link.nav-contact::before {
-        display: none;
-    }
-}
+   
 /*** Carousel Hero Header Start ***/
 .carousel-header {
     position: relative;
