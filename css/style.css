@@ -1227,3 +1227,31 @@ body {
 .copyright {
   flex-shrink: 0;
 }
+/* === HERO SECTION FIX === */
+
+@media (min-width: 992px) {
+  .navbar-light,
+  .sticky-top.navbar-light {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+  }
+}
+
+.bg-breadcrumb {
+  min-height: 320px !important;
+  padding: 120px 0 90px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+@media (max-width: 991.98px) {
+  .bg-breadcrumb {
+    min-height: 260px !important;
+    padding: 90px 0 70px 0 !important;
+  }
+
+  .carousel .carousel-inner .carousel-item {
+    margin-top: 0 !important;
+  }
+}
