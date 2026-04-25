@@ -1299,7 +1299,7 @@ a:hover{ color: #55382B; }
 
   .comparison-brand-heading h5,
   .comparison-heading-text {
-    display: none;
+    display: block;
   }
 
   .comparison-row {
