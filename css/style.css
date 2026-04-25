@@ -1281,3 +1281,10 @@ a:hover{ color: #55382B; }
     display: none;
   }
 }
+.comparison-logo {
+  max-width: 90px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
