@@ -152,6 +152,10 @@
   <!-- Journey Examples Start -->
   <div class="container-fluid py-5">
     <div class="container py-5" id="section-1">
+  <button class="ra-btn" data-label="Listen to this section" onclick="readSection(this, 'section-1')">
+  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+  <span class="ra-label">Listen to this section</span>
+</button>
       <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 820px;">
         <h4 class="text-uppercase text-primary">Journey Examples</h4>
         <h2 class="display-4 mb-3">A starting point — always bespoke</h2>
@@ -299,6 +303,10 @@
   <!-- Footer Start -->
   <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-5" id="section-2">
+  <button class="ra-btn" data-label="Listen to this section" onclick="readSection(this, 'section-2')">
+  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+  <span class="ra-label">Listen to this section</span>
+</button>
       <div class="row g-5 align-items-start">
 
         <div class="col-md-6 col-lg-3">
@@ -392,44 +400,52 @@
 <script>
 (function() {
   var synth = window.speechSynthesis;
-  var activeBtn = null;
-
-  function getVoice(cb) {
-    var attempts = 0;
-    function try_() {
-      var voices = synth.getVoices();
-      var preferred = [
-        'Google UK English Female',
-        'Google UK English Male',
-        'Microsoft Libby Online (Natural) - English (United Kingdom)',
-        'Microsoft Sonia Online (Natural) - English (United Kingdom)',
-        'Karen', 'Moira', 'Samantha'
-      ];
-      for (var i = 0; i < preferred.length; i++) {
-        for (var j = 0; j < voices.length; j++) {
-          if (voices[j].name === preferred[i]) { cb(voices[j]); return; }
-        }
-      }
-      for (var j = 0; j < voices.length; j++) {
-        if (voices[j].lang && voices[j].lang.indexOf('en') === 0) { cb(voices[j]); return; }
-      }
-      if (attempts < 8) { attempts++; setTimeout(try_, 150); } else { cb(null); }
-    }
-    try_();
-  }
-
-  function stop() {
+  var current = null;
+  var currentBtn = null;
+  function stopCurrent() {
     synth.cancel();
-    if (activeBtn) {
-      activeBtn.classList.remove('listening');
-      activeBtn.querySelector('.cl-label').textContent = 'Listen';
-      activeBtn = null;
+    if (currentBtn) {
+      currentBtn.classList.remove('ra-speaking');
+      currentBtn.querySelector('.ra-label').textContent = currentBtn.dataset.label;
+      currentBtn = null;
     }
+    current = null;
   }
-
+  window.readSection = function(btn, sectionId) {
+    if (currentBtn === btn) { stopCurrent(); return; }
+    stopCurrent();
+    var el = document.getElementById(sectionId);
+    if (!el) return;
+    var text = el.innerText.replace(/\s+/g, ' ').trim();
+    var utt = new SpeechSynthesisUtterance(text);
+    utt.lang = 'en-GB';
+    utt.rate = 0.95;
+    utt.onend = function() { stopCurrent(); };
+    synth.speak(utt);
+    current = utt;
+    currentBtn = btn;
+    btn.classList.add('ra-speaking');
+    btn.querySelector('.ra-label').textContent = 'Stop';
+  };
+})();
+</script>
+<script>
+(function() {
+  var synth = window.speechSynthesis;
+  var activeCardBtn = null;
   window.readCardBlock = function(btn, titleSel, textSel, collapseSel) {
-    if (activeBtn === btn) { stop(); return; }
-    stop();
+    if (activeCardBtn === btn) {
+      synth.cancel();
+      btn.classList.remove('listening');
+      btn.querySelector('.cl-label').textContent = 'Listen';
+      activeCardBtn = null;
+      return;
+    }
+    if (activeCardBtn) {
+      synth.cancel();
+      activeCardBtn.classList.remove('listening');
+      activeCardBtn.querySelector('.cl-label').textContent = 'Listen';
+    }
     var parts = [];
     var card = btn.closest('[data-listen-card]');
     if (card) {
@@ -443,18 +459,18 @@
       }
     }
     if (!parts.length) return;
-    var text = parts.join(' ');
-    getVoice(function(voice) {
-      var utt = new SpeechSynthesisUtterance(text);
-      utt.lang = 'en-GB';
-      utt.rate = 0.92;
-      if (voice) utt.voice = voice;
-      utt.onend = function() { stop(); };
-      synth.speak(utt);
-      activeBtn = btn;
-      btn.classList.add('listening');
-      btn.querySelector('.cl-label').textContent = 'Stop';
-    });
+    var utt = new SpeechSynthesisUtterance(parts.join(' ').replace(/\s+/g, ' ').trim());
+    utt.lang = 'en-GB';
+    utt.rate = 0.95;
+    utt.onend = function() {
+      btn.classList.remove('listening');
+      btn.querySelector('.cl-label').textContent = 'Listen';
+      activeCardBtn = null;
+    };
+    synth.speak(utt);
+    activeCardBtn = btn;
+    btn.classList.add('listening');
+    btn.querySelector('.cl-label').textContent = 'Stop';
   };
 })();
 </script>
