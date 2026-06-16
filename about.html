@@ -289,6 +289,24 @@
 .ra-btn.ra-speaking { background: #6E4B3A; color: #F4F1EC; border-color: #6E4B3A; }
 .ra-btn svg { flex-shrink: 0; }
 </style>
+<style>
+.btn-card-listen {
+  background: none;
+  border: 1px solid #CBB89D;
+  color: #6E4B3A;
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-card-listen:hover { background: #CBB89D; color: #2B2B2B; }
+.btn-card-listen.listening { background: #6E4B3A; color: #F4F1EC; border-color: #6E4B3A; }
+</style>
 </head>
 <body>
   <div class="page-wrap">
@@ -377,7 +395,7 @@
             When my teachers asked what I wanted to be, I answered without hesitation: an archaeologist.
           </p>
 
-          <div class="collapse" id="storyAnnet">
+          <div class="collapse" id="storyAnnet" data-listen-card="storyAnnet">
             <p>
               I did not fully understand the profession — but I understood wonder. I understood treasure. I understood the magic of uncovering stories buried by time.
             </p>
@@ -421,7 +439,8 @@
             </p>
           </div>
 
-          <div class="story-actions">
+          <div class="story-actions" data-listen-card="storyAnnet">
+            <button class="btn-card-listen" onclick="readCardBlock(this,'h3','p.card-text','#storyAnnet')"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
             <button class="story-toggle story-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#storyAnnet" aria-expanded="false" aria-controls="storyAnnet">
               <span class="label-open">Read more</span>
               <span class="label-close d-none">Read less</span>
@@ -452,7 +471,7 @@
 
          
 
-          <div class="collapse" id="storyJoint">
+          <div class="collapse" id="storyJoint" data-listen-card="storyJoint">
             <p>
               Joseph had already begun building his path. In 2005, he founded King Safari with his brother Bob. In 2008, his wife Irina joined and helped build the company further. That same year, Annette came as well, and the four of us shaped King Safari together. Through passion, hard work, and countless days in the mountains and valleys of Sinai, the company grew.
             </p>
@@ -485,7 +504,8 @@
             </p>
           </div>
 
-          <div class="story-actions">
+          <div class="story-actions" data-listen-card="storyJoint">
+            <button class="btn-card-listen" onclick="readCardBlock(this,'h3','p.card-text','#storyJoint')"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
             <button class="story-toggle story-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#storyJoint" aria-expanded="false" aria-controls="storyJoint">
               <span class="label-open">Read more</span>
               <span class="label-close d-none">Read less</span>
@@ -514,7 +534,7 @@
             I think that is where my love for history really began: in the dark shadows of those ruins.
           </p>
 
-          <div class="collapse" id="storyJoseph">
+          <div class="collapse" id="storyJoseph" data-listen-card="storyJoseph">
             <p>
               But by the time I was six or seven, the play ended. I started working in a metal factory. It was heavy, mechanical work — too heavy for a child — but that factory is actually what taught me to love reading. I hated the grease and the hard labor so much that I knew school was my only way out.
             </p>
@@ -550,7 +570,8 @@
             </p>
           </div>
 
-          <div class="story-actions">
+          <div class="story-actions" data-listen-card="storyJoseph">
+            <button class="btn-card-listen" onclick="readCardBlock(this,'h3','p.card-text','#storyJoseph')"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
             <button class="story-toggle story-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#storyJoseph" aria-expanded="false" aria-controls="storyJoseph">
               <span class="label-open">Read more</span>
               <span class="label-close d-none">Read less</span>
@@ -794,6 +815,51 @@
     currentBtn = btn;
     btn.classList.add('ra-speaking');
     btn.querySelector('.ra-label').textContent = 'Stop';
+  };
+})();
+</script>
+<script>
+(function() {
+  var synth = window.speechSynthesis;
+  var activeCardBtn = null;
+  window.readCardBlock = function(btn, titleSel, textSel, collapseSel) {
+    if (activeCardBtn === btn) {
+      synth.cancel();
+      btn.classList.remove('listening');
+      btn.querySelector('.cl-label').textContent = 'Listen';
+      activeCardBtn = null;
+      return;
+    }
+    if (activeCardBtn) {
+      synth.cancel();
+      activeCardBtn.classList.remove('listening');
+      activeCardBtn.querySelector('.cl-label').textContent = 'Listen';
+    }
+    var parts = [];
+    var card = btn.closest('[data-listen-card]');
+    if (card) {
+      card.querySelectorAll(titleSel + ', ' + textSel).forEach(function(el) {
+        var t = el.innerText.trim();
+        if (t) parts.push(t);
+      });
+      if (collapseSel) {
+        var col = card.querySelector(collapseSel);
+        if (col) { var t = col.innerText.trim(); if (t) parts.push(t); }
+      }
+    }
+    if (!parts.length) return;
+    var utt = new SpeechSynthesisUtterance(parts.join(' ').replace(/\s+/g, ' ').trim());
+    utt.lang = 'en-GB';
+    utt.rate = 0.95;
+    utt.onend = function() {
+      btn.classList.remove('listening');
+      btn.querySelector('.cl-label').textContent = 'Listen';
+      activeCardBtn = null;
+    };
+    synth.speak(utt);
+    activeCardBtn = btn;
+    btn.classList.add('listening');
+    btn.querySelector('.cl-label').textContent = 'Stop';
   };
 })();
 </script>
