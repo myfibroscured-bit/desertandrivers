@@ -365,10 +365,6 @@
 <!-- Header End -->
 
 <div class="container py-5" id="section-1">
-  <button class="ra-btn" data-label="Listen to this section" onclick="readSection(this, 'section-1')">
-  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-  <span class="ra-label">Listen to this section</span>
-</button>
   <div class="about-intro wow fadeInUp" data-wow-delay="0.1s">
     <h2 class="display-5 mb-3">The people behind Desert &amp; River</h2>
     <p class="mb-0">
@@ -655,10 +651,6 @@
 <!-- Footer Start -->
 <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
  <div class="container py-5" id="section-2">
-  <button class="ra-btn" data-label="Listen to this section" onclick="readSection(this, 'section-2')">
-  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-  <span class="ra-label">Listen to this section</span>
-</button>
     <div class="row g-5 align-items-start">
 
       <!-- Column 1 -->
@@ -788,78 +780,38 @@
   <script src="js/main.js"></script>
 <script>
 (function() {
-  var synth = window.speechSynthesis;
-  var current = null;
-  var currentBtn = null;
-  function stopCurrent() {
-    synth.cancel();
-    if (currentBtn) {
-      currentBtn.classList.remove('ra-speaking');
-      currentBtn.querySelector('.ra-label').textContent = currentBtn.dataset.label;
-      currentBtn = null;
-    }
-    current = null;
+  var synth=window.speechSynthesis,active=null;
+
+  function getBestVoice(cb) {
+    var v = synth.getVoices();
+    if (v.length) { cb(pick(v)); return; }
+    synth.onvoiceschanged = function() { cb(pick(synth.getVoices())); };
   }
-  window.readSection = function(btn, sectionId) {
-    if (currentBtn === btn) { stopCurrent(); return; }
-    stopCurrent();
-    var el = document.getElementById(sectionId);
-    if (!el) return;
-    var text = el.innerText.replace(/\s+/g, ' ').trim();
-    var utt = new SpeechSynthesisUtterance(text);
-    utt.lang = 'en-GB';
-    utt.rate = 0.95;
-    utt.onend = function() { stopCurrent(); };
-    synth.speak(utt);
-    current = utt;
-    currentBtn = btn;
-    btn.classList.add('ra-speaking');
-    btn.querySelector('.ra-label').textContent = 'Stop';
-  };
-})();
-</script>
-<script>
-(function() {
-  var synth = window.speechSynthesis;
-  var activeCardBtn = null;
-  window.readCardBlock = function(btn, titleSel, textSel, collapseSel) {
-    if (activeCardBtn === btn) {
-      synth.cancel();
-      btn.classList.remove('listening');
-      btn.querySelector('.cl-label').textContent = 'Listen';
-      activeCardBtn = null;
-      return;
-    }
-    if (activeCardBtn) {
-      synth.cancel();
-      activeCardBtn.classList.remove('listening');
-      activeCardBtn.querySelector('.cl-label').textContent = 'Listen';
-    }
-    var parts = [];
-    var card = btn.closest('[data-listen-card]');
-    if (card) {
-      card.querySelectorAll(titleSel + ', ' + textSel).forEach(function(el) {
-        var t = el.innerText.trim();
-        if (t) parts.push(t);
-      });
-      if (collapseSel) {
-        var col = card.querySelector(collapseSel);
-        if (col) { var t = col.innerText.trim(); if (t) parts.push(t); }
-      }
-    }
-    if (!parts.length) return;
-    var utt = new SpeechSynthesisUtterance(parts.join(' ').replace(/\s+/g, ' ').trim());
-    utt.lang = 'en-GB';
-    utt.rate = 0.95;
-    utt.onend = function() {
-      btn.classList.remove('listening');
-      btn.querySelector('.cl-label').textContent = 'Listen';
-      activeCardBtn = null;
-    };
-    synth.speak(utt);
-    activeCardBtn = btn;
-    btn.classList.add('listening');
-    btn.querySelector('.cl-label').textContent = 'Stop';
+  function pick(v) {
+    var p = ['Google UK English Female','Google UK English Male',
+      'Microsoft Libby Online (Natural) - English (United Kingdom)',
+      'Microsoft Sonia Online (Natural) - English (United Kingdom)',
+      'Karen','Moira','Samantha'];
+    for (var i=0;i<p.length;i++) for (var j=0;j<v.length;j++) if (v[j].name===p[i]) return v[j];
+    for (var j=0;j<v.length;j++) if (v[j].lang.indexOf('en')===0) return v[j];
+    return null;
+  }
+  window.readCardBlock=function(btn,tSel,pSel,cSel) {
+    if(active===btn){synth.cancel();btn.classList.remove('listening');btn.querySelector('.cl-label').textContent='Listen';active=null;return;}
+    if(active){synth.cancel();active.classList.remove('listening');active.querySelector('.cl-label').textContent='Listen';}
+    var parts=[],card=btn.closest('[data-listen-card]');
+    if(card){card.querySelectorAll(tSel+','+pSel).forEach(function(el){var t=el.innerText.trim();if(t)parts.push(t);});if(cSel){var c=card.querySelector(cSel);if(c){var t=c.innerText.trim();if(t)parts.push(t);}}}
+    if(!parts.length) return;
+    var text=parts.join(' ').replace(/[ 	
+]+/g,' ').trim();
+    getBestVoice(function(voice) {
+      var utt = new SpeechSynthesisUtterance(text);
+      utt.lang='en-GB'; utt.rate=0.92; utt.pitch=1.0;
+      if (voice) utt.voice=voice;
+      utt.onend=function(){btn.classList.remove('listening');btn.querySelector('.cl-label').textContent='Listen';active=null;};
+      synth.speak(utt); active=btn;
+      btn.classList.add('listening'); btn.querySelector('.cl-label').textContent='Stop';
+    });
   };
 })();
 </script>

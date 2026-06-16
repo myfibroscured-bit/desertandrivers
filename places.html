@@ -110,14 +110,22 @@
 </style>
 <style>
 .btn-listen-place {
-  background: none;
-  border: 1px solid #CBB89D;
+  width: 42px;
+  min-width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(110, 75, 58, 0.25);
+  background: #fff;
   color: #6E4B3A;
-  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: all .2s ease;
+  flex-shrink: 0;
 }
-.btn-listen-place:hover { background: #CBB89D; color: #2B2B2B; }
+.btn-listen-place:hover { transform: translateY(-1px); background: rgba(203,184,157,0.15); }
 .btn-listen-place.listening { background: #6E4B3A; color: #F4F1EC; border-color: #6E4B3A; }
 </style>
 </head>
@@ -174,10 +182,6 @@
 </div>
 <!-- Header End -->
 <div class="container py-5" id="section-1">
-  <button class="ra-btn" data-label="Listen to this section" onclick="readSection(this, 'section-1')">
-  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-  <span class="ra-label">Listen to this section</span>
-</button>
 <div class="row align-items-end g-3 mb-3">
 <div class="col-lg-6">
 <h2 class="display-6 mb-1">Shortlist your places</h2>
@@ -227,13 +231,9 @@
 <br/>
 <p>A typical guided walk through the canyon takes 2 hours and involves uneven terrain with occasional light scrambling.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore1" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore1" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore1" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore1" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -248,13 +248,9 @@
 <br/>
 <p>Access requires a 45–60 minute guided desert walk from the nearest track. Accessible by 4x4 vehicle or camel</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore2" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore2" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore2" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore2" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -269,13 +265,9 @@
 <br/>
 <p>Approximately 30–45 minutes on foot; best visited in the early morning for cooler temperatures and softer light.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore3" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore3" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore3" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore3" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -290,13 +282,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle or camel with short exploratory walks across uneven terrain.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore4" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore4" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore4" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore4" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -311,13 +299,9 @@
 <br/>
 <p>Best visited between October and April, when daytime temperatures are moderate and access routes are more manageable.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore5" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore5" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore5" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore5" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -332,13 +316,9 @@
 <br/>
 <p>Typical walking route: approximately 1–2 hours over uneven, rocky terrain.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore6" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore6" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore6" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore6" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -353,13 +333,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle; located approximately 60 km northwest of Nuweiba in South Sinai.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore7" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore7" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore7" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore7" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -374,13 +350,9 @@
 <br/>
 <p>Accessible via a 30-minute walk from the nearest desert track for short exploratory walks</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore8" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore8" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore8" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore8" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -395,13 +367,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle from the nearest desert track.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore9" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore9" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore9" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore9" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -416,13 +384,9 @@
 <br/>
 <p>The wadi is typically traversed by vehicle rather than on foot, offering a scenic drive through its narrow desert passages.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore10" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore10" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore10" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore10" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -437,13 +401,9 @@
 <br/>
 <p>A moderate 1-hour hike accessible via 4x4</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore11" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore11" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore11" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore11" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -458,13 +418,9 @@
 <br/>
 <p>Approximately 30 minutes to traverse; best visited in cooler morning or late afternoon hours.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore12" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore12" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore12" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore12" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -479,13 +435,9 @@
 <br/>
 <p>Suitable for vehicular access; overnight camping is possible under clear desert skies.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore13" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore13" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore13" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore13" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -500,13 +452,9 @@
 <br/>
 <p>Elevation ranges from 450 to 850 metres; moderate trek recommended.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore14" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore14" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore14" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore14" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -521,13 +469,9 @@
 <br/>
 <p>Approx. 1-hour walk; moderate terrain; elevation ~650 m.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore15" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore15" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore15" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore15" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -542,13 +486,9 @@
 <br/>
 <p>Walking time: approximately 30 minutes each way; very narrow passages.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore16" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore16" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore16" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore16" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -563,13 +503,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle with a short walk across flat desert terrain.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore17" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore17" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore17" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore17" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -584,13 +520,9 @@
 <br/>
 <p>Accessible by hiking or camel via the Nuweibaa–St. Katherine road; moderate walking conditions along the wadi. Approx. 1 hour hike.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore18" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore18" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore18" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore18" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -605,13 +537,9 @@
 <br/>
 <p>Accessible via off-road tracks</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore19" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore19" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore19" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore19" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -626,13 +554,9 @@
 <br/>
 <p>Accessible from nearby roads, moderate walk of 1 hour, elevation is 950m</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore20" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore20" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore20" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore20" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -647,13 +571,9 @@
 <br/>
 <p>Hike takes around one hour; suitable for overnight camping in sheltered areas.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore21" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore21" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore21" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore21" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -668,13 +588,9 @@
 <br/>
 <p>Accessible by unpaved road from Dahab; suitable for short walks and light hiking</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore22" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore22" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore22" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore22" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -689,13 +605,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle; allow 1–2 hours for walking between farms, inscriptions, and the archaeological hill.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore23" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore23" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore23" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore23" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -710,13 +622,9 @@
 <br/>
 <p>Best accessed by 4WD vehicle; sites are typically reached via rough desert tracks from central South Sinai.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore24" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore24" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore24" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore24" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -731,13 +639,9 @@
 <br/>
 <p>walking among the village and tombs is easy on flat desert terrain.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore25" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore25" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore25" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore25" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -752,13 +656,9 @@
 <br/>
 <p>Approximate hiking time across the main ridge: 2–3 hours.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore26" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore26" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore26" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore26" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -773,13 +673,9 @@
 <br/>
 <p>Elevation approximately 820 meters; moderate hike</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore27" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore27" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore27" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore27" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -794,13 +690,9 @@
 <br/>
 <p>Walking across the dune is a short walk and is a great spot for sand boarding.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore28" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore28" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore28" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore28" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -815,13 +707,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore29" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore29" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore29" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore29" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -836,13 +724,9 @@
 <br/>
 <p>Walking to the summit takes approximately 15 minutes, can be challenging as you get closer to the top with the soft deep sand</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore30" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore30" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore30" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore30" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -857,13 +741,9 @@
 <br/>
 <p>Accessible by road; walking through the village takes approximately 20–30 minutes.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore31" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore31" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore31" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore31" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -878,13 +758,9 @@
 <br/>
 <p>Accessible via a 1 hour hike from the St. Catherine–Nuweibaa road. Easy walking.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore32" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore32" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore32" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore32" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -899,13 +775,9 @@
 <br/>
 <p>The full traverse of the double canyon, including climbing and descent, takes approximately 1–1.5 hours.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore33" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore33" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore33" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore33" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -920,13 +792,9 @@
 <br/>
 <p>Approximately a 1-hour hike; easy difficulty.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore34" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore34" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore34" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore34" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -941,13 +809,9 @@
 <br/>
 <p>Hike takes approximately 30 minutes there and back; moderate difficulty</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore35" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore35" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore35" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore35" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -962,13 +826,9 @@
 <br/>
 <p>Approximately 1-hour hike from the St. Katherine–Nuweibaa road, moderate difficulty.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore36" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore36" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore36" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore36" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -983,13 +843,9 @@
 <br/>
 <p>Located at 1,580 m above sea level; accessible year-round with moderate walking paths.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore37" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore37" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore37" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore37" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1004,13 +860,9 @@
 <br/>
 <p>Accessible by 4x4</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore38" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore38" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore38" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore38" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1025,13 +877,9 @@
 <br/>
 <p>Elevation: 2,285 metres; ascent typically takes 2–3 hours from the base trails.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore39" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore39" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore39" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore39" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1046,13 +894,9 @@
 <br/>
 <p>Reachable via a 1.5–2 hour moderate hike from the monastery toward Mount Sinai.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore40" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore40" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore40" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore40" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1067,13 +911,9 @@
 <br/>
 <p>Elevation: 2,634 metres; typically a 2–3 hour difficult climb from Saint Catherine.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore41" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore41" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore41" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore41" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1088,13 +928,9 @@
 <br/>
 <p>One-hour walk; moderate terrain suitable for most hikers.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore42" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore42" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore42" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore42" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1109,13 +945,9 @@
 <br/>
 <p>Accessible via unpaved desert tracks</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore43" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore43" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore43" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore43" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1130,13 +962,9 @@
 <br/>
 <p>Driving through Wadi Zaraniq takes approximately 2–3 hours.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore44" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore44" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore44" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore44" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1151,13 +979,9 @@
 <br/>
 <p>Accessible via a short 20-minute hike from the main desert track.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore45" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore45" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore45" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore45" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1172,13 +996,9 @@
 <br/>
 <p>Accessible via 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore46" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore46" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore46" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore46" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1193,13 +1013,9 @@
 <br/>
 <p>Located approximately 130 km northwest of Sharm El-Sheikh; accessible by paved road year-round.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore47" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore47" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore47" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore47" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1214,13 +1030,9 @@
 <br/>
 <p>Accessible by rough desert track; conditions vary</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore48" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore48" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore48" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore48" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1235,13 +1047,9 @@
 <br/>
 <p>Located in South Sinai, approximately 1–2 hours by road from Dahab, depending on desert route conditions.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore49" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore49" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore49" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore49" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1256,13 +1064,9 @@
 <br/>
 <p>Located in South Sinai’s mountainous interior; accessible by 4x4 vehicle via desert tracks.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore50" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore50" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore50" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore50" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1277,13 +1081,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore51" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore51" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore51" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore51" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1298,13 +1098,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore52" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore52" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore52" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore52" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1319,13 +1115,9 @@
 <br/>
 <p>Typical walking routes through the wadi range from 2–4 hours, depending on pace and entry point.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore53" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore53" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore53" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore53" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1340,13 +1132,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle; traversing the central stretch typically takes 2–3 hours depending on route and conditions.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore54" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore54" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore54" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore54" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1361,13 +1149,9 @@
 <br/>
 <p>Accessible via a moderate 1–2 hour walk</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore55" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore55" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore55" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore55" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1382,13 +1166,9 @@
 <br/>
 <p>Accessible via 4×4 vehicle; moderate walking required</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore56" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore56" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore56" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore56" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1403,13 +1183,9 @@
 <br/>
 <p>Accessible via 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore57" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore57" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore57" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore57" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1424,13 +1200,9 @@
 <br/>
 <p>Accessible by 4x4; flash floods are common during rare rains.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore58" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore58" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore58" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore58" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1445,13 +1217,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore59" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore59" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore59" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore59" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1466,13 +1234,9 @@
 <br/>
 <p>Located about 15–20 miles south of the Ahmed Hamdi Tunnel, accessible by road.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore62" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore62" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore62" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore62" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1487,13 +1251,9 @@
 <br/>
 <p>Elevation: ~355 m above sea level with archaeological deposits reflecting prolonged ancient and nabatean metallurgical activity.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore64" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore64" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore64" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore64" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1508,13 +1268,9 @@
 <br/>
 <p>Elevation ~ 917 m above sea level; located in South Sinai, Egypt.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore65" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore65" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore65" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore65" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1529,13 +1285,9 @@
 <br/>
 <p>Accessible via 4x4; en route to Serabit el-Khadim temple</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore66" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore66" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore66" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore66" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1550,13 +1302,9 @@
 <br/>
 <p>Located roughly 43 km east of Abu Zenima on a plateau about 850 m above sea level.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore67" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore67" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore67" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore67" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1571,13 +1319,9 @@
 <br/>
 <p></p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore68" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore68" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore68" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore68" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1592,13 +1336,9 @@
 <br/>
 <p>Started guiding in 2019; first female Bedouin head guide on Sinai Trail.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore69" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore69" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore69" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore69" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1613,13 +1353,9 @@
 <br/>
 <p>Contains visible rock inscriptions from multiple historical periods and still-inhabited traditional Bedouin homes.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore70" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore70" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore70" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore70" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1634,13 +1370,9 @@
 <br/>
 <p>Elevation ranges around 400–600 meters above sea level; accessible via 4x4 tracks.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore71" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore71" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore71" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore71" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1655,13 +1387,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore73" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore73" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore73" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore73" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1676,13 +1404,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore74" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore74" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore74" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore74" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1697,13 +1421,9 @@
 <br/>
 <p>Located in central Sinai’s desert terrain near Wadi Islaf — a waypoint on traditional routes through the peninsula.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore76" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore76" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore76" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore76" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1718,13 +1438,9 @@
 <br/>
 <p>Elevation approximately 879 m; valley contains dense patches of vegetation and acacia trees.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore77" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore77" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore77" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore77" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1739,13 +1455,9 @@
 <br/>
 <p>Hagar el-Logha is accessible via a short walk from the main valley path.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore78" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore78" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore78" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore78" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1760,13 +1472,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle and is a short walk</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore79" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore79" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore79" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore79" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1781,13 +1489,9 @@
 <br/>
 <p>Shelter length ~100 m with rock art strata from ~10,000 BCE to early Islamic periods.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore81" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore81" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore81" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore81" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1802,13 +1506,9 @@
 <br/>
 <p>Located ~30 min from Serabit el‑Khadim, within the central Sinai mining district.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore82" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore82" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore82" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore82" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1823,13 +1523,9 @@
 <br/>
 <p>Discovered in 2012; accessible via 4x4 vehicle and a short climb.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore83" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore83" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore83" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore83" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1844,13 +1540,9 @@
 <br/>
 <p>Located in southern Sinai; accessible via off-road track with 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore84" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore84" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore84" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore84" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1865,13 +1557,9 @@
 <br/>
 <p>Located on the Nabatean trade route, accessible by 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore85" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore85" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore85" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore85" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1886,13 +1574,9 @@
 <br/>
 <p>Accessible by 4x4 vehicle and short walk</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore87" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore87" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore87" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore87" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1907,13 +1591,9 @@
 <br/>
 <p>Accessible only by 4×4</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore88" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore88" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore88" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore88" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1928,13 +1608,9 @@
 <br/>
 <p>Access by 4x4 vehicle</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore91" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore91" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore91" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore91" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1949,13 +1625,9 @@
 <br/>
 <p>Accessible only by 4×4 vehicles; terrain is very rugged and challenging.</p>
 </div>
-<div class="mt-auto d-flex gap-2">
-<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
-<button aria-controls="placeMore92" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore92" data-bs-toggle="collapse" type="button">
+<div class="mt-auto d-flex align-items-center justify-content-between"><div class="d-flex gap-2"><button aria-controls="placeMore92" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore92" data-bs-toggle="collapse" type="button">
               Read more
-            </button>
-<a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a>
-</div>
+            </button><a class="btn btn-outline-dr rounded-pill py-2 px-4" href="https://calendly.com/desertandriver2026/30min" rel="noopener" target="_blank">Book a call</a></div><div class="d-flex gap-2"><button class="btn-listen-place" onclick="readCard(this)" type="button" aria-label="Listen to this place"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div></div>
 </div>
 </div>
 </div>
@@ -1982,374 +1654,40 @@
 </div>
 </div>
 <script>
-  (function() {
-    const grid = document.getElementById('placesGrid');
-    if (!grid) return;
-
-    const input = document.getElementById('placeSearch');
-    const sort = document.getElementById('placeSort');
-    const filtersWrap = document.getElementById('placeFilters');
-    const favToggle = document.getElementById('showFavourites');
-    const countEl = document.getElementById('placesCount');
-    const storageKey = 'desertAndRiverFavouritePlaces';
-
-    const slugify = (text) => (text || '')
-      .toLowerCase()
-      .normalize('NFD').replace(/[̀-ͯ]/g, '')
-      .replace(/&/g, ' and ')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-
-    const getCategory = (text, title, keywords) => {
-      const hay = `${title} ${text} ${keywords}`.toLowerCase();
-      if (/canyon|gorge/.test(hay)) return 'canyon';
-      if (/wadi/.test(hay)) return 'wadi';
-      if (/oasis|spring|palm|ain\s|well|water source/.test(hay)) return 'oasis';
-      if (/reef|lagoon|sea|coast|snorkel|underwater|beach|red sea|mangrove|blue hole/.test(hay)) return 'sea';
-      if (/mount|mt\.|mountain|peak|summit|jabal|plateau|pass/.test(hay)) return 'mountain';
-      if (/ancient|archae|fort|castle|monastery|inscription|hieroglyph|nabataean|bedouin|history|historic|tomb|mine|mining|temple|pharaonic|proto-sinaitic|trade route|pilgrimage|crusader/.test(hay)) return 'heritage';
-      return 'all';
-    };
-
-    let favourites = [];
-    try {
-      favourites = JSON.parse(localStorage.getItem(storageKey) || '[]');
-      if (!Array.isArray(favourites)) favourites = [];
-    } catch (e) {
-      favourites = [];
-    }
-
-    let activeFilter = 'all';
-    let favouritesOnly = false;
-
-    const items = Array.from(grid.children).map((col, index) => {
-      const card = col.querySelector('.card');
-      const title = card.querySelector('.card-title')?.textContent?.trim() || '';
-      const overview = card.querySelector('.card-text')?.textContent?.trim() || '';
-      const collapse = card.querySelector('.collapse');
-      const extraText = collapse ? collapse.textContent.replace(/\s+/g, ' ').trim() : '';
-      const img = card.querySelector('img');
-      const alt = img?.getAttribute('alt') || '';
-      const src = img?.getAttribute('src') || '';
-      const fileSlug = src.split('/').pop().replace(/\.[a-z0-9]+$/i, '');
-      const slug = fileSlug || slugify(title) || `place-${index + 1}`;
-      const keywords = col.dataset.keywords || card.dataset.keywords || '';
-      const combined = [title, overview, extraText, alt, keywords, slug.replace(/-/g, ' ')].join(' ');
-      const category = getCategory(combined, title, keywords);
-
-      col.dataset.index = String(index);
-      col.dataset.slug = slug;
-      col.dataset.category = category;
-      col.dataset.search = combined.toLowerCase();
-      col.dataset.title = title.toLowerCase();
-
-      const actions = card.querySelector('.mt-auto.d-flex.gap-2');
-      if (actions && !actions.querySelector('.place-fav-btn')) {
-        const favBtn = document.createElement('button');
-        favBtn.type = 'button';
-        favBtn.className = 'place-fav-btn';
-        favBtn.setAttribute('aria-label', `Add ${title} to favourites`);
-        favBtn.setAttribute('title', 'Save as favourite');
-        favBtn.innerHTML = '♡';
-        favBtn.addEventListener('click', function() {
-          toggleFavourite(slug);
-        });
-        actions.appendChild(favBtn);
-      }
-
-      return { col, card, title, slug, index, category };
-    });
-
-    function saveFavourites() {
-      localStorage.setItem(storageKey, JSON.stringify(favourites));
-    }
-
-    function isFavourite(slug) {
-      return favourites.includes(slug);
-    }
-
-    function toggleFavourite(slug) {
-      if (isFavourite(slug)) {
-        favourites = favourites.filter(item => item !== slug);
-      } else {
-        favourites.push(slug);
-      }
-      saveFavourites();
-      render();
-    }
-
-    function updateFavouriteButtons() {
-      items.forEach(({ col, title, slug }) => {
-        const btn = col.querySelector('.place-fav-btn');
-        if (!btn) return;
-        const active = isFavourite(slug);
-        btn.classList.toggle('is-fav', active);
-        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-        btn.setAttribute('aria-label', active ? `Remove ${title} from favourites` : `Add ${title} to favourites`);
-        btn.setAttribute('title', active ? 'Remove favourite' : 'Save as favourite');
-        btn.innerHTML = active ? '♥' : '♡';
-      });
-
-      if (favToggle) {
-        favToggle.classList.toggle('active', favouritesOnly);
-        favToggle.setAttribute('aria-pressed', favouritesOnly ? 'true' : 'false');
-      }
-
-      if (countEl) {
-        countEl.textContent = `${favourites.length} favourite${favourites.length === 1 ? '' : 's'}`;
-      }
-    }
-
-    function render() {
-      const q = (input?.value || '').toLowerCase().trim();
-      const queryParts = q ? q.split(/\s+/).filter(Boolean) : [];
-
-      const visible = items.filter(({ col }) => {
-        const matchesQuery = !queryParts.length || queryParts.every(part => (col.dataset.search || '').includes(part));
-        const matchesFilter = activeFilter === 'all' || col.dataset.category === activeFilter;
-        const matchesFav = !favouritesOnly || isFavourite(col.dataset.slug);
-        return matchesQuery && matchesFilter && matchesFav;
-      });
-
-      let ordered = visible.slice();
-      if (sort) {
-        if (sort.value === 'az') ordered.sort((a, b) => a.title.localeCompare(b.title));
-        if (sort.value === 'za') ordered.sort((a, b) => b.title.localeCompare(a.title));
-      }
-
-      items.forEach(({ col }) => { col.style.display = 'none'; });
-      ordered.forEach(({ col }) => {
-        col.style.display = '';
-        grid.appendChild(col);
-      });
-
-      updateFavouriteButtons();
-    }
-
-    if (filtersWrap) {
-      filtersWrap.addEventListener('click', function(e) {
-        const btn = e.target.closest('[data-filter]');
-        if (!btn) return;
-        activeFilter = btn.dataset.filter || 'all';
-        filtersWrap.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b === btn));
-        render();
-      });
-    }
-
-    if (input) input.addEventListener('input', render);
-    if (sort) sort.addEventListener('change', render);
-    if (favToggle) {
-      favToggle.addEventListener('click', function() {
-        favouritesOnly = !favouritesOnly;
-        render();
-      });
-    }
-
-    updateFavouriteButtons();
-    render();
-  })();
-        </script>
-<!-- Footer Start -->
-<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
- <div class="container py-5" id="section-2">
-  <button class="ra-btn" data-label="Listen to this section" onclick="readSection(this, 'section-2')">
-  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-  <span class="ra-label">Listen to this section</span>
-</button>
-    <div class="row g-5 align-items-start">
-
-      <!-- Column 1 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="footer-item">
-          <h4 class="text-white mb-4">Desert & River</h4>
-          <p class="text-white mb-4">
-            Travel deeper into Sinai with custom journeys, cultural insight, and meaningful local connection.
-          </p>
-
-          <div class="footer-social-grid">
-            <a href="https://www.youtube.com/@dahablive9360" target="_blank" rel="noopener" aria-label="YouTube">
-              <img src="img/icons/youtube.png" alt="YouTube">
-            </a>
-            <a href="https://www.instagram.com/desertandriver2026?igsh=MXRyZnZyNzdpOGhzNg==" target="_blank" rel="noopener" aria-label="Instagram">
-              <img src="img/icons/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://www.facebook.com/share/18W5Y2KeDt/" target="_blank" rel="noopener" aria-label="Facebook">
-              <img src="img/icons/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://x.com/DesertandR86590" target="_blank" rel="noopener" aria-label="X">
-              <img src="img/icons/x.png" alt="X">
-            </a>
-            <a href="https://www.threads.com/@desertandriver2026" target="_blank" rel="noopener" aria-label="Threads">
-              <img src="img/icons/threads.png" alt="Threads">
-            </a>
-
-            <a href="https://uk.pinterest.com/desertandriver" target="_blank" rel="noopener" aria-label="Pinterest">
-              <img src="img/icons/pinterest.png" alt="Pinterest">
-            </a>
-            <a href="https://www.linkedin.com/in/desert-river-b172173a8/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <img src="img/icons/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://bsky.app/profile/desert-and-river.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
-              <img src="img/icons/bluesky.png" alt="Bluesky">
-            </a>
-            <a href="https://www.snapchat.com/add/desert-river" target="_blank" rel="noopener" aria-label="Snapchat">
-              <img src="img/icons/snapchat.png" alt="Snapchat">
-            </a>
-            <a href="https://www.tiktok.com/@desert_and_river" target="_blank" rel="noopener" aria-label="TikTok">
-              <img src="img/icons/tiktok.png" alt="TikTok">
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 2 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="footer-item">
-          <h4 class="text-white mb-4">Explore</h4>
-          <div class="footer-links">
-            <a class="footer-link" href="about.html">About Us</a>
-            <a class="footer-link" href="plan-your-own-trip.html">Plan Your Own Trip</a>
-            <a class="footer-link" href="places.html">Places to Visit</a>
-            <a class="footer-link" href="blog.html">Blog Posts</a>
-            <a class="footer-link" href="gallery.html">Gallery</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 3 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="footer-item footer-contact-column">
-          <h4 class="text-white mb-4">Contact</h4>
-
-          <div class="footer-links footer-contact-links">
-            <a class="footer-link" href="https://wa.me/201063864837" target="_blank" rel="noopener">WhatsApp: +201063864837</a>
-            <a class="footer-link" href="contact.html">Email: info@desertandriver.com</a>
-            <a class="footer-link" href="https://calendly.com/desertandriver2026/30min" target="_blank" rel="noopener">Book a call</a>
-          </div>
-
-          <div class="footer-field-box">
-            <a class="footer-link footer-field-title mb-1" href="field-support.html">
-  Working in the field?
-</a>
-
-<p class="text-white mb-0 mt-0">
-  Are you an Archaeologist, Geologist, Researcher or Filmmaker?
-</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 4 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="footer-item">
-          <h4 class="text-white mb-4">Legal</h4>
-          <div class="footer-links">
-            <a class="footer-link" href="privacy-policy.html">Privacy Policy</a>
-            <a class="footer-link" href="terms-and-conditions.html">Terms & Conditions</a>
-            <a class="footer-link" href="cookie-policy.html">Cookie Policy</a>
-            <a class="footer-link" href="disclaimer.html">Disclaimer</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid copyright py-4">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-md-6 text-center text-md-start mb-md-0">
-        <span class="text-body">
-          <a href="index.html" class="border-bottom text-white">
-            <i class="fas fa-copyright text-light me-2"></i>Desert & River
-          </a>, All rights reserved.
-        </span>
-      </div>
-      <div class="col-md-6 text-center text-md-end text-body">
-        Designed By <span class="border-bottom text-white">Dream Your Desires Publishing</span>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Footer End -->
-
-  <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="js/main.js"></script>
-<script>
 (function() {
-  var synth = window.speechSynthesis;
-  var current = null;
-  var currentBtn = null;
-  function stopCurrent() {
-    synth.cancel();
-    if (currentBtn) {
-      currentBtn.classList.remove('ra-speaking');
-      currentBtn.querySelector('.ra-label').textContent = currentBtn.dataset.label;
-      currentBtn = null;
-    }
-    current = null;
+  var synth=window.speechSynthesis,active=null;
+
+  function getBestVoice(cb) {
+    var v = synth.getVoices();
+    if (v.length) { cb(pick(v)); return; }
+    synth.onvoiceschanged = function() { cb(pick(synth.getVoices())); };
   }
-  window.readSection = function(btn, sectionId) {
-    if (currentBtn === btn) { stopCurrent(); return; }
-    stopCurrent();
-    var el = document.getElementById(sectionId);
-    if (!el) return;
-    var text = el.innerText.replace(/\s+/g, ' ').trim();
-    var utt = new SpeechSynthesisUtterance(text);
-    utt.lang = 'en-GB';
-    utt.rate = 0.95;
-    utt.onend = function() { stopCurrent(); };
-    synth.speak(utt);
-    current = utt;
-    currentBtn = btn;
-    btn.classList.add('ra-speaking');
-    btn.querySelector('.ra-label').textContent = 'Stop';
-  };
-})();
-</script>
-<script>
-(function() {
-  var synth = window.speechSynthesis;
-  var activeBtn = null;
-  window.readCard = function(btn) {
-    if (activeBtn === btn) {
-      synth.cancel();
-      btn.classList.remove('listening');
-      btn.querySelector('.listen-label').textContent = 'Listen';
-      activeBtn = null;
-      return;
-    }
-    if (activeBtn) {
-      synth.cancel();
-      activeBtn.classList.remove('listening');
-      activeBtn.querySelector('.listen-label').textContent = 'Listen';
-    }
-    var card = btn.closest('.card-body');
-    var title = card.querySelector('h5') ? card.querySelector('h5').innerText : '';
-    var shortDesc = card.querySelector('p.card-text') ? card.querySelector('p.card-text').innerText : '';
-    var moreEl = card.querySelector('.collapse');
-    var moreText = moreEl ? moreEl.innerText.trim() : '';
-    var text = title + '. ' + shortDesc + (moreText ? ' ' + moreText : '');
-    var utt = new SpeechSynthesisUtterance(text.replace(/\s+/g, ' ').trim());
-    utt.lang = 'en-GB';
-    utt.rate = 0.95;
-    utt.onend = function() {
-      btn.classList.remove('listening');
-      btn.querySelector('.listen-label').textContent = 'Listen';
-      activeBtn = null;
-    };
-    synth.speak(utt);
-    activeBtn = btn;
-    btn.classList.add('listening');
-    btn.querySelector('.listen-label').textContent = 'Stop';
+  function pick(v) {
+    var p = ['Google UK English Female','Google UK English Male',
+      'Microsoft Libby Online (Natural) - English (United Kingdom)',
+      'Microsoft Sonia Online (Natural) - English (United Kingdom)',
+      'Karen','Moira','Samantha'];
+    for (var i=0;i<p.length;i++) for (var j=0;j<v.length;j++) if (v[j].name===p[i]) return v[j];
+    for (var j=0;j<v.length;j++) if (v[j].lang.indexOf('en')===0) return v[j];
+    return null;
+  }
+  window.readCard=function(btn) {
+    if(active===btn){synth.cancel();btn.classList.remove('listening');btn.setAttribute('aria-label','Listen to this place');btn.title='';active=null;return;}
+    if(active){synth.cancel();active.classList.remove('listening');active.setAttribute('aria-label','Listen to this place');}
+    var card=btn.closest('.card-body');
+    var t1=card.querySelector('h5')?card.querySelector('h5').innerText:'';
+    var t2=card.querySelector('p.card-text')?card.querySelector('p.card-text').innerText:'';
+    var more=card.querySelector('.collapse');var t3=more?more.innerText.trim():'';
+    var text=(t1+'. '+t2+(t3?' '+t3:'')).replace(/[ 	
+]+/g,' ').trim();
+    getBestVoice(function(voice) {
+      var utt = new SpeechSynthesisUtterance(text);
+      utt.lang='en-GB'; utt.rate=0.92; utt.pitch=1.0;
+      if (voice) utt.voice=voice;
+      utt.onend=function(){btn.classList.remove('listening');btn.setAttribute('aria-label','Listen to this place');btn.title='';active=null;};
+      synth.speak(utt); active=btn;
+      btn.classList.add('listening'); btn.title='Stop'; btn.setAttribute('aria-label','Stop');
+    });
   };
 })();
 </script>

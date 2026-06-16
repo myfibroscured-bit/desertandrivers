@@ -228,27 +228,36 @@
   <script src="js/main.js"></script>
 <script>
 (function() {
-  var synth = window.speechSynthesis;
-  var legalBtn = null;
-  window.readLegalPage = function(btn) {
-    if (legalBtn === btn) {
-      synth.cancel();
-      btn.classList.remove('listening');
-      btn.querySelector('.ll-label').textContent = 'Listen to this page';
-      legalBtn = null;
-      return;
-    }
-    if (legalBtn) { synth.cancel(); legalBtn.classList.remove('listening'); legalBtn.querySelector('.ll-label').textContent = 'Listen to this page'; }
-    var el = document.querySelector('.dr-card');
-    if (!el) return;
-    var utt = new SpeechSynthesisUtterance(el.innerText.replace(/\s+/g, ' ').trim());
-    utt.lang = 'en-GB';
-    utt.rate = 0.95;
-    utt.onend = function() { btn.classList.remove('listening'); btn.querySelector('.ll-label').textContent = 'Listen to this page'; legalBtn = null; };
-    synth.speak(utt);
-    legalBtn = btn;
-    btn.classList.add('listening');
-    btn.querySelector('.ll-label').textContent = 'Stop';
+  var synth=window.speechSynthesis,lBtn=null;
+
+  function getBestVoice(cb) {
+    var v = synth.getVoices();
+    if (v.length) { cb(pick(v)); return; }
+    synth.onvoiceschanged = function() { cb(pick(synth.getVoices())); };
+  }
+  function pick(v) {
+    var p = ['Google UK English Female','Google UK English Male',
+      'Microsoft Libby Online (Natural) - English (United Kingdom)',
+      'Microsoft Sonia Online (Natural) - English (United Kingdom)',
+      'Karen','Moira','Samantha'];
+    for (var i=0;i<p.length;i++) for (var j=0;j<v.length;j++) if (v[j].name===p[i]) return v[j];
+    for (var j=0;j<v.length;j++) if (v[j].lang.indexOf('en')===0) return v[j];
+    return null;
+  }
+  window.readLegalPage=function(btn) {
+    if(lBtn===btn){synth.cancel();btn.classList.remove('listening');btn.querySelector('.ll-label').textContent='Listen to this page';lBtn=null;return;}
+    if(lBtn){synth.cancel();lBtn.classList.remove('listening');lBtn.querySelector('.ll-label').textContent='Listen to this page';}
+    var el=document.querySelector('.dr-card'); if(!el) return;
+    var text=el.innerText.replace(/[ 	
+]+/g,' ').trim();
+    getBestVoice(function(voice) {
+      var utt = new SpeechSynthesisUtterance(text);
+      utt.lang='en-GB'; utt.rate=0.92; utt.pitch=1.0;
+      if (voice) utt.voice=voice;
+      utt.onend=function(){btn.classList.remove('listening');btn.querySelector('.ll-label').textContent='Listen to this page';lBtn=null;};
+      synth.speak(utt); lBtn=btn;
+      btn.classList.add('listening'); btn.querySelector('.ll-label').textContent='Stop';
+    });
   };
 })();
 </script>
