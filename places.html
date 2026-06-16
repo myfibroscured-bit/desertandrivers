@@ -89,29 +89,36 @@
 </script>
 <link rel="canonical" href="https://desertandriver.com/places.html">
 <style>
-.read-aloud-bar {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-.read-aloud-btn {
-  background: #CBB89D;
-  color: #2B2B2B;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 18px;
-  font-family: inherit;
-  font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-  display: flex;
+.ra-btn {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  transition: background 0.2s;
+  gap: 6px;
+  background: none;
+  border: 1px solid #CBB89D;
+  border-radius: 50px;
+  padding: 5px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #6E4B3A;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s, color 0.2s;
 }
-.read-aloud-btn:hover { background: #b8a085; }
-.read-aloud-btn.speaking { background: #6E4B3A; color: #F4F1EC; }
+.ra-btn:hover { background: #CBB89D; color: #2B2B2B; }
+.ra-btn.ra-speaking { background: #6E4B3A; color: #F4F1EC; border-color: #6E4B3A; }
+.ra-btn svg { flex-shrink: 0; }
+</style>
+<style>
+.btn-listen-place {
+  background: none;
+  border: 1px solid #CBB89D;
+  color: #6E4B3A;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-listen-place:hover { background: #CBB89D; color: #2B2B2B; }
+.btn-listen-place.listening { background: #6E4B3A; color: #F4F1EC; border-color: #6E4B3A; }
 </style>
 </head>
 <body>
@@ -166,7 +173,11 @@
 </div>
 </div>
 <!-- Header End -->
-<div class="container py-5">
+<div class="container py-5" id="section-1">
+  <button class="ra-btn" data-label="Listen to this section" onclick="readSection(this, 'section-1')">
+  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+  <span class="ra-label">Listen to this section</span>
+</button>
 <div class="row align-items-end g-3 mb-3">
 <div class="col-lg-6">
 <h2 class="display-6 mb-1">Shortlist your places</h2>
@@ -217,6 +228,7 @@
 <p>A typical guided walk through the canyon takes 2 hours and involves uneven terrain with occasional light scrambling.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore1" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore1" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -237,6 +249,7 @@
 <p>Access requires a 45–60 minute guided desert walk from the nearest track. Accessible by 4x4 vehicle or camel</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore2" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore2" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -257,6 +270,7 @@
 <p>Approximately 30–45 minutes on foot; best visited in the early morning for cooler temperatures and softer light.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore3" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore3" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -277,6 +291,7 @@
 <p>Accessible by 4x4 vehicle or camel with short exploratory walks across uneven terrain.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore4" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore4" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -297,6 +312,7 @@
 <p>Best visited between October and April, when daytime temperatures are moderate and access routes are more manageable.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore5" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore5" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -317,6 +333,7 @@
 <p>Typical walking route: approximately 1–2 hours over uneven, rocky terrain.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore6" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore6" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -337,6 +354,7 @@
 <p>Accessible by 4x4 vehicle; located approximately 60 km northwest of Nuweiba in South Sinai.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore7" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore7" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -357,6 +375,7 @@
 <p>Accessible via a 30-minute walk from the nearest desert track for short exploratory walks</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore8" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore8" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -377,6 +396,7 @@
 <p>Accessible by 4x4 vehicle from the nearest desert track.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore9" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore9" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -397,6 +417,7 @@
 <p>The wadi is typically traversed by vehicle rather than on foot, offering a scenic drive through its narrow desert passages.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore10" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore10" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -417,6 +438,7 @@
 <p>A moderate 1-hour hike accessible via 4x4</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore11" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore11" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -437,6 +459,7 @@
 <p>Approximately 30 minutes to traverse; best visited in cooler morning or late afternoon hours.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore12" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore12" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -457,6 +480,7 @@
 <p>Suitable for vehicular access; overnight camping is possible under clear desert skies.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore13" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore13" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -477,6 +501,7 @@
 <p>Elevation ranges from 450 to 850 metres; moderate trek recommended.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore14" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore14" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -497,6 +522,7 @@
 <p>Approx. 1-hour walk; moderate terrain; elevation ~650 m.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore15" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore15" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -517,6 +543,7 @@
 <p>Walking time: approximately 30 minutes each way; very narrow passages.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore16" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore16" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -537,6 +564,7 @@
 <p>Accessible by 4x4 vehicle with a short walk across flat desert terrain.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore17" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore17" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -557,6 +585,7 @@
 <p>Accessible by hiking or camel via the Nuweibaa–St. Katherine road; moderate walking conditions along the wadi. Approx. 1 hour hike.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore18" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore18" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -577,6 +606,7 @@
 <p>Accessible via off-road tracks</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore19" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore19" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -597,6 +627,7 @@
 <p>Accessible from nearby roads, moderate walk of 1 hour, elevation is 950m</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore20" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore20" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -617,6 +648,7 @@
 <p>Hike takes around one hour; suitable for overnight camping in sheltered areas.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore21" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore21" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -637,6 +669,7 @@
 <p>Accessible by unpaved road from Dahab; suitable for short walks and light hiking</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore22" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore22" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -657,6 +690,7 @@
 <p>Accessible by 4x4 vehicle; allow 1–2 hours for walking between farms, inscriptions, and the archaeological hill.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore23" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore23" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -677,6 +711,7 @@
 <p>Best accessed by 4WD vehicle; sites are typically reached via rough desert tracks from central South Sinai.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore24" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore24" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -697,6 +732,7 @@
 <p>walking among the village and tombs is easy on flat desert terrain.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore25" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore25" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -717,6 +753,7 @@
 <p>Approximate hiking time across the main ridge: 2–3 hours.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore26" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore26" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -737,6 +774,7 @@
 <p>Elevation approximately 820 meters; moderate hike</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore27" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore27" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -757,6 +795,7 @@
 <p>Walking across the dune is a short walk and is a great spot for sand boarding.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore28" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore28" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -777,6 +816,7 @@
 <p>Accessible by 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore29" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore29" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -797,6 +837,7 @@
 <p>Walking to the summit takes approximately 15 minutes, can be challenging as you get closer to the top with the soft deep sand</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore30" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore30" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -817,6 +858,7 @@
 <p>Accessible by road; walking through the village takes approximately 20–30 minutes.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore31" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore31" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -837,6 +879,7 @@
 <p>Accessible via a 1 hour hike from the St. Catherine–Nuweibaa road. Easy walking.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore32" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore32" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -857,6 +900,7 @@
 <p>The full traverse of the double canyon, including climbing and descent, takes approximately 1–1.5 hours.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore33" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore33" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -877,6 +921,7 @@
 <p>Approximately a 1-hour hike; easy difficulty.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore34" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore34" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -897,6 +942,7 @@
 <p>Hike takes approximately 30 minutes there and back; moderate difficulty</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore35" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore35" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -917,6 +963,7 @@
 <p>Approximately 1-hour hike from the St. Katherine–Nuweibaa road, moderate difficulty.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore36" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore36" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -937,6 +984,7 @@
 <p>Located at 1,580 m above sea level; accessible year-round with moderate walking paths.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore37" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore37" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -957,6 +1005,7 @@
 <p>Accessible by 4x4</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore38" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore38" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -977,6 +1026,7 @@
 <p>Elevation: 2,285 metres; ascent typically takes 2–3 hours from the base trails.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore39" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore39" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -997,6 +1047,7 @@
 <p>Reachable via a 1.5–2 hour moderate hike from the monastery toward Mount Sinai.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore40" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore40" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1017,6 +1068,7 @@
 <p>Elevation: 2,634 metres; typically a 2–3 hour difficult climb from Saint Catherine.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore41" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore41" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1037,6 +1089,7 @@
 <p>One-hour walk; moderate terrain suitable for most hikers.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore42" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore42" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1057,6 +1110,7 @@
 <p>Accessible via unpaved desert tracks</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore43" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore43" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1077,6 +1131,7 @@
 <p>Driving through Wadi Zaraniq takes approximately 2–3 hours.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore44" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore44" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1097,6 +1152,7 @@
 <p>Accessible via a short 20-minute hike from the main desert track.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore45" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore45" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1117,6 +1173,7 @@
 <p>Accessible via 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore46" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore46" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1137,6 +1194,7 @@
 <p>Located approximately 130 km northwest of Sharm El-Sheikh; accessible by paved road year-round.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore47" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore47" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1157,6 +1215,7 @@
 <p>Accessible by rough desert track; conditions vary</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore48" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore48" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1177,6 +1236,7 @@
 <p>Located in South Sinai, approximately 1–2 hours by road from Dahab, depending on desert route conditions.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore49" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore49" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1197,6 +1257,7 @@
 <p>Located in South Sinai’s mountainous interior; accessible by 4x4 vehicle via desert tracks.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore50" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore50" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1217,6 +1278,7 @@
 <p>Accessible by 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore51" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore51" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1237,6 +1299,7 @@
 <p>Accessible by 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore52" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore52" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1257,6 +1320,7 @@
 <p>Typical walking routes through the wadi range from 2–4 hours, depending on pace and entry point.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore53" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore53" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1277,6 +1341,7 @@
 <p>Accessible by 4x4 vehicle; traversing the central stretch typically takes 2–3 hours depending on route and conditions.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore54" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore54" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1297,6 +1362,7 @@
 <p>Accessible via a moderate 1–2 hour walk</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore55" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore55" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1317,6 +1383,7 @@
 <p>Accessible via 4×4 vehicle; moderate walking required</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore56" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore56" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1337,6 +1404,7 @@
 <p>Accessible via 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore57" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore57" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1357,6 +1425,7 @@
 <p>Accessible by 4x4; flash floods are common during rare rains.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore58" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore58" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1377,6 +1446,7 @@
 <p>Accessible by 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore59" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore59" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1397,6 +1467,7 @@
 <p>Located about 15–20 miles south of the Ahmed Hamdi Tunnel, accessible by road.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore62" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore62" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1417,6 +1488,7 @@
 <p>Elevation: ~355 m above sea level with archaeological deposits reflecting prolonged ancient and nabatean metallurgical activity.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore64" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore64" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1437,6 +1509,7 @@
 <p>Elevation ~ 917 m above sea level; located in South Sinai, Egypt.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore65" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore65" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1457,6 +1530,7 @@
 <p>Accessible via 4x4; en route to Serabit el-Khadim temple</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore66" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore66" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1477,6 +1551,7 @@
 <p>Located roughly 43 km east of Abu Zenima on a plateau about 850 m above sea level.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore67" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore67" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1497,6 +1572,7 @@
 <p></p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore68" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore68" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1517,6 +1593,7 @@
 <p>Started guiding in 2019; first female Bedouin head guide on Sinai Trail.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore69" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore69" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1537,6 +1614,7 @@
 <p>Contains visible rock inscriptions from multiple historical periods and still-inhabited traditional Bedouin homes.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore70" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore70" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1557,6 +1635,7 @@
 <p>Elevation ranges around 400–600 meters above sea level; accessible via 4x4 tracks.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore71" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore71" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1577,6 +1656,7 @@
 <p>Accessible by 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore73" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore73" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1597,6 +1677,7 @@
 <p>Accessible by 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore74" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore74" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1617,6 +1698,7 @@
 <p>Located in central Sinai’s desert terrain near Wadi Islaf — a waypoint on traditional routes through the peninsula.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore76" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore76" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1637,6 +1719,7 @@
 <p>Elevation approximately 879 m; valley contains dense patches of vegetation and acacia trees.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore77" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore77" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1657,6 +1740,7 @@
 <p>Hagar el-Logha is accessible via a short walk from the main valley path.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore78" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore78" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1677,6 +1761,7 @@
 <p>Accessible by 4x4 vehicle and is a short walk</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore79" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore79" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1697,6 +1782,7 @@
 <p>Shelter length ~100 m with rock art strata from ~10,000 BCE to early Islamic periods.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore81" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore81" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1717,6 +1803,7 @@
 <p>Located ~30 min from Serabit el‑Khadim, within the central Sinai mining district.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore82" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore82" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1737,6 +1824,7 @@
 <p>Discovered in 2012; accessible via 4x4 vehicle and a short climb.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore83" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore83" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1757,6 +1845,7 @@
 <p>Located in southern Sinai; accessible via off-road track with 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore84" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore84" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1777,6 +1866,7 @@
 <p>Located on the Nabatean trade route, accessible by 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore85" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore85" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1797,6 +1887,7 @@
 <p>Accessible by 4x4 vehicle and short walk</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore87" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore87" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1817,6 +1908,7 @@
 <p>Accessible only by 4×4</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore88" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore88" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1837,6 +1929,7 @@
 <p>Access by 4x4 vehicle</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore91" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore91" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -1857,6 +1950,7 @@
 <p>Accessible only by 4×4 vehicles; terrain is very rugged and challenging.</p>
 </div>
 <div class="mt-auto d-flex gap-2">
+<button class="btn btn-listen-place rounded-pill py-2 px-4" onclick="readCard(this)" type="button"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:5px;vertical-align:-1px"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="listen-label">Listen</span></button>
 <button aria-controls="placeMore92" aria-expanded="false" class="btn btn-secondary rounded-pill py-2 px-4" data-bs-target="#placeMore92" data-bs-toggle="collapse" type="button">
               Read more
             </button>
@@ -2057,7 +2151,11 @@
         </script>
 <!-- Footer Start -->
 <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
- <div class="container py-5">
+ <div class="container py-5" id="section-2">
+  <button class="ra-btn" data-label="Listen to this section" onclick="readSection(this, 'section-2')">
+  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+  <span class="ra-label">Listen to this section</span>
+</button>
     <div class="row g-5 align-items-start">
 
       <!-- Column 1 -->
@@ -2185,40 +2283,73 @@
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
-<div class="read-aloud-bar">
-  <button class="read-aloud-btn" id="readAloudBtn" onclick="toggleReadAloud()" aria-label="Read page aloud">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-    <span id="readAloudLabel">Read aloud</span>
-  </button>
-</div>
 <script>
 (function() {
   var synth = window.speechSynthesis;
-  var utterance = null;
-  var speaking = false;
-  window.toggleReadAloud = function() {
-    var btn = document.getElementById('readAloudBtn');
-    var lbl = document.getElementById('readAloudLabel');
-    if (speaking) {
+  var current = null;
+  var currentBtn = null;
+  function stopCurrent() {
+    synth.cancel();
+    if (currentBtn) {
+      currentBtn.classList.remove('ra-speaking');
+      currentBtn.querySelector('.ra-label').textContent = currentBtn.dataset.label;
+      currentBtn = null;
+    }
+    current = null;
+  }
+  window.readSection = function(btn, sectionId) {
+    if (currentBtn === btn) { stopCurrent(); return; }
+    stopCurrent();
+    var el = document.getElementById(sectionId);
+    if (!el) return;
+    var text = el.innerText.replace(/\s+/g, ' ').trim();
+    var utt = new SpeechSynthesisUtterance(text);
+    utt.lang = 'en-GB';
+    utt.rate = 0.95;
+    utt.onend = function() { stopCurrent(); };
+    synth.speak(utt);
+    current = utt;
+    currentBtn = btn;
+    btn.classList.add('ra-speaking');
+    btn.querySelector('.ra-label').textContent = 'Stop';
+  };
+})();
+</script>
+<script>
+(function() {
+  var synth = window.speechSynthesis;
+  var activeBtn = null;
+  window.readCard = function(btn) {
+    if (activeBtn === btn) {
       synth.cancel();
-      speaking = false;
-      btn.classList.remove('speaking');
-      lbl.textContent = 'Read aloud';
+      btn.classList.remove('listening');
+      btn.querySelector('.listen-label').textContent = 'Listen';
+      activeBtn = null;
       return;
     }
-    var text = document.body.innerText.replace(/\s+/g, ' ').trim();
-    utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-GB';
-    utterance.rate = 0.95;
-    utterance.onend = function() {
-      speaking = false;
-      btn.classList.remove('speaking');
-      lbl.textContent = 'Read aloud';
+    if (activeBtn) {
+      synth.cancel();
+      activeBtn.classList.remove('listening');
+      activeBtn.querySelector('.listen-label').textContent = 'Listen';
+    }
+    var card = btn.closest('.card-body');
+    var title = card.querySelector('h5') ? card.querySelector('h5').innerText : '';
+    var shortDesc = card.querySelector('p.card-text') ? card.querySelector('p.card-text').innerText : '';
+    var moreEl = card.querySelector('.collapse');
+    var moreText = moreEl ? moreEl.innerText.trim() : '';
+    var text = title + '. ' + shortDesc + (moreText ? ' ' + moreText : '');
+    var utt = new SpeechSynthesisUtterance(text.replace(/\s+/g, ' ').trim());
+    utt.lang = 'en-GB';
+    utt.rate = 0.95;
+    utt.onend = function() {
+      btn.classList.remove('listening');
+      btn.querySelector('.listen-label').textContent = 'Listen';
+      activeBtn = null;
     };
-    synth.speak(utterance);
-    speaking = true;
-    btn.classList.add('speaking');
-    lbl.textContent = 'Stop';
+    synth.speak(utt);
+    activeBtn = btn;
+    btn.classList.add('listening');
+    btn.querySelector('.listen-label').textContent = 'Stop';
   };
 })();
 </script>
