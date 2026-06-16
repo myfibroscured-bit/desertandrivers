@@ -2,6 +2,14 @@
 
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTCWP93H9S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTCWP93H9S');
+</script>
 <meta charset="utf-8"/>
 <title>Places to Visit | Desert &amp; River — Sinai &amp; Beyond</title>
 <link rel="icon" href="img/favicon.ico" type="image/x-icon"> 
@@ -51,7 +59,61 @@
     }
   }
 </style>
-</link></head>
+</link><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristInformationCenter",
+  "name": "Desert & River",
+  "url": "https://desertandriver.com",
+  "logo": "https://desertandriver.com/img/logo.png",
+  "description": "Bespoke desert journeys in the Sinai region, Egypt. Small-group, ethical, slow travel with Joseph and Annet.",
+  "telephone": "+201063864837",
+  "email": "desertandriver2026@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dahab",
+    "addressRegion": "South Sinai",
+    "addressCountry": "EG"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.5,
+    "longitude": 34.5167
+  },
+  "areaServed": "Sinai, Egypt",
+  "priceRange": "€€€",
+  "sameAs": [
+    "https://www.youtube.com/@desertandriver"
+  ]
+}
+</script>
+<link rel="canonical" href="https://desertandriver.com/places.html">
+<style>
+.read-aloud-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.read-aloud-btn {
+  background: #CBB89D;
+  color: #2B2B2B;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+.read-aloud-btn:hover { background: #b8a085; }
+.read-aloud-btn.speaking { background: #6E4B3A; color: #F4F1EC; }
+</style>
+</head>
 <body>
 <!-- Spinner Start -->
 <div class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
@@ -2123,6 +2185,43 @@
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+<div class="read-aloud-bar">
+  <button class="read-aloud-btn" id="readAloudBtn" onclick="toggleReadAloud()" aria-label="Read page aloud">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+    <span id="readAloudLabel">Read aloud</span>
+  </button>
+</div>
+<script>
+(function() {
+  var synth = window.speechSynthesis;
+  var utterance = null;
+  var speaking = false;
+  window.toggleReadAloud = function() {
+    var btn = document.getElementById('readAloudBtn');
+    var lbl = document.getElementById('readAloudLabel');
+    if (speaking) {
+      synth.cancel();
+      speaking = false;
+      btn.classList.remove('speaking');
+      lbl.textContent = 'Read aloud';
+      return;
+    }
+    var text = document.body.innerText.replace(/\s+/g, ' ').trim();
+    utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-GB';
+    utterance.rate = 0.95;
+    utterance.onend = function() {
+      speaking = false;
+      btn.classList.remove('speaking');
+      lbl.textContent = 'Read aloud';
+    };
+    synth.speak(utterance);
+    speaking = true;
+    btn.classList.add('speaking');
+    lbl.textContent = 'Stop';
+  };
+})();
+</script>
 </body>
 </html>
 
