@@ -931,14 +931,11 @@ After a few days… everyone smells like the fire anyway.
     ">Occasional stories, practical guides, and honest insight from Dahab and the Sinai. No noise — just what's worth knowing.</p>
 
     <form
-      name="newsletter"
+      name="newsletter" id="newsletterForm"
       method="POST"
-      data-netlify="true"
       action="/thank-you.html"
       style="display: flex; flex-direction: column; gap: 12px; max-width: 420px; margin: 0 auto;"
     >
-      <!-- Cloudflare Pages form detection -->
-      <input type="hidden" name="form-name" value="newsletter" />
 
       <input
         type="email"
@@ -981,7 +978,7 @@ After a few days… everyone smells like the fire anyway.
         onmouseout="this.style.background='#CBB89D'"
       >Subscribe</button>
 
-    </form>
+    </form><script>document.getElementById('newsletterForm').addEventListener('submit',function(e){e.preventDefault();var body=new URLSearchParams();body.set('email',this.email.value);fetch('https://script.google.com/macros/s/AKfycbzrx5lnyLeeDtv0GcTfwJIKcfBUn4v6XdDucd7dpOa0q_rSI2QJE1d3ykmiSXfxFxpAOA/exec',{method:'POST',mode:'no-cors',body:body}).then(function(){window.location.href='/thank-you.html';}).catch(function(){window.location.href='/thank-you.html';});});</script>
 
     <p style="
       font-family: Georgia, serif;
