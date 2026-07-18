@@ -26,6 +26,12 @@
   </url>
 
   <url>
+    <loc>https://desertandriver.com/ready-to-book-trips.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
     <loc>https://desertandriver.com/trip-3-day-desert-safari.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
@@ -39,6 +45,12 @@
 
   <url>
     <loc>https://desertandriver.com/trip-8-day-sinai-discovery.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/trip-2-day-1-night.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
