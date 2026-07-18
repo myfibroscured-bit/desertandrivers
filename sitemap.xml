@@ -26,6 +26,24 @@
   </url>
 
   <url>
+    <loc>https://desertandriver.com/trip-3-day-desert-safari.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/trip-6-day-camel-trip.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/trip-8-day-sinai-discovery.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
     <loc>https://desertandriver.com/plan-your-own-trip.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
