@@ -1281,6 +1281,31 @@ a:hover{ color: #55382B; }
     display: none;
   }
 }
+
+/* Fix: "Bespoke Packages" / "Packages" sit inside a wrapping <div class="nav-item
+   dropdown">, so unlike the plain links (Home, About, FAQ) their <a class="nav-link">
+   is not a direct flex child of the navbar — it stays a plain inline element, which
+   throws off how the browser centers the absolutely-positioned pyramid marker under
+   it. Giving it an explicit box (inline-block) makes centering behave the same as
+   the plain links. Also resets the dropdown-toggle's margin-left:8px (meant for its
+   old arrow icon), which was nudging the triangle to the right. */
+.navbar-light .navbar-nav .nav-item.dropdown > .nav-link.dropdown-toggle {
+  display: inline-block;
+}
+.navbar-light .navbar-nav .nav-link.dropdown-toggle::after {
+  margin-left: 0 !important;
+}
+
+/* Fix: Bootstrap's default .dropdown-item.active styling is a solid blue
+   background — it was showing on "Build Your Own Pyramid Package" even without
+   hovering, because that link carries .active to mark it as the current page.
+   Replace it with the same soft brand highlight used on hover instead. */
+.navbar .dropdown-item.active,
+.navbar .dropdown-item.active:hover,
+.navbar .dropdown-item.active:focus {
+  background: rgba(203,184,157,.35) !important;
+  color: var(--dr-charcoal) !important;
+}
 .comparison-logo {
   max-width: 90px;
   width: 100%;
