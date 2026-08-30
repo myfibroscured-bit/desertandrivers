@@ -117,6 +117,25 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
   margin-right: 0.6em;
 }
 </style>
+<style>
+.btn-card-listen {
+  background: none;
+  border: 1px solid #CBB89D;
+  color: #6E4B3A;
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 10px;
+}
+.btn-card-listen:hover { background: #CBB89D; color: #2B2B2B; }
+.btn-card-listen.listening { background: #6E4B3A; color: #F4F1EC; border-color: #6E4B3A; }
+</style>
 </head>
 
 <body>
@@ -154,7 +173,6 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
               <a href="build-your-own-pyramid-package.html" class="dropdown-item">Add-ons</a>
               <a href="transfer.html" class="dropdown-item">Transfer</a>
               <a href="accommodation.html" class="dropdown-item active">Accommodation</a>
-              <a href="day-tours.html" class="dropdown-item">Day Tours</a>
             </div>
           </div>
           <div class="nav-item dropdown">
@@ -210,7 +228,7 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
         <div class="col-md-6 col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
           <div class="product-item addon-card shadow-soft h-100">
             <img src="img/accommodation-lidia-hotel.jpg" class="img-fluid w-100 rounded-top" alt="Lidia Hotel Dahab, seafront hotel on the south boulevard">
-            <div class="product-content bg-light text-center rounded-bottom p-4">
+            <div class="product-content bg-light text-center rounded-bottom p-4" data-listen-card="accomCard1">
               <h5 class="mb-1 addon-title">Lidia Hotel</h5>
               <p class="mb-2 text-body small text-uppercase" style="letter-spacing:1px;">Seafront &middot; South Boulevard</p>
               <p class="mb-3 text-body addon-desc">
@@ -225,6 +243,7 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
                 <li>Beachfront restaurant, easy water access</li>
                 <li>Breakfast included</li>
               </ul>
+              <button class="btn-card-listen" onclick="readCardBlock(this,'.addon-title','.addon-desc',null)"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
               <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-outline-secondary rounded-pill py-2 px-4">Ask About This</a>
             </div>
           </div>
@@ -233,7 +252,7 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
         <div class="col-md-6 col-lg-5 wow fadeInUp" data-wow-delay="0.2s">
           <div class="product-item addon-card shadow-soft h-100">
             <img src="img/accommodation-sababa-hotel.jpg" class="img-fluid w-100 rounded-top" alt="Sababa Hotel Dahab, family-run hotel in the heart of the boulevard">
-            <div class="product-content bg-light text-center rounded-bottom p-4">
+            <div class="product-content bg-light text-center rounded-bottom p-4" data-listen-card="accomCard2">
               <h5 class="mb-1 addon-title">Sababa Hotel</h5>
               <p class="mb-2 text-body small text-uppercase" style="letter-spacing:1px;">Family-Run &middot; Heart of the Boulevard</p>
               <p class="mb-3 text-body addon-desc">
@@ -248,6 +267,7 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
                 <li>Steps from the Lighthouse Reef</li>
                 <li>Breakfast included (continental or vegan)</li>
               </ul>
+              <button class="btn-card-listen" onclick="readCardBlock(this,'.addon-title','.addon-desc',null)"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
               <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-outline-secondary rounded-pill py-2 px-4">Ask About This</a>
             </div>
           </div>
@@ -362,5 +382,50 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+<script>
+(function() {
+  var synth = window.speechSynthesis;
+  var activeCardBtn = null;
+  window.readCardBlock = function(btn, titleSel, textSel, collapseSel) {
+    if (activeCardBtn === btn) {
+      synth.cancel();
+      btn.classList.remove('listening');
+      btn.querySelector('.cl-label').textContent = 'Listen';
+      activeCardBtn = null;
+      return;
+    }
+    if (activeCardBtn) {
+      synth.cancel();
+      activeCardBtn.classList.remove('listening');
+      activeCardBtn.querySelector('.cl-label').textContent = 'Listen';
+    }
+    var parts = [];
+    var card = btn.closest('[data-listen-card]');
+    if (card) {
+      card.querySelectorAll(titleSel + ', ' + textSel).forEach(function(el) {
+        var t = el.innerText.trim();
+        if (t) parts.push(t);
+      });
+      if (collapseSel) {
+        var col = card.querySelector(collapseSel);
+        if (col) { var t = col.innerText.trim(); if (t) parts.push(t); }
+      }
+    }
+    if (!parts.length) return;
+    var utt = new SpeechSynthesisUtterance(parts.join(' ').replace(/\s+/g, ' ').trim());
+    utt.lang = 'en-GB';
+    utt.rate = 0.95;
+    utt.onend = function() {
+      btn.classList.remove('listening');
+      btn.querySelector('.cl-label').textContent = 'Listen';
+      activeCardBtn = null;
+    };
+    synth.speak(utt);
+    activeCardBtn = btn;
+    btn.classList.add('listening');
+    btn.querySelector('.cl-label').textContent = 'Stop';
+  };
+})();
+</script>
 </body>
 </html>
