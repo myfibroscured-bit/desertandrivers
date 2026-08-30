@@ -99,6 +99,25 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
   flex-grow: 1;
 }
 </style>
+<style>
+.btn-card-listen {
+  background: none;
+  border: 1px solid #CBB89D;
+  color: #6E4B3A;
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 10px;
+}
+.btn-card-listen:hover { background: #CBB89D; color: #2B2B2B; }
+.btn-card-listen.listening { background: #6E4B3A; color: #F4F1EC; border-color: #6E4B3A; }
+</style>
 </head>
 
 <body>
@@ -195,11 +214,12 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
           <div class="product-item addon-card shadow-soft h-100">
             <img src="img/addon-ras-abu-galum-blue-lagoon.jpg" class="img-fluid w-100 rounded-top" alt="Ras Abu Galum and the Blue Lagoon">
-            <div class="product-content bg-light text-center rounded-bottom p-4">
+            <div class="product-content bg-light text-center rounded-bottom p-4" data-listen-card="daytourCard1">
               <h5 class="mb-1 addon-title">Ras Abu Galum &amp; Blue Lagoon</h5>
               <p class="mb-2 text-body small text-uppercase" style="letter-spacing:1px;">Full Day</p>
               <p class="fs-5 text-primary mb-3">&euro;60pp</p>
               <p class="mb-3 text-body addon-desc">Camel or boat out past the Blue Hole to Ras Abu Galum, with a snorkel, a simple Bedouin lunch, and a stop at the Blue Lagoon.</p>
+              <button class="btn-card-listen" onclick="readCardBlock(this,'.addon-title','.addon-desc',null)"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
               <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-outline-secondary rounded-pill py-2 px-4 addon-btn">Ask About This</a>
             </div>
           </div>
@@ -214,11 +234,12 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
           <div class="product-item addon-card shadow-soft h-100">
             <img src="img/addon-petra-jordan.jpg" class="img-fluid w-100 rounded-top" alt="Petra day trip from Dahab">
-            <div class="product-content bg-light text-center rounded-bottom p-4">
+            <div class="product-content bg-light text-center rounded-bottom p-4" data-listen-card="daytourCard2">
               <h5 class="mb-1 addon-title">Petra, Jordan</h5>
               <p class="mb-2 text-body small text-uppercase" style="letter-spacing:1px;">Full Day (18h)</p>
               <p class="fs-5 text-primary mb-3">&euro;255pp</p>
               <p class="mb-3 text-body addon-desc">A long day out: ferry to Aqaba, a guided three-hour tour through Petra, lunch, then the journey back to Dahab the same night.</p>
+              <button class="btn-card-listen" onclick="readCardBlock(this,'.addon-title','.addon-desc',null)"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
               <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-outline-secondary rounded-pill py-2 px-4 addon-btn">Ask About This</a>
             </div>
           </div>
@@ -226,11 +247,12 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
           <div class="product-item addon-card shadow-soft h-100">
             <img src="img/addon-luxor.jpg" class="img-fluid w-100 rounded-top" alt="Luxor temples and Valley of the Kings day trip">
-            <div class="product-content bg-light text-center rounded-bottom p-4">
+            <div class="product-content bg-light text-center rounded-bottom p-4" data-listen-card="daytourCard3">
               <h5 class="mb-1 addon-title">Luxor</h5>
               <p class="mb-2 text-body small text-uppercase" style="letter-spacing:1px;">Full Day</p>
               <p class="fs-5 text-primary mb-3">&euro;255pp</p>
               <p class="mb-3 text-body addon-desc">Fly to Luxor for the day and visit the Temple of Hatshepsut, the Valley of the Kings, and Karnak Temple, back in Dahab that evening.</p>
+              <button class="btn-card-listen" onclick="readCardBlock(this,'.addon-title','.addon-desc',null)"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
               <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-outline-secondary rounded-pill py-2 px-4 addon-btn">Ask About This</a>
             </div>
           </div>
@@ -238,11 +260,12 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
           <div class="product-item addon-card shadow-soft h-100">
             <img src="img/addon-aswan.jpg" class="img-fluid w-100 rounded-top" alt="Aswan day trip from Dahab">
-            <div class="product-content bg-light text-center rounded-bottom p-4">
+            <div class="product-content bg-light text-center rounded-bottom p-4" data-listen-card="daytourCard4">
               <h5 class="mb-1 addon-title">Aswan</h5>
               <p class="mb-2 text-body small text-uppercase" style="letter-spacing:1px;">Full Day</p>
               <p class="fs-5 text-primary mb-3">&euro;425pp</p>
               <p class="mb-3 text-body addon-desc">A day trip to Aswan — ask us for the current itinerary, or combine with Luxor and Cairo for a multi-day round trip.</p>
+              <button class="btn-card-listen" onclick="readCardBlock(this,'.addon-title','.addon-desc',null)"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
               <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-outline-secondary rounded-pill py-2 px-4 addon-btn">Ask About This</a>
             </div>
           </div>
@@ -250,11 +273,12 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
           <div class="product-item addon-card shadow-soft h-100">
             <img src="img/addon-cairo.jpg" class="img-fluid w-100 rounded-top" alt="Pyramids of Giza and Cairo Museum day trip">
-            <div class="product-content bg-light text-center rounded-bottom p-4">
+            <div class="product-content bg-light text-center rounded-bottom p-4" data-listen-card="daytourCard5">
               <h5 class="mb-1 addon-title">Cairo</h5>
               <p class="mb-2 text-body small text-uppercase" style="letter-spacing:1px;">Full Day</p>
               <p class="fs-5 text-primary mb-3">&euro;255pp</p>
               <p class="mb-3 text-body addon-desc">Fly to Cairo for the Egyptian Museum, the Pyramids of Giza, the Great Sphinx, and the Valley Temple, with an English-speaking guide throughout.</p>
+              <button class="btn-card-listen" onclick="readCardBlock(this,'.addon-title','.addon-desc',null)"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
               <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-outline-secondary rounded-pill py-2 px-4 addon-btn">Ask About This</a>
             </div>
           </div>
@@ -262,11 +286,12 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
           <div class="product-item addon-card shadow-soft h-100">
             <img src="img/addon-st-catherine-monastery.jpg" class="img-fluid w-100 rounded-top" alt="St Catherine's Monastery and Mount Sinai sunrise">
-            <div class="product-content bg-light text-center rounded-bottom p-4">
+            <div class="product-content bg-light text-center rounded-bottom p-4" data-listen-card="daytourCard6">
               <h5 class="mb-1 addon-title">St Catherine Monastery &amp; Mt Sinai</h5>
               <p class="mb-2 text-body small text-uppercase" style="letter-spacing:1px;">Overnight</p>
               <p class="fs-5 text-primary mb-3">&euro;85pp</p>
               <p class="mb-3 text-body addon-desc">Climb Mt Sinai overnight for sunrise, then visit St Catherine's Monastery, one of the oldest working Christian monasteries in the world, on the way down.</p>
+              <button class="btn-card-listen" onclick="readCardBlock(this,'.addon-title','.addon-desc',null)"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
               <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-outline-secondary rounded-pill py-2 px-4 addon-btn">Ask About This</a>
             </div>
           </div>
@@ -281,11 +306,12 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
           <div class="product-item addon-card shadow-soft h-100">
             <img src="img/addon-quad-bike-trips.jpg" class="img-fluid w-100 rounded-top" alt="Quad biking in the desert near Dahab">
-            <div class="product-content bg-light text-center rounded-bottom p-4">
+            <div class="product-content bg-light text-center rounded-bottom p-4" data-listen-card="daytourCard7">
               <h5 class="mb-1 addon-title">Quad Bike Trips</h5>
               <p class="mb-2 text-body small text-uppercase" style="letter-spacing:1px;">Half / Full Day</p>
               <p class="fs-5 text-primary mb-3">&euro;85pp</p>
               <p class="mb-3 text-body addon-desc">Choose a single or double quad, automatic or shift-gear, and head off-road to the Three Pools, Wadi Gunei, Wadi Towalat, or the Dahab highlights route. Always with a licensed guide, as required by law.</p>
+              <button class="btn-card-listen" onclick="readCardBlock(this,'.addon-title','.addon-desc',null)"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span class="cl-label">Listen</span></button>
               <a href="https://wa.me/201063864837" target="_blank" rel="noopener" class="btn btn-outline-secondary rounded-pill py-2 px-4 addon-btn">Ask About This</a>
             </div>
           </div>
@@ -398,5 +424,50 @@ src="https://www.facebook.com/tr?id=362795157788748&ev=PageView&noscript=1"
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+<script>
+(function() {
+  var synth = window.speechSynthesis;
+  var activeCardBtn = null;
+  window.readCardBlock = function(btn, titleSel, textSel, collapseSel) {
+    if (activeCardBtn === btn) {
+      synth.cancel();
+      btn.classList.remove('listening');
+      btn.querySelector('.cl-label').textContent = 'Listen';
+      activeCardBtn = null;
+      return;
+    }
+    if (activeCardBtn) {
+      synth.cancel();
+      activeCardBtn.classList.remove('listening');
+      activeCardBtn.querySelector('.cl-label').textContent = 'Listen';
+    }
+    var parts = [];
+    var card = btn.closest('[data-listen-card]');
+    if (card) {
+      card.querySelectorAll(titleSel + ', ' + textSel).forEach(function(el) {
+        var t = el.innerText.trim();
+        if (t) parts.push(t);
+      });
+      if (collapseSel) {
+        var col = card.querySelector(collapseSel);
+        if (col) { var t = col.innerText.trim(); if (t) parts.push(t); }
+      }
+    }
+    if (!parts.length) return;
+    var utt = new SpeechSynthesisUtterance(parts.join(' ').replace(/\s+/g, ' ').trim());
+    utt.lang = 'en-GB';
+    utt.rate = 0.95;
+    utt.onend = function() {
+      btn.classList.remove('listening');
+      btn.querySelector('.cl-label').textContent = 'Listen';
+      activeCardBtn = null;
+    };
+    synth.speak(utt);
+    activeCardBtn = btn;
+    btn.classList.add('listening');
+    btn.querySelector('.cl-label').textContent = 'Stop';
+  };
+})();
+</script>
 </body>
 </html>
