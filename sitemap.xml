@@ -8,181 +8,223 @@
   </url>
 
   <url>
-    <loc>https://desertandriver.com/about.html</loc>
+    <loc>https://desertandriver.com/about</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/ready-to-book-trips.html</loc>
+    <loc>https://desertandriver.com/ready-to-book-trips</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/plan-your-own-trip.html</loc>
+    <loc>https://desertandriver.com/plan-your-own-trip</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/places.html</loc>
+    <loc>https://desertandriver.com/places</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/contact.html</loc>
+    <loc>https://desertandriver.com/contact</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/trip-1-day-arada-safari.html</loc>
+    <loc>https://desertandriver.com/trip-1-day-arada-safari</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/trip-1-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/trip-1-day-colored-canyon</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/trip-2-day-1-night.html</loc>
+    <loc>https://desertandriver.com/trip-1-day-cave-painting-war-scene</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/trip-2-day-camel-trek.html</loc>
+    <loc>https://desertandriver.com/trip-1-day-serabit-el-khadim-nawamis</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/trip-3-day-desert-safari.html</loc>
+    <loc>https://desertandriver.com/trip-4-day-find-yourself-retreat</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/trip-6-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/trip-1-day-st-catherine-monastery</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/trip-8-day-sinai-discovery.html</loc>
+    <loc>https://desertandriver.com/trip-mount-sinai-sunset-hike</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/examples.html</loc>
+    <loc>https://desertandriver.com/trip-mount-sinai-sunrise-hike</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/trip-1-day-camel-trip</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/trip-2-day-1-night</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/trip-2-day-camel-trek</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/trip-3-day-desert-safari</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/trip-6-day-camel-trip</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/trip-8-day-sinai-discovery</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/examples</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/build-your-own-pyramid-package.html</loc>
+    <loc>https://desertandriver.com/build-your-own-pyramid-package</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/day-tours.html</loc>
+    <loc>https://desertandriver.com/day-tours</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/transfer.html</loc>
+    <loc>https://desertandriver.com/transfer</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/accommodation.html</loc>
+    <loc>https://desertandriver.com/accommodation</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/faq.html</loc>
+    <loc>https://desertandriver.com/faq</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/field-support.html</loc>
+    <loc>https://desertandriver.com/field-support</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/gallery.html</loc>
+    <loc>https://desertandriver.com/gallery</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/blog.html</loc>
+    <loc>https://desertandriver.com/blog</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/blog-desert-packing.html</loc>
+    <loc>https://desertandriver.com/blog-desert-packing</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/blog-permission-not-access.html</loc>
+    <loc>https://desertandriver.com/blog-permission-not-access</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/blog-price-protects.html</loc>
+    <loc>https://desertandriver.com/blog-price-protects</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/blog-slow-travel-sinai.html</loc>
+    <loc>https://desertandriver.com/blog-slow-travel-sinai</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/blog-what-to-expect.html</loc>
+    <loc>https://desertandriver.com/blog-what-to-expect</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/cookie-policy.html</loc>
+    <loc>https://desertandriver.com/cookie-policy</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/disclaimer.html</loc>
+    <loc>https://desertandriver.com/disclaimer</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/privacy-policy.html</loc>
+    <loc>https://desertandriver.com/privacy-policy</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://desertandriver.com/terms-and-conditions.html</loc>
+    <loc>https://desertandriver.com/terms-and-conditions</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
@@ -193,132 +235,174 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/about.html</loc>
+    <loc>https://desertandriver.com/nl/about</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/ready-to-book-trips.html</loc>
+    <loc>https://desertandriver.com/nl/ready-to-book-trips</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/plan-your-own-trip.html</loc>
+    <loc>https://desertandriver.com/nl/plan-your-own-trip</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/places.html</loc>
+    <loc>https://desertandriver.com/nl/places</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/contact.html</loc>
+    <loc>https://desertandriver.com/nl/contact</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/trip-1-day-arada-safari.html</loc>
+    <loc>https://desertandriver.com/nl/trip-1-day-arada-safari</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/nl/trip-1-day-colored-canyon</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/nl/trip-1-day-cave-painting-war-scene</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/nl/trip-1-day-serabit-el-khadim-nawamis</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/nl/trip-4-day-find-yourself-retreat</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/nl/trip-1-day-st-catherine-monastery</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/nl/trip-mount-sinai-sunset-hike</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/nl/trip-mount-sinai-sunrise-hike</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/trip-1-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/nl/trip-1-day-camel-trip</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/trip-2-day-1-night.html</loc>
+    <loc>https://desertandriver.com/nl/trip-2-day-1-night</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/trip-2-day-camel-trek.html</loc>
+    <loc>https://desertandriver.com/nl/trip-2-day-camel-trek</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/trip-3-day-desert-safari.html</loc>
+    <loc>https://desertandriver.com/nl/trip-3-day-desert-safari</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/trip-6-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/nl/trip-6-day-camel-trip</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/trip-8-day-sinai-discovery.html</loc>
+    <loc>https://desertandriver.com/nl/trip-8-day-sinai-discovery</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/examples.html</loc>
+    <loc>https://desertandriver.com/nl/examples</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/build-your-own-pyramid-package.html</loc>
+    <loc>https://desertandriver.com/nl/build-your-own-pyramid-package</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/day-tours.html</loc>
+    <loc>https://desertandriver.com/nl/day-tours</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/transfer.html</loc>
+    <loc>https://desertandriver.com/nl/transfer</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/accommodation.html</loc>
+    <loc>https://desertandriver.com/nl/accommodation</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/faq.html</loc>
+    <loc>https://desertandriver.com/nl/faq</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/field-support.html</loc>
+    <loc>https://desertandriver.com/nl/field-support</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/gallery.html</loc>
+    <loc>https://desertandriver.com/nl/gallery</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/blog.html</loc>
+    <loc>https://desertandriver.com/nl/blog</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/blog-desert-packing.html</loc>
+    <loc>https://desertandriver.com/nl/blog-desert-packing</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/blog-permission-not-access.html</loc>
+    <loc>https://desertandriver.com/nl/blog-permission-not-access</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/blog-price-protects.html</loc>
+    <loc>https://desertandriver.com/nl/blog-price-protects</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/blog-slow-travel-sinai.html</loc>
+    <loc>https://desertandriver.com/nl/blog-slow-travel-sinai</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/nl/blog-what-to-expect.html</loc>
+    <loc>https://desertandriver.com/nl/blog-what-to-expect</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
@@ -328,132 +412,174 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/about.html</loc>
+    <loc>https://desertandriver.com/de/about</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/ready-to-book-trips.html</loc>
+    <loc>https://desertandriver.com/de/ready-to-book-trips</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/plan-your-own-trip.html</loc>
+    <loc>https://desertandriver.com/de/plan-your-own-trip</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/places.html</loc>
+    <loc>https://desertandriver.com/de/places</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/contact.html</loc>
+    <loc>https://desertandriver.com/de/contact</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/trip-1-day-arada-safari.html</loc>
+    <loc>https://desertandriver.com/de/trip-1-day-arada-safari</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/de/trip-1-day-colored-canyon</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/de/trip-1-day-cave-painting-war-scene</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/de/trip-1-day-serabit-el-khadim-nawamis</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/de/trip-4-day-find-yourself-retreat</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/de/trip-1-day-st-catherine-monastery</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/de/trip-mount-sinai-sunset-hike</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/de/trip-mount-sinai-sunrise-hike</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/trip-1-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/de/trip-1-day-camel-trip</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/trip-2-day-1-night.html</loc>
+    <loc>https://desertandriver.com/de/trip-2-day-1-night</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/trip-2-day-camel-trek.html</loc>
+    <loc>https://desertandriver.com/de/trip-2-day-camel-trek</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/trip-3-day-desert-safari.html</loc>
+    <loc>https://desertandriver.com/de/trip-3-day-desert-safari</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/trip-6-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/de/trip-6-day-camel-trip</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/trip-8-day-sinai-discovery.html</loc>
+    <loc>https://desertandriver.com/de/trip-8-day-sinai-discovery</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/examples.html</loc>
+    <loc>https://desertandriver.com/de/examples</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/build-your-own-pyramid-package.html</loc>
+    <loc>https://desertandriver.com/de/build-your-own-pyramid-package</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/day-tours.html</loc>
+    <loc>https://desertandriver.com/de/day-tours</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/transfer.html</loc>
+    <loc>https://desertandriver.com/de/transfer</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/accommodation.html</loc>
+    <loc>https://desertandriver.com/de/accommodation</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/faq.html</loc>
+    <loc>https://desertandriver.com/de/faq</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/field-support.html</loc>
+    <loc>https://desertandriver.com/de/field-support</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/gallery.html</loc>
+    <loc>https://desertandriver.com/de/gallery</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/blog.html</loc>
+    <loc>https://desertandriver.com/de/blog</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/blog-desert-packing.html</loc>
+    <loc>https://desertandriver.com/de/blog-desert-packing</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/blog-permission-not-access.html</loc>
+    <loc>https://desertandriver.com/de/blog-permission-not-access</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/blog-price-protects.html</loc>
+    <loc>https://desertandriver.com/de/blog-price-protects</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/blog-slow-travel-sinai.html</loc>
+    <loc>https://desertandriver.com/de/blog-slow-travel-sinai</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/de/blog-what-to-expect.html</loc>
+    <loc>https://desertandriver.com/de/blog-what-to-expect</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
@@ -463,132 +589,174 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/about.html</loc>
+    <loc>https://desertandriver.com/ar/about</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/ready-to-book-trips.html</loc>
+    <loc>https://desertandriver.com/ar/ready-to-book-trips</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/plan-your-own-trip.html</loc>
+    <loc>https://desertandriver.com/ar/plan-your-own-trip</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/places.html</loc>
+    <loc>https://desertandriver.com/ar/places</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/contact.html</loc>
+    <loc>https://desertandriver.com/ar/contact</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/trip-1-day-arada-safari.html</loc>
+    <loc>https://desertandriver.com/ar/trip-1-day-arada-safari</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ar/trip-1-day-colored-canyon</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ar/trip-1-day-cave-painting-war-scene</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ar/trip-1-day-serabit-el-khadim-nawamis</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ar/trip-4-day-find-yourself-retreat</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ar/trip-1-day-st-catherine-monastery</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ar/trip-mount-sinai-sunset-hike</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ar/trip-mount-sinai-sunrise-hike</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/trip-1-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/ar/trip-1-day-camel-trip</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/trip-2-day-1-night.html</loc>
+    <loc>https://desertandriver.com/ar/trip-2-day-1-night</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/trip-2-day-camel-trek.html</loc>
+    <loc>https://desertandriver.com/ar/trip-2-day-camel-trek</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/trip-3-day-desert-safari.html</loc>
+    <loc>https://desertandriver.com/ar/trip-3-day-desert-safari</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/trip-6-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/ar/trip-6-day-camel-trip</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/trip-8-day-sinai-discovery.html</loc>
+    <loc>https://desertandriver.com/ar/trip-8-day-sinai-discovery</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/examples.html</loc>
+    <loc>https://desertandriver.com/ar/examples</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/build-your-own-pyramid-package.html</loc>
+    <loc>https://desertandriver.com/ar/build-your-own-pyramid-package</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/day-tours.html</loc>
+    <loc>https://desertandriver.com/ar/day-tours</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/transfer.html</loc>
+    <loc>https://desertandriver.com/ar/transfer</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/accommodation.html</loc>
+    <loc>https://desertandriver.com/ar/accommodation</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/faq.html</loc>
+    <loc>https://desertandriver.com/ar/faq</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/field-support.html</loc>
+    <loc>https://desertandriver.com/ar/field-support</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/gallery.html</loc>
+    <loc>https://desertandriver.com/ar/gallery</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/blog.html</loc>
+    <loc>https://desertandriver.com/ar/blog</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/blog-desert-packing.html</loc>
+    <loc>https://desertandriver.com/ar/blog-desert-packing</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/blog-permission-not-access.html</loc>
+    <loc>https://desertandriver.com/ar/blog-permission-not-access</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/blog-price-protects.html</loc>
+    <loc>https://desertandriver.com/ar/blog-price-protects</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/blog-slow-travel-sinai.html</loc>
+    <loc>https://desertandriver.com/ar/blog-slow-travel-sinai</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/ar/blog-what-to-expect.html</loc>
+    <loc>https://desertandriver.com/ar/blog-what-to-expect</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
@@ -598,133 +766,255 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/about.html</loc>
+    <loc>https://desertandriver.com/he/about</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/ready-to-book-trips.html</loc>
+    <loc>https://desertandriver.com/he/ready-to-book-trips</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/plan-your-own-trip.html</loc>
+    <loc>https://desertandriver.com/he/plan-your-own-trip</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/places.html</loc>
+    <loc>https://desertandriver.com/he/places</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/contact.html</loc>
+    <loc>https://desertandriver.com/he/contact</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/trip-1-day-arada-safari.html</loc>
+    <loc>https://desertandriver.com/he/trip-1-day-arada-safari</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/he/trip-1-day-colored-canyon</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/he/trip-1-day-cave-painting-war-scene</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/he/trip-1-day-serabit-el-khadim-nawamis</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/he/trip-4-day-find-yourself-retreat</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/he/trip-1-day-st-catherine-monastery</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/he/trip-mount-sinai-sunset-hike</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/he/trip-mount-sinai-sunrise-hike</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/trip-1-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/he/trip-1-day-camel-trip</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/trip-2-day-1-night.html</loc>
+    <loc>https://desertandriver.com/he/trip-2-day-1-night</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/trip-2-day-camel-trek.html</loc>
+    <loc>https://desertandriver.com/he/trip-2-day-camel-trek</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/trip-3-day-desert-safari.html</loc>
+    <loc>https://desertandriver.com/he/trip-3-day-desert-safari</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/trip-6-day-camel-trip.html</loc>
+    <loc>https://desertandriver.com/he/trip-6-day-camel-trip</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/trip-8-day-sinai-discovery.html</loc>
+    <loc>https://desertandriver.com/he/trip-8-day-sinai-discovery</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/examples.html</loc>
+    <loc>https://desertandriver.com/he/examples</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/build-your-own-pyramid-package.html</loc>
+    <loc>https://desertandriver.com/he/build-your-own-pyramid-package</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/day-tours.html</loc>
+    <loc>https://desertandriver.com/he/day-tours</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/transfer.html</loc>
+    <loc>https://desertandriver.com/he/transfer</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/accommodation.html</loc>
+    <loc>https://desertandriver.com/he/accommodation</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/faq.html</loc>
+    <loc>https://desertandriver.com/he/faq</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/field-support.html</loc>
+    <loc>https://desertandriver.com/he/field-support</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/gallery.html</loc>
+    <loc>https://desertandriver.com/he/gallery</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/blog.html</loc>
+    <loc>https://desertandriver.com/he/blog</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/blog-desert-packing.html</loc>
+    <loc>https://desertandriver.com/he/blog-desert-packing</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/blog-permission-not-access.html</loc>
+    <loc>https://desertandriver.com/he/blog-permission-not-access</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/blog-price-protects.html</loc>
+    <loc>https://desertandriver.com/he/blog-price-protects</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/blog-slow-travel-sinai.html</loc>
+    <loc>https://desertandriver.com/he/blog-slow-travel-sinai</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://desertandriver.com/he/blog-what-to-expect.html</loc>
+    <loc>https://desertandriver.com/he/blog-what-to-expect</loc>
     <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/nl/privacy-policy</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/nl/cookie-policy</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/nl/disclaimer</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/nl/terms-and-conditions</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/de/privacy-policy</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/de/cookie-policy</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/de/disclaimer</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/de/terms-and-conditions</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/ar/privacy-policy</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/ar/cookie-policy</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/ar/disclaimer</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/ar/terms-and-conditions</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/he/privacy-policy</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/he/cookie-policy</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/he/disclaimer</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://desertandriver.com/he/terms-and-conditions</loc>
+    <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
 </urlset>

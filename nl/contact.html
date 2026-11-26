@@ -76,7 +76,15 @@ fbq('track', 'PageView');
   ]
 }
 </script>
-<link href="https://desertandriver.com/nl/contact.html" rel="canonical"/>
+<link href="https://desertandriver.com/nl/contact" rel="canonical"/>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Desert &amp; River">
+<meta property="og:title" content="Contact met Desert &amp; River | Plan een gesprek of stuur een WhatsApp">
+<meta property="og:description" content="Neem contact op met Desert &amp; River in Dahab om je woestijnreis op maat in de Sinaï te ontwerpen. Plan een gesprek, stuur een bericht via WhatsApp of mail ons.">
+<meta property="og:url" content="https://desertandriver.com/nl/contact">
+<meta property="og:image" content="https://desertandriver.com/img/breadcrumb.jpg">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 .ra-btn {
   display: inline-flex;
@@ -97,12 +105,12 @@ fbq('track', 'PageView');
 .ra-btn.ra-speaking { background: #6E4B3A; color: #F4F1EC; border-color: #6E4B3A; }
 .ra-btn svg { flex-shrink: 0; }
 </style>
-<link rel="alternate" hreflang="en" href="https://desertandriver.com/contact.html">
-<link rel="alternate" hreflang="nl" href="https://desertandriver.com/nl/contact.html">
-<link rel="alternate" hreflang="de" href="https://desertandriver.com/de/contact.html">
-<link rel="alternate" hreflang="ar" href="https://desertandriver.com/ar/contact.html">
-<link rel="alternate" hreflang="he" href="https://desertandriver.com/he/contact.html">
-<link rel="alternate" hreflang="x-default" href="https://desertandriver.com/contact.html">
+<link rel="alternate" hreflang="en" href="https://desertandriver.com/contact">
+<link rel="alternate" hreflang="nl" href="https://desertandriver.com/nl/contact">
+<link rel="alternate" hreflang="de" href="https://desertandriver.com/de/contact">
+<link rel="alternate" hreflang="ar" href="https://desertandriver.com/ar/contact">
+<link rel="alternate" hreflang="he" href="https://desertandriver.com/he/contact">
+<link rel="alternate" hreflang="x-default" href="https://desertandriver.com/contact">
 </head>
 <body>
 <!-- Spinner Start -->
@@ -176,8 +184,8 @@ fbq('track', 'PageView');
 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
 <div class="p-4 rounded-2xl card-dr shadow-soft">
 <h3 class="mb-3">Stuur een bericht</h3>
-<p class="text-body mb-4">Dit formulier verstuurt nog geen berichten. Mail ons of stuur een WhatsApp, dan reageren we zo snel mogelijk.</p>
-<form onsubmit="return false;">
+<p class="text-body mb-4">Vul het formulier in en klik op versturen — je e-mailprogramma opent met je bericht klaar om te verzenden. Liever WhatsApp? Gebruik de knop hierboven.</p>
+<form id="drContactForm">
 <div class="row g-3">
 <div class="col-md-6">
 <input class="form-control" placeholder="Je naam" type="text"/>
@@ -191,7 +199,7 @@ fbq('track', 'PageView');
 <div class="col-12">
 <textarea class="form-control" placeholder="Vertel ons hoeveel tijd je hebt, wat je interesseert en hoe je graag reist..." rows="6"></textarea>
 </div>
-<div class="col-12"><a class="btn btn-primary rounded-pill py-3 px-4 w-100 d-inline-flex justify-content-center" href="mailto:info@desertandriver.com?subject=Desert%20%26%20River%20Enquiry"> Mail ons </a></div>
+<div class="col-12"><button type="submit" class="btn btn-primary rounded-pill py-3 px-4 w-100 d-inline-flex justify-content-center">Bericht versturen</button></div>
 </div>
 </form>
 <div class="section-divider my-4"></div>
@@ -269,7 +277,7 @@ fbq('track', 'PageView');
 <div class="col-md-6 col-lg-3">
 <div class="footer-item">
 <h4 class="text-white mb-4">Juridisch</h4>
-<div class="footer-links"><a class="footer-link" href="../privacy-policy.html">Privacybeleid (Engels)</a> <a class="footer-link" href="../terms-and-conditions.html">Algemene voorwaarden (Engels)</a> <a class="footer-link" href="../cookie-policy.html">Cookiebeleid (Engels)</a> <a class="footer-link" href="../disclaimer.html">Disclaimer (Engels)</a></div>
+<div class="footer-links"><a class="footer-link" href="privacy-policy.html">Privacybeleid</a> <a class="footer-link" href="terms-and-conditions.html">Algemene voorwaarden</a> <a class="footer-link" href="cookie-policy.html">Cookiebeleid</a> <a class="footer-link" href="disclaimer.html">Disclaimer</a></div>
 </div>
 </div>
 </div>
@@ -324,5 +332,6 @@ fbq('track', 'PageView');
   };
 })();
 </script>
+<script>(function(){var f=document.getElementById('drContactForm');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var i=f.querySelectorAll('input,textarea');var name=i[0].value.trim(),mail=i[1].value.trim(),sub=i[2].value.trim(),msg=i[3].value.trim();var body='Naam: '+name+'\nE-mail: '+mail+'\n\n'+msg;window.location.href='mailto:info@desertandriver.com?subject='+encodeURIComponent(sub||'Aanvraag Desert & River')+'&body='+encodeURIComponent(body);});})();</script>
 </body>
 </html>
