@@ -3,3 +3,18 @@ https://:project.pages.dev/*
 
 https://:version.:project.pages.dev/*
   X-Robots-Tag: noindex
+
+/img/*
+  Cache-Control: public, max-age=2592000
+
+/css/*
+  Cache-Control: public, max-age=604800
+
+/js/*
+  Cache-Control: public, max-age=604800
+
+/lib/*
+  Cache-Control: public, max-age=2592000
+
+/style.css
+  Cache-Control: public, max-age=604800
