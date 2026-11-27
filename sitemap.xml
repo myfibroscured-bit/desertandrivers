@@ -1498,4 +1498,53 @@
     <changefreq>monthly</changefreq>
   </url>
 
+
+  <url>
+    <loc>https://desertandriver.com/pl/build-your-own-pyramid-package</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ru/build-your-own-pyramid-package</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/uk/build-your-own-pyramid-package</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/fr/build-your-own-pyramid-package</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/es/build-your-own-pyramid-package</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ja/build-your-own-pyramid-package</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/ko/build-your-own-pyramid-package</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://desertandriver.com/zh/build-your-own-pyramid-package</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>
